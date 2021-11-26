@@ -13,7 +13,7 @@ mirror/pr.owl:
 
 pr_slim.owl: mirror/pr.owl seed.txt
 	$(ROBOT) extract -i $< -T seed.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		query --update sparql/inject-subset-declaration.ru --update sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
 .PRECIOUS: pr_slim.owl
 
