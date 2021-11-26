@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 13 * * 1"
 jobs:
-  diff:
+  pr_slim:
     runs-on: ubuntu-latest
     container: obolibrary/odklite:v1.2.30
     strategy:
