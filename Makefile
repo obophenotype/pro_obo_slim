@@ -1,8 +1,11 @@
-MIR=                        true
-URIBASE=                    http://purl.obolibrary.org/obophenotype/slims
+TODAY ?=                    $(shell date +%Y-%m-%d)
+URIBASE=                    http://purl.obolibrary.org/obo
+ONTBASE=                    $(URIBASE)/pr/obophenotype
 ROBOT=                      robot
 VERSION=                    $(TODAY)
-ANNOTATE_ONTOLOGY_VERSION = annotate -V $(URIBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
+ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
+
+MIR=                        true
 
 mirror/pr.owl:
 	if [ $(MIR) = true ]; then curl -L $(URIBASE)/pr.owl.gz --create-dirs -o mirror/pr.owl.gz --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/pr.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
