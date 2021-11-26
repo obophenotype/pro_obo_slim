@@ -1,8 +1,8 @@
 name: Create a PRO slim
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 13 * * 1"
+#  schedule:
+#    - cron: "0 13 * * 1"
 jobs:
   pr_slim:
     runs-on: ubuntu-latest
