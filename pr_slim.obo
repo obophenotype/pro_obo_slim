@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2021-11-26/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-01-20/pr_slim.owl
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2021-11-26" xsd:string
+property_value: owl:versionInfo "2022-01-20" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -121,7 +121,7 @@ synonym: "biological process" EXACT []
 id: GO:0015267
 name: channel activity
 namespace: molecular_function
-def: "Enables the energy-independent facilitated diffusion, mediated by passage of a solute through a transmembrane aqueous pore or channel. Stereospecificity is not exhibited but this transport may be specific for a particular molecular species or class of molecules." [GOC:mtg_transport, ISBN:0815340729, TC:1.-.-.-.-]
+def: "Enables the energy-independent facilitated diffusion, mediated by passage of a solute through a transmembrane aqueous pore or channel. Stereospecificity is not exhibited but this transport may be specific for a particular molecular species or class of molecules." [GOC:mtg_transport, ISBN:0815340729]
 synonym: "alpha-type channel activity" RELATED []
 is_a: GO:0003674 ! molecular_function
 
@@ -231,6 +231,11 @@ comment: The definition above excludes protein complexes, which some also consid
 synonym: "native protein" NARROW [IEDB:BP]
 synonym: "natural protein" EXACT [PRO:DAN]
 is_a: PR:000018263 ! amino acid chain
+intersection_of: PR:000018263 ! amino acid chain
+intersection_of: has_gene_template SO:0000704 ! gene
+intersection_of: output_of GO:0006412 ! translation
+relationship: has_gene_template SO:0000704 ! gene
+relationship: has_part PR:000000001 ! protein
 relationship: output_of GO:0006412 ! translation
 
 [Term]
@@ -326,7 +331,7 @@ name: receptor-type tyrosine-protein phosphatase C
 namespace: protein
 def: "A protein that is a translation product of the human PTPRC gene or a 1:1 ortholog thereof. It is composed of an extracellular domain, a single transmembrane segment and two tandem intracytoplasmic protein-tyrosine phosphatase domains. Contains 1 to 3 copies of the Fibronectin type III domain (Pfam:PF00041) followed by two copies of the Protein-tyrosine phosphatase (Pfam:PF00102) domain. Receptor-type tyrosine-protein phosphatase C (CD45) regulates signal transduction and lymphocyte activation by specific association with receptor molecules on T and B cells. Multiple isoforms of CD45 (180-235 kDa) can be generated asa result of alternative splicing of three variable exons 4(A), 5(B) and 6(C), encoding sequences at the N-terminal extracellular domain of the molecule." [PMID:1351092, PRO:CNA]
 comment: Category=gene. Requested by=CL.
-synonym: "CD45" EXACT []
+synonym: "CD45" RELATED Gene-based []
 synonym: "L-CA" EXACT []
 synonym: "leukocyte common antigen" EXACT []
 synonym: "ly-5" EXACT []
@@ -407,7 +412,7 @@ is_a: PR:000001005 ! integrin alpha with A domain
 id: PR:000001014
 name: receptor-type tyrosine-protein phosphatase C isoform CD45RABC
 namespace: protein
-def: "A receptor-type tyrosine-protein phosphatase C that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-3 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
+def: "A receptor-type tyrosine-protein phosphatase C that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-3 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
 comment: Category=sequence. Requested by=CL. Note: This isoform includes the region encoded by the variable exons 4(A), 5(B), and 6(C).
 synonym: "B220" RELATED []
 synonym: "CD45R" RELATED []
@@ -419,7 +424,7 @@ is_a: PR:000001006 ! receptor-type tyrosine-protein phosphatase C
 id: PR:000001015
 name: receptor-type tyrosine-protein phosphatase C isoform CD45RA
 namespace: protein
-def: "A receptor-type tyrosine-protein phosphatase C isoform CD45R that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-8 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
+def: "A receptor-type tyrosine-protein phosphatase C isoform CD45R that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-8 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
 comment: Category=sequence. Requested by=CL. Note: This isoform includes the region encoded by the variable exon 4(A), and lacks the region encoded by exons 5(B) and 6(C).
 synonym: "CD45RA" EXACT []
 synonym: "PTPRC/iso:CD45RA" EXACT PRO-short-label [PRO:DNx]
@@ -429,7 +434,7 @@ is_a: PR:000050216 ! receptor-type tyrosine-protein phosphatase C isoform CD45R
 id: PR:000001017
 name: receptor-type tyrosine-protein phosphatase C isoform CD45RO
 namespace: protein
-def: "A receptor-type tyrosine-protein phosphatase C that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-4 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
+def: "A receptor-type tyrosine-protein phosphatase C that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P08575-4 or a 1:1 ortholog thereof." [PMID:1351092, PRO:CNA, PRO:DAN]
 comment: Category=sequence. Requested by=CL. Note: This isoform lacks the region encoded by the variable exons 4(A), 5(B), and 6(C).
 synonym: "180 kDa form" EXACT []
 synonym: "CD45RO" EXACT [GOC:add, PRO:ADD]
@@ -505,8 +510,8 @@ is_a: PR:000000001 ! protein
 id: PR:000001026
 name: lymphocyte antigen 75
 namespace: protein
-def: "A C-type lectin with multiple lectin domains that is a translation product of the human LY75 gene or a 1:1 ortholog thereof. It consists of 12 extracellular domains (an N-terminal cysteine-rich domain, a fibronectin type II domain and 10 C-type carbohydrate recognition domains), a transmembrane region and a small cytoplasmic C terminus containing a single Tyr residue, but no obvious kinase domain. Acts as an endocytic receptor to direct captured antigens from the extracellular space to a specialized antigen-processing compartment." [PMID:9862343]
-comment: Category=gene. Requested by=CL.
+def: "A C-type lectin with multiple lectin domains that is a translation product of the mouse LY75 gene or a 1:1 ortholog thereof. It consists of 12 extracellular domains (an N-terminal cysteine-rich domain, a fibronectin type II domain and 10 C-type carbohydrate recognition domains), a transmembrane region and a small cytoplasmic C terminus containing a single Tyr residue, but no obvious kinase domain." [PMID:9862343]
+comment: Category=gene. Requested by=CL. Note: Acts as an endocytic receptor to direct captured antigens from the extracellular space to a specialized antigen-processing compartment.
 synonym: "C-type lectin domain family 13 member B" EXACT []
 synonym: "CD205" EXACT []
 synonym: "CLEC13B" RELATED []
@@ -714,7 +719,7 @@ synonym: "CD197" EXACT []
 synonym: "CDw197" EXACT []
 synonym: "chemokine receptor CCR7" EXACT []
 synonym: "CMKBR7" RELATED Gene-based []
-synonym: "EBI1" EXACT []
+synonym: "EBI1" RELATED Gene-based []
 synonym: "Ebi1h" RELATED Gene-based []
 synonym: "EBV-induced G-protein coupled receptor 1" EXACT []
 synonym: "epstein-Barr virus-induced G-protein coupled receptor 1" EXACT []
@@ -945,7 +950,7 @@ synonym: "B-cell surface antigen CD20" EXACT []
 synonym: "B-lymphocyte antigen CD20" EXACT []
 synonym: "B-lymphocyte surface antigen B1" EXACT []
 synonym: "Bp35" EXACT []
-synonym: "CD20" EXACT []
+synonym: "CD20" RELATED Gene-based []
 synonym: "leukocyte surface antigen Leu-16" EXACT []
 synonym: "Ly-44" RELATED Gene-based []
 synonym: "lymphocyte antigen 44" EXACT []
@@ -1341,7 +1346,7 @@ name: killer cell lectin-like receptor subfamily D member 1
 namespace: protein
 def: "A protein that is a translation product of the human KLRD1 gene or a 1:1 ortholog thereof." [PRO:WCB]
 comment: Category=gene. Requested by=CL.
-synonym: "CD94" EXACT []
+synonym: "CD94" RELATED Gene-based []
 synonym: "KLRD1" EXACT PRO-short-label [PRO:DNx]
 synonym: "KP43" EXACT []
 synonym: "natural killer cells antigen CD94" EXACT []
@@ -1416,7 +1421,7 @@ namespace: protein
 def: "A B7-related protein that is a translation product of the human CD80 gene or a 1:1 ortholog thereof." [PRO:WCB]
 comment: Category=gene. Requested by=CL.
 synonym: "activation B7-1 antigen" EXACT []
-synonym: "B7" EXACT []
+synonym: "B7" RELATED Gene-based []
 synonym: "BB1" EXACT []
 synonym: "CD28LG" RELATED Gene-based []
 synonym: "CD28LG1" RELATED Gene-based []
@@ -1673,8 +1678,9 @@ is_a: PR:000000001 ! protein
 id: PR:000001809
 name: CD59-like glycoprotein
 namespace: protein
-def: "A protein that is a translation product of the human CD59 gene, a 1:1 ortholog thereof, or pro-orthologs thereof. This gene is present as a single copy in human and has undergone a lineage-specific duplication in mouse. CD59 antigen has a core architecture consisting of one UPAR/Ly-6 domain (Pfam:PF00021), a small domain of about 70 amino acids and containing 5 conserved disulfide bonds. It is both N- and O-glycosylated and is a GPI-anchored protein that releases soluble forms in some tissues." [PRO:WCB]
-comment: Category=gene. Requested by=CL. Pro-orthology refers to, in this case, after-speciation gene duplication in the non-human species (aka 1:many orthology).
+def: "A protein that is a translation product of the human CD59 gene, a 1:1 ortholog thereof, or pro-orthologs thereof." [PRO:WCB]
+comment: Category=gene. Requested by=CL. Pro-orthology refers to, in this case, after-speciation gene duplication in the non-human species (aka 1:many orthology). This gene is present as a single copy in human and has undergone a lineage-specific duplication in mouse. CD59 antigen has a core architecture consisting of one UPAR/Ly-6 domain (Pfam:PF00021), a small domain of about 70 amino acids and containing 5 conserved disulfide bonds. It is both N- and O-glycosylated and is a GPI-anchored protein that releases soluble forms in some tissues.
+synonym: "CD59-like" EXACT PRO-short-label [PRO:DNx]
 xref: PIRSF:PIRSF038782
 is_a: PR:000000001 ! protein
 
@@ -1697,7 +1703,7 @@ synonym: "ADGRE1" EXACT PRO-short-label [PRO:DNx]
 synonym: "cell surface glycoprotein F4/80" EXACT []
 synonym: "EGF-like module receptor 1" EXACT []
 synonym: "EGF-like module-containing mucin-like hormone receptor-like 1" EXACT []
-synonym: "EMR1" EXACT [PRO:DNx]
+synonym: "EMR1" RELATED Gene-based [PRO:DNx]
 synonym: "EMR1 hormone receptor" EXACT []
 synonym: "Gpf480" RELATED Gene-based []
 synonym: "TM7LN3" RELATED Gene-based []
@@ -1849,7 +1855,7 @@ name: cytotoxic T-lymphocyte protein 4
 namespace: protein
 def: "A protein that is a translation product of the human CTLA4 gene or a 1:1 ortholog thereof." [PRO:WCB]
 comment: Category=gene. Requested by=CL.
-synonym: "CD152" EXACT []
+synonym: "CD152" RELATED Gene-based []
 synonym: "CTLA-4" EXACT []
 synonym: "CTLA4" EXACT PRO-short-label [PRO:DNx]
 synonym: "cytotoxic T-lymphocyte-associated antigen 4" EXACT []
@@ -1983,7 +1989,7 @@ namespace: protein
 def: "A protein that is a translation product of the human SPN gene or a 1:1 ortholog thereof." [PRO:WCB]
 comment: Category=gene. Requested by=CL.
 synonym: "B-cell differentiation antigen LP-3" EXACT []
-synonym: "CD43" EXACT []
+synonym: "CD43" RELATED Gene-based []
 synonym: "galactoglycoprotein" EXACT []
 synonym: "GALGP" EXACT []
 synonym: "leukocyte sialoglycoprotein" EXACT []
@@ -2419,7 +2425,7 @@ synonym: "TfR" EXACT []
 synonym: "TfR1" EXACT []
 synonym: "TFRC" EXACT PRO-short-label [PRO:DNx]
 synonym: "TR" RELATED []
-synonym: "Trfr" EXACT []
+synonym: "Trfr" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -2534,7 +2540,7 @@ name: receptor-type tyrosine-protein kinase FLT3
 namespace: protein
 def: "A CSF-1/PDGF receptor-type tyrosine-protein kinase that is a translation product of the human FLT3 gene or a 1:1 ortholog thereof." [PRO:WCB]
 comment: Category=gene. Requested by=CL.
-synonym: "CD135" EXACT []
+synonym: "CD135" RELATED Gene-based []
 synonym: "fetal liver kinase 2" EXACT []
 synonym: "FL cytokine receptor" EXACT []
 synonym: "FLK-2" EXACT []
@@ -2651,7 +2657,7 @@ synonym: "ANPEP" EXACT PRO-short-label [PRO:DNx]
 synonym: "AP-M" EXACT []
 synonym: "AP-N" EXACT []
 synonym: "APN" RELATED Gene-based []
-synonym: "CD13" EXACT []
+synonym: "CD13" RELATED Gene-based []
 synonym: "gp150" EXACT []
 synonym: "Lap-1" RELATED Gene-based []
 synonym: "Lap1" RELATED Gene-based []
@@ -2739,7 +2745,7 @@ comment: Category=gene. Requested by=CL.
 synonym: "CD117" EXACT []
 synonym: "KIT" EXACT PRO-short-label [PRO:DNx]
 synonym: "proto-oncogene c-Kit" EXACT []
-synonym: "SCFR" EXACT []
+synonym: "SCFR" RELATED Gene-based []
 synonym: "Sl" RELATED Gene-based []
 synonym: "tyrosine-protein kinase Kit" EXACT []
 xref: IUPHARobj:1805
@@ -2930,7 +2936,7 @@ is_a: PR:000000001 ! protein
 id: PR:000003455
 name: nuclear receptor ROR-gamma isoform 2
 namespace: protein
-def: "A nuclear receptor ROR-gamma that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P51450-2 or a 1:1 ortholog thereof." [PRO:CNA]
+def: "A nuclear receptor ROR-gamma that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P51450-2 or a 1:1 ortholog thereof." [PRO:CNA]
 comment: Category=sequence. Requested by=CL.
 synonym: "RORC/iso:2" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000001902 ! nuclear receptor ROR-gamma
@@ -2979,7 +2985,7 @@ comment: Category=gene. Requested by=CL.
 synonym: "cytolysin" EXACT []
 synonym: "lymphocyte pore-forming protein" EXACT []
 synonym: "P1" RELATED []
-synonym: "PFP" EXACT []
+synonym: "PFP" RELATED Gene-based []
 synonym: "PRF1" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
@@ -3240,7 +3246,7 @@ namespace: protein
 def: "A protein that is a translation product of the human DNTT gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene. Requested by=CL.
 synonym: "DNTT" EXACT PRO-short-label [PRO:DNx]
-synonym: "TDT" EXACT []
+synonym: "TDT" RELATED Gene-based []
 synonym: "terminal addition enzyme" EXACT []
 synonym: "terminal deoxynucleotidyltransferase" EXACT []
 synonym: "terminal transferase" EXACT []
@@ -3301,7 +3307,7 @@ name: fibroblast growth factor 8
 namespace: protein
 def: "A protein that is a translation product of the human FGF8 gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene.
-synonym: "AIGF" EXACT []
+synonym: "AIGF" RELATED Gene-based []
 synonym: "androgen-induced growth factor" EXACT []
 synonym: "FGF-8" EXACT []
 synonym: "FGF8" EXACT PRO-short-label [PRO:DNx]
@@ -3532,6 +3538,17 @@ xref: IUPHARobj:2461
 is_a: PR:000001861 ! integrin beta
 
 [Term]
+id: PR:000009344
+name: metastasis-suppressor KiSS-1
+namespace: protein
+def: "A protein that is a translation product of the human KISS1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "KISS1" EXACT PRO-short-label [PRO:DNx]
+synonym: "kisspeptin-1" EXACT []
+synonym: "PP5098" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000009426
 name: killer cell lectin-like receptor subfamily G member 1
 namespace: protein
@@ -3630,7 +3647,7 @@ synonym: "25 kDa alpha-2-microglobulin-related subunit of MMP-9" EXACT []
 synonym: "HNL" RELATED Gene-based []
 synonym: "LCN2" EXACT PRO-short-label [PRO:DNx]
 synonym: "lipocalin-2" EXACT []
-synonym: "NGAL" EXACT []
+synonym: "NGAL" RELATED Gene-based []
 synonym: "oncogene 24p3" EXACT []
 synonym: "p25" BROAD [PRO:DNx]
 synonym: "SV-40-induced 24P3 protein" EXACT []
@@ -3809,6 +3826,17 @@ synonym: "UNQ571/PRO1133" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000012526
+name: proenkephalin-B
+namespace: protein
+def: "A protein that is a translation product of the human PDYN gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "beta-neoendorphin-dynorphin" EXACT []
+synonym: "PDYN" EXACT PRO-short-label [PRO:DNx]
+synonym: "preprodynorphin" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000013016
 name: protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1
 namespace: protein
@@ -3870,7 +3898,7 @@ name: eosinophil cationic protein
 namespace: protein
 def: "A protein that is a translation product of the human RNASE3 gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene. Requested by=CL.
-synonym: "ECP" EXACT []
+synonym: "ECP" RELATED Gene-based []
 synonym: "ribonuclease 3" RELATED []
 synonym: "RNase 3" EXACT []
 synonym: "RNASE3" EXACT PRO-short-label [PRO:DNx]
@@ -3970,7 +3998,7 @@ name: alpha-synuclein
 namespace: protein
 def: "A protein that is a translation product of the human SNCA gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene.
-synonym: "NACP" EXACT []
+synonym: "NACP" RELATED Gene-based []
 synonym: "non-A beta component of AD amyloid" EXACT []
 synonym: "non-A4 component of amyloid precursor" EXACT []
 synonym: "PARK1" RELATED Gene-based []
@@ -4037,6 +4065,22 @@ comment: Category=gene.
 synonym: "growth hormone release-inhibiting factor" EXACT []
 synonym: "Smst" RELATED Gene-based []
 synonym: "SST" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000016004
+name: tachykinin-3
+namespace: protein
+def: "A protein that is a translation product of the human TAC3 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "neurokinin B-like protein Zneurok1" EXACT []
+synonym: "NKNB" RELATED Gene-based []
+synonym: "PPT-B" EXACT []
+synonym: "preprotachykinin-B" EXACT []
+synonym: "Tac2" RELATED Gene-based []
+synonym: "TAC3" EXACT PRO-short-label [PRO:DNx]
+synonym: "UNQ585/PRO1155" RELATED Gene-based []
+synonym: "ZNEUROK1" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5120,6 +5164,19 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000020376
+name: metastasis-suppressor KiSS-1 proteolytic cleavage product
+namespace: protein
+def: "A metastasis-suppressor KiSS-1 that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "KISS1/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000009344 ! metastasis-suppressor KiSS-1
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000009344 ! metastasis-suppressor KiSS-1
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000020428
 name: laminin subunit alpha-2, signal peptide removed form
 namespace: protein
@@ -5231,6 +5288,31 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000020915
+name: proenkephalin-B, signal peptide removed form
+namespace: protein
+def: "A proenkephalin-B that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "PDYN/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000012526 ! proenkephalin-B
+intersection_of: PR:000012526 ! proenkephalin-B
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000020916
+name: proenkephalin-B proteolytic cleavage product
+namespace: protein
+def: "A proenkephalin-B that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "PDYN/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000012526 ! proenkephalin-B
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000012526 ! proenkephalin-B
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000021081
 name: bone marrow proteoglycan, signal peptide removed form
 namespace: protein
@@ -5330,6 +5412,19 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000021620
+name: tachykinin-3 proteolytic cleavage product
+namespace: protein
+def: "A tachykinin-3 that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "TAC3/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000016004 ! tachykinin-3
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000016004 ! tachykinin-3
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000021656
 name: thyroglobulin, signal peptide removed form
 namespace: protein
@@ -5368,7 +5463,7 @@ relationship: part_of PR:000000001 ! protein
 id: PR:000022003
 name: bone marrow proteoglycan isoform 1
 namespace: protein
-def: "A bone marrow proteoglycan that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P13727-1 or a 1:1 ortholog thereof." [PRO:CNA]
+def: "A bone marrow proteoglycan that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P13727-1 or a 1:1 ortholog thereof." [PRO:CNA]
 comment: Category=sequence.
 synonym: "PRG2/iso:1" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000013206 ! bone marrow proteoglycan
@@ -5401,7 +5496,7 @@ relationship: has_component PR:000025409 ! T-cell surface glycoprotein CD8 beta 
 id: PR:000025403
 name: T-cell surface glycoprotein CD8 alpha chain isoform 1
 namespace: protein
-def: "A T-cell surface glycoprotein CD8 alpha chain that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P01732-1 or a 1:1 ortholog thereof. Having a single-pass transmembrane domain, this form is membrane bound." [PRO:DAN]
+def: "A T-cell surface glycoprotein CD8 alpha chain that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P01732-1 or a 1:1 ortholog thereof. Having a single-pass transmembrane domain, this form is membrane bound." [PRO:DAN]
 comment: Category=sequence. Requested by=CL.
 synonym: "CD8A/iso:1" EXACT PRO-short-label [PRO:DNx]
 synonym: "mCD8alpha" EXACT []
@@ -5411,7 +5506,7 @@ is_a: PR:000001084 ! T-cell surface glycoprotein CD8 alpha chain
 id: PR:000025405
 name: T-cell surface glycoprotein CD8 beta chain isoform 1
 namespace: protein
-def: "A T-cell surface glycoprotein CD8 beta chain that is a translation product of some mRNA giving rise to a protein with the amino acid sequence represented by UniProtKB:P10966-1 or a 1:1 ortholog thereof." [PRO:DAN]
+def: "A T-cell surface glycoprotein CD8 beta chain that is a translation product of some mRNA whose exon structure and start site selection renders it capable of giving rise to a protein with the amino acid sequence represented by UniProtKB:P10966-1 or a 1:1 ortholog thereof." [PRO:DAN]
 comment: Category=sequence.
 synonym: "CD8B/iso:1" EXACT PRO-short-label [PRO:DNx]
 synonym: "CD8beta isoform M-1" EXACT [PMID:1541829]
@@ -5725,7 +5820,7 @@ namespace: protein
 def: "An integrin alpha-IIb, signal peptide removed form in human. Example: UniProtKB:P08514-1, 32-1039." [PRO:DNx]
 comment: Category=organism-modification.
 synonym: "hITGA2B/SigPep-" EXACT PRO-short-label [PRO:DNx]
-synonym: "PRO_0000016276" NARROW PRO-proteoform-ftid [PRO:DNx]
+synonym: "PRO_0000016275" NARROW PRO-proteoform-ftid [PRO:DNx]
 synonym: "UniProtKB:P08514-1, 32-1039" NARROW PRO-proteoform-std [PRO:DNx]
 xref: Reactome:R-HSA-57578 "PR:000028409 located_in GO:0005886"
 is_a: PR:000020328 ! integrin alpha-IIb, signal peptide removed form
@@ -7480,6 +7575,24 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:131489
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:O35417
+name: proenkephalin-B (mouse)
+namespace: protein
+def: "A proenkephalin-B that is encoded in the genome of mouse." [OMA:O35417, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "beta-neoendorphin-dynorphin (mouse)" EXACT [UniProtKB:O35417]
+synonym: "mPDYN" EXACT PRO-short-label [PRO:DNx]
+synonym: "Pdyn" RELATED Gene-based [UniProtKB:O35417]
+synonym: "preprodynorphin (mouse)" EXACT [UniProtKB:O35417]
+xref: UniProtKB:O35417
+is_a: PR:000012526 ! proenkephalin-B
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000012526 ! proenkephalin-B
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97535 ! Pdyn (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:O35930
 name: platelet glycoprotein Ib alpha chain (mouse)
 namespace: protein
@@ -7870,6 +7983,24 @@ intersection_of: PR:000007597 ! proto-oncogene c-Fos
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95574 ! Fos (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P01213
+name: proenkephalin-B (human)
+namespace: protein
+def: "A proenkephalin-B that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01213]
+comment: Category=organism-gene.
+synonym: "beta-neoendorphin-dynorphin (human)" EXACT [UniProtKB:P01213]
+synonym: "hPDYN" EXACT PRO-short-label [PRO:DNx]
+synonym: "PDYN" RELATED Gene-based [UniProtKB:P01213]
+synonym: "preprodynorphin (human)" EXACT [UniProtKB:P01213]
+xref: UniProtKB:P01213
+is_a: PR:000012526 ! proenkephalin-B
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000012526 ! proenkephalin-B
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8820 ! PDYN (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P01266
@@ -9028,7 +9159,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P09803
 name: cadherin-1 (mouse)
 namespace: protein
-def: "A cadherin-1 that is encoded in the genome of mouse." [OMA:P09803, PRO:DNx]
+def: "A cadherin-1 that is encoded in the genome of mouse." [PRO:WCB]
 comment: Category=organism-gene.
 synonym: "ARC-1 (mouse)" EXACT [UniProtKB:P09803]
 synonym: "CD324 (mouse)" EXACT [UniProtKB:P09803]
@@ -11780,7 +11911,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P35329
 name: B-cell receptor CD22 (mouse)
 namespace: protein
-def: "A B-cell receptor CD22 that is encoded in the genome of mouse." [PRO:WCB]
+def: "A B-cell receptor CD22 that is encoded in the genome of mouse." [OMA:P35329, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "B-lymphocyte cell adhesion molecule (mouse)" EXACT [UniProtKB:P35329]
 synonym: "BL-CAM (mouse)" EXACT [UniProtKB:P35329]
@@ -12821,6 +12952,27 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001850 ! cathepsin K
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:107823 ! Ctsk (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P55099
+name: tachykinin-3 (mouse)
+namespace: protein
+def: "A tachykinin-3 that is encoded in the genome of mouse." [OMA:P55099, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTAC3" EXACT PRO-short-label [PRO:DNx]
+synonym: "neurokinin B-like protein Zneurok1 (mouse)" EXACT [UniProtKB:P55099]
+synonym: "Nknb" RELATED Gene-based [UniProtKB:P55099]
+synonym: "PPT-B (mouse)" EXACT [UniProtKB:P55099]
+synonym: "preprotachykinin-B (mouse)" EXACT [UniProtKB:P55099]
+synonym: "Tac2" RELATED Gene-based [UniProtKB:P55099]
+synonym: "Tac3" RELATED Gene-based [UniProtKB:P55099]
+xref: UniProtKB:P55099
+is_a: PR:000016004 ! tachykinin-3
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016004 ! tachykinin-3
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98476 ! Tac2 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -14013,6 +14165,24 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:Q15726
+name: metastasis-suppressor KiSS-1 (human)
+namespace: protein
+def: "A metastasis-suppressor KiSS-1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q15726]
+comment: Category=organism-gene.
+synonym: "hKISS1" EXACT PRO-short-label [PRO:DNx]
+synonym: "KISS1" RELATED Gene-based [UniProtKB:Q15726]
+synonym: "kisspeptin-1 (human)" EXACT [UniProtKB:Q15726]
+synonym: "PP5098" RELATED Gene-based [UniProtKB:Q15726]
+xref: UniProtKB:Q15726
+is_a: PR:000009344 ! metastasis-suppressor KiSS-1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000009344 ! metastasis-suppressor KiSS-1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6341 ! KISS1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q15744
 name: CCAAT/enhancer-binding protein epsilon (human)
 namespace: protein
@@ -14716,6 +14886,23 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001807 ! C-type lectin domain family 7 member A
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1861431 ! Clec7a (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q6Y4S4
+name: metastasis-suppressor KiSS-1 (mouse)
+namespace: protein
+def: "A metastasis-suppressor KiSS-1 that is encoded in the genome of mouse." [OMA:Q6Y4S4, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Kiss1" RELATED Gene-based [UniProtKB:Q6Y4S4]
+synonym: "kisspeptin-1 (mouse)" EXACT [UniProtKB:Q6Y4S4]
+synonym: "mKISS1" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q6Y4S4
+is_a: PR:000009344 ! metastasis-suppressor KiSS-1
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000009344 ! metastasis-suppressor KiSS-1
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2663985 ! Kiss1 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -15616,6 +15803,25 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:Q9UHF0
+name: tachykinin-3 (human)
+namespace: protein
+def: "A tachykinin-3 that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9UHF0]
+comment: Category=organism-gene.
+synonym: "hTAC3" EXACT PRO-short-label [PRO:DNx]
+synonym: "NKNB" RELATED Gene-based [UniProtKB:Q9UHF0]
+synonym: "TAC3" RELATED Gene-based [UniProtKB:Q9UHF0]
+synonym: "UNQ585/PRO1155" RELATED Gene-based [UniProtKB:Q9UHF0]
+synonym: "ZNEUROK1 (human)" EXACT [UniProtKB:Q9UHF0]
+xref: UniProtKB:Q9UHF0
+is_a: PR:000016004 ! tachykinin-3
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016004 ! tachykinin-3
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11521 ! TAC3 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q9UIB8
 name: SLAM family member 5 (human)
 namespace: protein
@@ -16272,6 +16478,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11329
 name: SST (human)
 namespace: gene
 def: "A protein coding gene SST in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11521
+name: TAC3 (human)
+namespace: gene
+def: "A protein coding gene TAC3 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -17582,6 +17797,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6341
+name: KISS1 (human)
+namespace: gene
+def: "A protein coding gene KISS1 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6342
 name: KIT (human)
 namespace: gene
@@ -17856,6 +18080,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8803
 name: PDGFRA (human)
 namespace: gene
 def: "A protein coding gene PDGFRA in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8820
+name: PDYN (human)
+namespace: gene
+def: "A protein coding gene PDYN in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -18824,6 +19057,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:2663985
+name: Kiss1 (mouse)
+namespace: gene
+def: "A protein coding gene Kiss1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:2674311
 name: Sspo (mouse)
 namespace: gene
@@ -19526,6 +19768,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:97535
+name: Pdyn (mouse)
+namespace: gene
+def: "A protein coding gene Pdyn in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:97551
 name: Prf1 (mouse)
 namespace: gene
@@ -19647,6 +19898,15 @@ id: http://www.informatics.jax.org/marker/MGI:98427
 name: Il1rl1 (mouse)
 namespace: gene
 def: "A protein coding gene Il1rl1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:98476
+name: Tac2 (mouse)
+namespace: gene
+def: "A protein coding gene Tac2 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
