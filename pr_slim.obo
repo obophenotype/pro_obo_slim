@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-01-20/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-01-21/pr_slim.owl
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-01-20" xsd:string
+property_value: owl:versionInfo "2022-01-21" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3184,6 +3184,19 @@ synonym: "Gm294" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000005444
+name: chondrolectin
+namespace: protein
+def: "A protein that is a translation product of the human CHODL gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "C21orf68" RELATED Gene-based []
+synonym: "CHODL" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRED12" RELATED Gene-based []
+synonym: "transmembrane protein MT75" EXACT []
+synonym: "UNQ872/PRO1890" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000005460
 name: neuronal acetylcholine receptor subunit alpha-7
 namespace: protein
@@ -4119,6 +4132,18 @@ comment: Category=gene.
 synonym: "TG" EXACT PRO-short-label [PRO:DNx]
 synonym: "Tg" EXACT []
 synonym: "Tgn" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000016301
+name: tyrosine 3-monooxygenase
+namespace: protein
+def: "A protein that is a translation product of the human TH gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "TH" EXACT PRO-short-label [PRO:DNx]
+synonym: "TYH" RELATED Gene-based []
+synonym: "tyrosine 3-hydroxylase" EXACT []
+xref: IUPHARobj:1243
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -8700,6 +8725,24 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97249 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P07101
+name: tyrosine 3-monooxygenase (human)
+namespace: protein
+def: "A tyrosine 3-monooxygenase that is encoded in the genome of human." [PRO:DNx, UniProtKB:P07101]
+comment: Category=organism-gene.
+synonym: "hTH" EXACT PRO-short-label [PRO:DNx]
+synonym: "TH" RELATED Gene-based [UniProtKB:P07101]
+synonym: "TYH" RELATED Gene-based [UniProtKB:P07101]
+synonym: "tyrosine 3-hydroxylase (human)" EXACT [UniProtKB:P07101]
+xref: UniProtKB:P07101
+is_a: PR:000016301 ! tyrosine 3-monooxygenase
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016301 ! tyrosine 3-monooxygenase
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11782 ! TH (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P07204
 name: thrombomodulin (human)
 namespace: protein
@@ -11171,6 +11214,24 @@ intersection_of: PR:000009651 ! laminin subunit alpha-2
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6482 ! LAMA2 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P24529
+name: tyrosine 3-monooxygenase (mouse)
+namespace: protein
+def: "A tyrosine 3-monooxygenase that is encoded in the genome of mouse." [OMA:P24529, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTH" EXACT PRO-short-label [PRO:DNx]
+synonym: "Th" RELATED Gene-based [UniProtKB:P24529]
+synonym: "TH (mouse)" EXACT [UniProtKB:P24529]
+synonym: "tyrosine 3-hydroxylase (mouse)" EXACT [UniProtKB:P24529]
+xref: UniProtKB:P24529
+is_a: PR:000016301 ! tyrosine 3-monooxygenase
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016301 ! tyrosine 3-monooxygenase
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98735 ! Th (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P24807
@@ -15393,6 +15454,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:Q9CXM0
+name: chondrolectin (mouse)
+namespace: protein
+def: "A chondrolectin that is encoded in the genome of mouse." [OMA:Q9CXM0, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Chodl" RELATED Gene-based [UniProtKB:Q9CXM0]
+synonym: "mCHODL" EXACT PRO-short-label [PRO:DNx]
+synonym: "transmembrane protein MT75 (mouse)" EXACT [UniProtKB:Q9CXM0]
+xref: UniProtKB:Q9CXM0
+is_a: PR:000005444 ! chondrolectin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000005444 ! chondrolectin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2179069 ! Chodl (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q9D387
 name: lysosome-associated membrane glycoprotein 5 (mouse)
 namespace: protein
@@ -15450,6 +15528,26 @@ intersection_of: PR:000006786 ! dysferlin
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1349385 ! Dysf (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q9H9P2
+name: chondrolectin (human)
+namespace: protein
+def: "A chondrolectin that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9H9P2]
+comment: Category=organism-gene.
+synonym: "C21orf68" RELATED Gene-based [UniProtKB:Q9H9P2]
+synonym: "CHODL" RELATED Gene-based [UniProtKB:Q9H9P2]
+synonym: "hCHODL" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRED12" RELATED Gene-based [UniProtKB:Q9H9P2]
+synonym: "transmembrane protein MT75 (human)" EXACT [UniProtKB:Q9H9P2]
+synonym: "UNQ872/PRO1890" RELATED Gene-based [UniProtKB:Q9H9P2]
+xref: UniProtKB:Q9H9P2
+is_a: PR:000005444 ! chondrolectin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000005444 ! chondrolectin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17807 ! CHODL (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:Q9H9S5
@@ -16537,6 +16635,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11782
+name: TH (human)
+namespace: gene
+def: "A protein coding gene TH in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11784
 name: THBD (human)
 namespace: gene
@@ -17090,6 +17197,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1764
 name: CDH5 (human)
 namespace: gene
 def: "A protein coding gene CDH5 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17807
+name: CHODL (human)
+namespace: gene
+def: "A protein coding gene CHODL in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -19021,6 +19137,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:2179069
+name: Chodl (mouse)
+namespace: gene
+def: "A protein coding gene Chodl in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:2180021
 name: Cd207 (mouse)
 namespace: gene
@@ -19934,6 +20059,15 @@ id: http://www.informatics.jax.org/marker/MGI:98733
 name: Tg (mouse)
 namespace: gene
 def: "A protein coding gene Tg in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:98735
+name: Th (mouse)
+namespace: gene
+def: "A protein coding gene Th in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
