@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-01-21/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-01-25/pr_slim.owl
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-01-21" xsd:string
+property_value: owl:versionInfo "2022-01-25" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3298,6 +3298,24 @@ synonym: "EPER" RELATED Gene-based []
 synonym: "EPO" BROAD Gene-based [PRO:DNx]
 synonym: "EPP" RELATED Gene-based []
 synonym: "EPX" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000007204
+name: estrogen receptor
+namespace: protein
+def: "A protein that is a translation product of the human ESR1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "ER" EXACT []
+synonym: "ER-alpha" EXACT []
+synonym: "ESR" RELATED Gene-based []
+synonym: "ESR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "Estr" RELATED Gene-based []
+synonym: "Estra" RELATED Gene-based []
+synonym: "estradiol receptor" EXACT []
+synonym: "NR3A1" RELATED Gene-based []
+synonym: "nuclear receptor subfamily 3 group A member 1" EXACT []
+xref: IUPHARobj:620
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -8365,6 +8383,31 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P03372
+name: estrogen receptor (human)
+namespace: protein
+def: "An estrogen receptor that is encoded in the genome of human." [PRO:DNx, UniProtKB:P03372]
+comment: Category=organism-gene.
+synonym: "ER (human)" EXACT [UniProtKB:P03372]
+synonym: "ER-alpha (human)" EXACT [UniProtKB:P03372]
+synonym: "ESR" RELATED Gene-based [UniProtKB:P03372]
+synonym: "ESR1" RELATED Gene-based [UniProtKB:P03372]
+synonym: "estradiol receptor (human)" EXACT [UniProtKB:P03372]
+synonym: "hESR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "NR3A1" RELATED Gene-based [UniProtKB:P03372]
+synonym: "nuclear receptor subfamily 3 group A member 1 (human)" EXACT [UniProtKB:P03372]
+xref: DTO:00117511
+xref: Reactome:R-HSA-446168 "PR:P03372 located_in GO:0005654"
+xref: Reactome:R-HSA-9020968 "PR:P03372 located_in GO:0005829"
+xref: UniProtKB:P03372
+is_a: PR:000007204 ! estrogen receptor
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000007204 ! estrogen receptor
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3467 ! ESR1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P03995
 name: glial fibrillary acidic protein (mouse)
 namespace: protein
@@ -10773,6 +10816,30 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001289 ! membrane-spanning 4-domains subfamily A member 1
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88321 ! Ms4a1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P19785
+name: estrogen receptor (mouse)
+namespace: protein
+def: "An estrogen receptor that is encoded in the genome of mouse." [OMA:P19785, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "ER (mouse)" EXACT [UniProtKB:P19785]
+synonym: "ER-alpha (mouse)" EXACT [UniProtKB:P19785]
+synonym: "Esr" RELATED Gene-based [UniProtKB:P19785]
+synonym: "Esr1" RELATED Gene-based [UniProtKB:P19785]
+synonym: "Estr" RELATED Gene-based [UniProtKB:P19785]
+synonym: "Estra" RELATED Gene-based [UniProtKB:P19785]
+synonym: "estradiol receptor (mouse)" EXACT [UniProtKB:P19785]
+synonym: "mESR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "Nr3a1" RELATED Gene-based [UniProtKB:P19785]
+synonym: "nuclear receptor subfamily 3 group A member 1 (mouse)" EXACT [UniProtKB:P19785]
+xref: UniProtKB:P19785
+is_a: PR:000007204 ! estrogen receptor
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000007204 ! estrogen receptor
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1352467 ! Esr1 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -17499,6 +17566,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3467
+name: ESR1 (human)
+namespace: gene
+def: "A protein coding gene ESR1 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3609
 name: FCER1A (human)
 namespace: gene
@@ -18970,6 +19046,15 @@ id: http://www.informatics.jax.org/marker/MGI:1351314
 name: Slamf1 (mouse)
 namespace: gene
 def: "A protein coding gene Slamf1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:1352467
+name: Esr1 (mouse)
+namespace: gene
+def: "A protein coding gene Esr1 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
