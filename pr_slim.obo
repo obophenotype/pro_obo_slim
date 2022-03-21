@@ -1,7 +1,7 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-01-25/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-03-21/pr_slim.owl
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-01-25" xsd:string
+property_value: owl:versionInfo "2022-03-21" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -1588,6 +1588,17 @@ xref: PIRSF:PIRSF001962
 is_a: PR:000001094 ! rhodopsin-like G-protein coupled receptor
 
 [Term]
+id: PR:000001562
+name: vasopressin/oxytocin receptor
+namespace: protein
+def: "A rhodopsin-like G-protein coupled receptor that is a translation product of the human AVPR1A, AVPR1B, AVPR2, or OXTR genes, 1:1 orthologs thereof, or a semi-ortholog thereof. These receptors bind vasopressin or oxytocin or related nonapeptides." [PRO:WCB, PRO:XQ, Wikipedia:Vasopressin, Wikipedia:Vasopressin_receptor]
+comment: Category=family.
+synonym: "name: vasopressin and oxytocin receptor" EXACT [IUPHARfam:66]
+xref: IUPHARfam:66
+xref: PIRSF:PIRSF001841
+is_a: PR:000001094 ! rhodopsin-like G-protein coupled receptor
+
+[Term]
 id: PR:000001580
 name: fMet-Leu-Phe receptor
 namespace: protein
@@ -1600,6 +1611,18 @@ synonym: "N-formyl peptide receptor" BROAD [PRO:DNx]
 synonym: "N-formylpeptide chemoattractant receptor" EXACT []
 xref: IUPHARobj:222
 is_a: PR:000001431 ! N-formyl peptide receptor
+
+[Term]
+id: PR:000001635
+name: oxytocin receptor
+namespace: protein
+def: "A vasopressin/oxytocin receptor that is a translation product of the human OXTR gene or a 1:1 ortholog thereof. The preferred ligand is oxytocin." [PRO:WCB]
+comment: Category=gene.
+synonym: "OT-R" EXACT []
+synonym: "OXTR" EXACT PRO-short-label [PRO:DNx]
+xref: IUPHARobj:369
+xref: PANTHER:PTHR24241\:SF46
+is_a: PR:000001562 ! vasopressin/oxytocin receptor
 
 [Term]
 id: PR:000001753
@@ -11742,6 +11765,25 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98257 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P30559
+name: oxytocin receptor (human)
+namespace: protein
+def: "An oxytocin receptor that is encoded in the genome of human." [PRO:WCB, UniProtKB:P30559]
+comment: Category=organism-gene. Requested by=PubChem.
+synonym: "hOXTR" EXACT PRO-short-label [PRO:DNx]
+synonym: "OT-R (human)" EXACT [UniProtKB:P30559]
+synonym: "OXTR" RELATED Gene-based [UniProtKB:P30559]
+xref: DTO:02100725
+xref: Reactome:R-HSA-388428 "PR:P30559 located_in GO:0005886"
+xref: UniProtKB:P30559
+is_a: PR:000001635 ! oxytocin receptor
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001635 ! oxytocin receptor
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8529 ! OXTR (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P31001
 name: desmin (mouse)
 namespace: protein
@@ -13515,6 +13557,23 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001968 ! tyrosine-protein phosphatase non-receptor type substrate 1
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:108563 ! Sirpa (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P97926
+name: oxytocin receptor (mouse)
+namespace: protein
+def: "An oxytocin receptor that is encoded in the genome of mouse." [OMA:P97926, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mOXTR" EXACT PRO-short-label [PRO:DNx]
+synonym: "OT-R (mouse)" EXACT [UniProtKB:P97926]
+synonym: "Oxtr" RELATED Gene-based [UniProtKB:P97926]
+xref: UniProtKB:P97926
+is_a: PR:000001635 ! oxytocin receptor
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001635 ! oxytocin receptor
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:109147 ! Oxtr (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -18250,6 +18309,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8529
+name: OXTR (human)
+namespace: gene
+def: "A protein coding gene OXTR in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8619
 name: PAX5 (human)
 namespace: gene
@@ -18731,6 +18799,15 @@ id: http://www.informatics.jax.org/marker/MGI:108564
 name: Meis2 (mouse)
 namespace: gene
 def: "A protein coding gene Meis2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:109147
+name: Oxtr (mouse)
+namespace: gene
+def: "A protein coding gene Oxtr in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
