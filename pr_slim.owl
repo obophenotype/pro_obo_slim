@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/pr/obophenotype/pr_slim.owl>
-<http://purl.obolibrary.org/obo/pr/obophenotype/releases/2022-03-21/pr_slim.owl>
-Annotation(owl:versionInfo "2022-03-21"^^xsd:string)
+<http://purl.obolibrary.org/obo/pr/obophenotype/releases/2022-04-11/pr_slim.owl>
+Annotation(owl:versionInfo "2022-04-11"^^xsd:string)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000019>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000024>))
@@ -448,9 +448,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PR_000026870>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000027222>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000027223>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000027393>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000027795>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000028409>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000028418>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000028527>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000028941>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029032>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029067>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000029562>))
@@ -460,6 +462,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PR_000030035>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000032148>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000034294>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000036194>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_000036291>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000036947>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000037069>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_000037272>))
@@ -612,6 +615,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06332>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06467>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06729>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06734>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06800>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P06876>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P07101>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PR_P07204>))
@@ -1380,6 +1384,7 @@ Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97535>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97551>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97612>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97769>))
+Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97810>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97821>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97848>))
 Declaration(Class(<http://www.informatics.jax.org/marker/MGI:97849>))
@@ -1418,6 +1423,13 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002353>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_gene_template>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#lacks_part>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#Gene-based>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#PRO-common-name>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#PRO-proteoform-ftid>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#PRO-proteoform-std>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#PRO-short-label>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/pr#PSI-MOD-label>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -1428,6 +1440,34 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#is_transitive>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#shorthand>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#Gene-based> (<http://purl.obolibrary.org/obo/pr#Gene-based>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#Gene-based> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#PRO-common-name> (<http://purl.obolibrary.org/obo/pr#PRO-common-name>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#PRO-common-name> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#PRO-proteoform-ftid> (<http://purl.obolibrary.org/obo/pr#PRO-proteoform-ftid>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#PRO-proteoform-ftid> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#PRO-proteoform-std> (<http://purl.obolibrary.org/obo/pr#PRO-proteoform-std>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#PRO-proteoform-std> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#PRO-short-label> (<http://purl.obolibrary.org/obo/pr#PRO-short-label>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#PRO-short-label> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/pr#PSI-MOD-label> (<http://purl.obolibrary.org/obo/pr#PSI-MOD-label>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/pr#PSI-MOD-label> <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>)
+
 
 ############################
 #   Object Properties
@@ -4786,12 +4826,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_000003499> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/PR_000003505> (leukocyte granule-associated proteinase)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:11790262") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:7952649") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:8929545") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000003505> "A protein that is a serine protease of the granules from mast cells, cytotoxic T lymphocytes and/or natural killer cells. Leukocyte granule-associated proteinase is a component of the immune system that protect higher organisms against viral infection and cellular transformation. Members of this class have features that are strongly conserved including: consensus sequences at their N-termini and around the three catalytic residues, activation from zymogenic forms, and conserved disulphide bridges.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:11790262") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:7952649") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:8929545") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000003505> "A trypsin that is a serine protease of the granules from mast cells, cytotoxic T lymphocytes and/or natural killer cells. Leukocyte granule-associated proteinase is a component of the immune system that protect higher organisms against viral infection and cellular transformation. Members of this class have features that are strongly conserved including: consensus sequences at their N-termini and around the three catalytic residues, activation from zymogenic forms, and conserved disulphide bridges.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000003505> "protein")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000003505> "PR:000003505")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000003505> "Category=family.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000003505> "leukocyte granule-associated proteinase")
-SubClassOf(<http://purl.obolibrary.org/obo/PR_000003505> <http://purl.obolibrary.org/obo/PR_000000001>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000003505> <http://purl.obolibrary.org/obo/PR_000027795>)
 
 # Class: <http://purl.obolibrary.org/obo/PR_000003506> (T-brain transcription factor)
 
@@ -5124,28 +5164,30 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000007499> "
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000007499> "fibroblast growth factor 8")
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000007499> <http://purl.obolibrary.org/obo/PR_000000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PR_000007547> (fukutin-related protein)
+# Class: <http://purl.obolibrary.org/obo/PR_000007547> (ribitol 5-phosphate transferase FKRP)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000007547> "A protein that is a translation product of the human FKRP gene or a 1:1 ortholog thereof.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007547> "FKRP")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007547> "fukutin-related protein")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000007547> "protein")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000007547> "PR:000007547")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000007547> "Category=gene.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000007547> "fukutin-related protein")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000007547> "ribitol 5-phosphate transferase FKRP")
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000007547> <http://purl.obolibrary.org/obo/PR_000000001>)
 
-# Class: <http://purl.obolibrary.org/obo/PR_000007597> (proto-oncogene c-Fos)
+# Class: <http://purl.obolibrary.org/obo/PR_000007597> (protein c-Fos)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000007597> "A protein that is a translation product of the human FOS gene or a 1:1 ortholog thereof.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "FOS")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "G0/G1 switch regulatory protein 7")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "cellular oncogene fos")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "proto-oncogene protein c-fos")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "transcription factor AP-1 subunit c-Fos")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000007597> "protein")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_000007597> "G0S7")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000007597> "PR:000007597")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000007597> "Category=gene. Requested by=CL.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000007597> "proto-oncogene c-Fos")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000007597> "protein c-Fos")
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000007597> <http://purl.obolibrary.org/obo/PR_000000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PR_000007636> (forkhead box protein N1)
@@ -7523,6 +7565,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_000025796> <http://purl.obolibrary
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000025797> "An integrin alpha that lacks an A domain. This type of integrin is often cleaved into heavy and light chains.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_000025797> "PIRSF:PIRSF005666")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000025797> "fam:ITGAsansA")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000025797> "protein")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000025797> "PR:000025797")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000025797> "Category=family.")
@@ -7631,6 +7674,7 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000026712> "
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000026712> "granzyme B, signal peptide removed form")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_000026712> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000003499> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0000418>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000026712> <http://purl.obolibrary.org/obo/PR_000003499>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000026712> <http://purl.obolibrary.org/obo/PR_000036291>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000026712> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0000418>))
 
 # Class: <http://purl.obolibrary.org/obo/PR_000026869> (integrin alpha-E, signal peptide removed form (human))
@@ -7709,6 +7753,16 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_000027393> <http://purl.obolibrary
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000027393> <http://purl.obolibrary.org/obo/PR_P11215>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000027393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 
+# Class: <http://purl.obolibrary.org/obo/PR_000027795> (trypsin)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Wikipedia:Trypsin") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000027795> "A protein that in active form is a serine protease that cleaves peptide bonds on the carboxyl side of lysine or arginine amino acids within amino acid chains.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000027795> "PRSS")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000027795> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000027795> "PR:000027795")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000027795> "Category=family.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000027795> "trypsin")
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000027795> <http://purl.obolibrary.org/obo/PR_000000001>)
+
 # Class: <http://purl.obolibrary.org/obo/PR_000028409> (integrin alpha-IIb, signal peptide removed form (human))
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000028409> "An integrin alpha-IIb, signal peptide removed form in human. Example: UniProtKB:P08514-1, 32-1039.")
@@ -7753,6 +7807,18 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000028527> "Category=modification.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000028527> "casein derived peptide")
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000028527> <http://purl.obolibrary.org/obo/PR_000018264>)
+
+# Class: <http://purl.obolibrary.org/obo/PR_000028941> (activated trypsin)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000028941> "A trypsin, signal peptide removed form that has been activated by removal of the propeptide (activation peptide).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000028941> "PRSS/ProPep-")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000028941> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000028941> "PR:000028941")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000028941> "Category=modification.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000028941> "activated trypsin")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_000028941> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000036291> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0001062>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000028941> <http://purl.obolibrary.org/obo/PR_000036291>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000028941> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0001062>))
 
 # Class: <http://purl.obolibrary.org/obo/PR_000029032> (Mus musculus protein)
 
@@ -7887,6 +7953,19 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000036194> "eu
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_000036194> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_2759>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000036194> <http://purl.obolibrary.org/obo/PR_000000001>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_000036194> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_2759>))
+
+# Class: <http://purl.obolibrary.org/obo/PR_000036291> (trypsin, signal peptide removed form)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_000036291> "A trypsin that has had the signal peptide removed.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DAN") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000036291> "PRSS/SigPep-")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_000036291> "trypsinogen")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_000036291> "protein")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_000036291> "PR:000036291")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_000036291> "Category=modification.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_000036291> "trypsin, signal peptide removed form")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_000036291> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000027795> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0000418>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000036291> <http://purl.obolibrary.org/obo/PR_000027795>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_000036291> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#lacks_part> <http://purl.obolibrary.org/obo/SO_0000418>))
 
 # Class: <http://purl.obolibrary.org/obo/PR_000036947> (T-cell surface glycoprotein CD1 (human))
 
@@ -9244,7 +9323,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_000050467> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/PR_A2ASS6> (titin (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_A2ASS6> "A titin that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:A2ASS6") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_A2ASS6> "A titin that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_A2ASS6> "UniProtKB:A2ASS6")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:A2ASS6") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_A2ASS6> "connectin (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_A2ASS6> "mTTN")
@@ -9852,37 +9931,42 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_O95944> <http://purl.obolibrary.or
 SubClassOf(<http://purl.obolibrary.org/obo/PR_O95944> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_O95944> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6732>))
 
-# Class: <http://purl.obolibrary.org/obo/PR_P01100> (proto-oncogene c-Fos (human))
+# Class: <http://purl.obolibrary.org/obo/PR_P01100> (protein c-Fos (human))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P01100> "A proto-oncogene c-Fos that is encoded in the genome of human.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P01100> "A protein c-Fos that is encoded in the genome of human.")
 AnnotationAssertion(Annotation(rdfs:label "PR:P01100 located_in GO:0005654") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P01100> "Reactome:R-HSA-450216")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P01100> "UniProtKB:P01100")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "Fos proto-oncogene, AP-1 transcription factor subunit (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "G0/G1 switch regulatory protein 7 (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "cellular oncogene fos (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "hFOS")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "proto-oncogene c-Fos (human)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "transcription factor AP-1 subunit c-Fos (human)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_P01100> "protein")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "FOS")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01100") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P01100> "G0S7")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_P01100> "PR:P01100")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_P01100> "Category=organism-gene.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_P01100> "proto-oncogene c-Fos (human)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_P01100> "protein c-Fos (human)")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_P01100> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000007597> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01100> <http://purl.obolibrary.org/obo/PR_000007597>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01100> <http://purl.obolibrary.org/obo/PR_000029067>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01100> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01100> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3796>))
 
-# Class: <http://purl.obolibrary.org/obo/PR_P01101> (proto-oncogene c-Fos (mouse))
+# Class: <http://purl.obolibrary.org/obo/PR_P01101> (protein c-Fos (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:P01101") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P01101> "A proto-oncogene c-Fos that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:P01101") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P01101> "A protein c-Fos that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P01101> "UniProtKB:P01101")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01101") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01101> "FBJ osteosarcoma oncogene (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01101") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01101> "cellular oncogene fos (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01101> "mFOS")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01101") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P01101> "transcription factor AP-1 subunit c-Fos (mouse)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_P01101> "protein")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P01101") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P01101> "Fos")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_P01101> "PR:P01101")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_P01101> "Category=organism-gene.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_P01101> "proto-oncogene c-Fos (mouse)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_P01101> "protein c-Fos (mouse)")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_P01101> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000007597> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01101> <http://purl.obolibrary.org/obo/PR_000007597>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P01101> <http://purl.obolibrary.org/obo/PR_000029032>)
@@ -10449,7 +10533,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_P05533> ObjectSomeValuesFrom(<http
 
 # Class: <http://purl.obolibrary.org/obo/PR_P05555> (integrin alpha-M (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:P05555") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P05555> "An integrin alpha-M that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P05555") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P05555> "An integrin alpha-M that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P05555> "UniProtKB:P05555")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P05555") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P05555> "CD11 antigen-like family member B (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P05555") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P05555> "CD11b (mouse)")
@@ -10611,6 +10695,28 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_P06734> <http://purl.obolibrary.or
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P06734> <http://purl.obolibrary.org/obo/PR_000029067>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P06734> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_P06734> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3612>))
+
+# Class: <http://purl.obolibrary.org/obo/PR_P06800> (receptor-type tyrosine-protein phosphatase C (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:P06800") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P06800> "A receptor-type tyrosine-protein phosphatase C that is encoded in the genome of mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P06800> "UniProtKB:P06800")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "CD45 (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "L-CA (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "T200 (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "leukocyte common antigen (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "lymphocyte antigen 5 (mouse)")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "mPTPRC")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_P06800> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "Ly-5")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P06800") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P06800> "Ptprc")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_P06800> "PR:P06800")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_P06800> "Category=organism-gene.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_P06800> "receptor-type tyrosine-protein phosphatase C (mouse)")
+EquivalentClasses(<http://purl.obolibrary.org/obo/PR_P06800> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000001006> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_P06800> <http://purl.obolibrary.org/obo/PR_000001006>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_P06800> <http://purl.obolibrary.org/obo/PR_000029032>)
+SubClassOf(<http://purl.obolibrary.org/obo/PR_P06800> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+SubClassOf(<http://purl.obolibrary.org/obo/PR_P06800> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:97810>))
 
 # Class: <http://purl.obolibrary.org/obo/PR_P06876> (transcriptional activator Myb (mouse))
 
@@ -11238,7 +11344,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_P10242> ObjectSomeValuesFrom(<http
 
 # Class: <http://purl.obolibrary.org/obo/PR_P10300> (T-cell surface glycoprotein CD8 beta chain (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:P10300") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P10300> "A T-cell surface glycoprotein CD8 beta chain that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:CNA") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_P10300> "A T-cell surface glycoprotein CD8 beta chain that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_P10300> "UniProtKB:P10300")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P10300") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P10300> "CD8b (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P10300") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P10300> "T-cell membrane glycoprotein Ly-3 (mouse)")
@@ -12992,6 +13098,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P22083") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "fucosyltransferase IV (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "hFUT4")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_P22083> "protein")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P22083") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "4-galactosyl-N-acetylglucosaminide 3-alpha-L-fucosyltransferase (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P22083") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "ELFT")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P22083") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "FCT3A")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:P22083") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_P22083> "FUT4")
@@ -15901,6 +16008,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q10589> ObjectSomeValuesFrom(<http
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q11127") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q11127> "An alpha-(1,3)-fucosyltransferase 4 that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q11127> "UniProtKB:Q11127")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q11127") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q11127> "4-galactosyl-N-acetylglucosaminide 3-alpha-L-fucosyltransferase (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q11127") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q11127> "Fuc-TIV (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q11127") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q11127> "FucT-IV (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q11127") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q11127> "fucosyltransferase 4 (mouse)")
@@ -16372,7 +16480,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q60651> ObjectSomeValuesFrom(<http
 
 # Class: <http://purl.obolibrary.org/obo/PR_Q60675> (laminin subunit alpha-2 (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q60675> "A laminin subunit alpha-2 that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q60675") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q60675> "A laminin subunit alpha-2 that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q60675> "UniProtKB:Q60675")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q60675") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q60675> "laminin M chain (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q60675") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q60675> "laminin-12 subunit alpha (mouse)")
@@ -16748,7 +16856,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q63961> ObjectSomeValuesFrom(<http
 
 # Class: <http://purl.obolibrary.org/obo/PR_Q63994> (myeloid cell surface antigen CD33 (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q63994") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q63994> "A CD33 molecule that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:WCB") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q63994> "A CD33 molecule that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q63994> "UniProtKB:Q63994")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q63994") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q63994> "CD33 (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q63994> "mCD33")
@@ -16971,7 +17079,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q86VB7> ObjectSomeValuesFrom(<http
 
 # Class: <http://purl.obolibrary.org/obo/PR_Q8C567> (natural cytotoxicity triggering receptor 1 (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:WCB") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q8C567> "A natural cytotoxicity triggering receptor 1 that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q8C567") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:WCB") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q8C567> "A natural cytotoxicity triggering receptor 1 that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q8C567> "UniProtKB:Q8C567")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q8C567") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q8C567> "CD335 (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q8C567") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q8C567> "NK-p46 (mouse)")
@@ -16994,17 +17102,18 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q8C567> <http://purl.obolibrary.or
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q8C567> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q8C567> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.informatics.jax.org/marker/MGI:1336212>))
 
-# Class: <http://purl.obolibrary.org/obo/PR_Q8CG64> (fukutin-related protein (mouse))
+# Class: <http://purl.obolibrary.org/obo/PR_Q8CG64> (ribitol 5-phosphate transferase FKRP (mouse))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q8CG64") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q8CG64> "A fukutin-related protein that is encoded in the genome of mouse.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OMA:Q8CG64") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q8CG64> "A ribitol 5-phosphate transferase FKRP that is encoded in the genome of mouse.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q8CG64> "UniProtKB:Q8CG64")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q8CG64") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q8CG64> "fukutin-related protein (mouse)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q8CG64> "mFKRP")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_Q8CG64> "protein")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q8CG64") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_Q8CG64> "Fkrp")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q8CG64") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_Q8CG64> "ribitol-5-phosphate transferase (mouse)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_Q8CG64> "PR:Q8CG64")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_Q8CG64> "Category=organism-gene.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_Q8CG64> "fukutin-related protein (mouse)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_Q8CG64> "ribitol 5-phosphate transferase FKRP (mouse)")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_Q8CG64> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000007547> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q8CG64> <http://purl.obolibrary.org/obo/PR_000007547>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q8CG64> <http://purl.obolibrary.org/obo/PR_000029032>)
@@ -17514,17 +17623,18 @@ SubClassOf(<http://purl.obolibrary.org/obo/PR_Q9H9P2> <http://purl.obolibrary.or
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q9H9P2> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q9H9P2> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/pr#has_gene_template> <http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17807>))
 
-# Class: <http://purl.obolibrary.org/obo/PR_Q9H9S5> (fukutin-related protein (human))
+# Class: <http://purl.obolibrary.org/obo/PR_Q9H9S5> (ribitol 5-phosphate transferase FKRP (human))
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q9H9S5") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "A fukutin-related protein that is encoded in the genome of human.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q9H9S5") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "A ribitol 5-phosphate transferase FKRP that is encoded in the genome of human.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q9H9S5") <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "ribitol-5-phosphate transferase (human)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "UniProtKB:Q9H9S5")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q9H9S5") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "fukutin-related protein (human)")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#PRO-short-label>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "hFKRP")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "protein")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "UniProtKB:Q9H9S5") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/pr#Gene-based>) <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "FKRP")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PR_Q9H9S5> "PR:Q9H9S5")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PR_Q9H9S5> "Category=organism-gene.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_Q9H9S5> "fukutin-related protein (human)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PR_Q9H9S5> "ribitol 5-phosphate transferase FKRP (human)")
 EquivalentClasses(<http://purl.obolibrary.org/obo/PR_Q9H9S5> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PR_000007547> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q9H9S5> <http://purl.obolibrary.org/obo/PR_000007547>)
 SubClassOf(<http://purl.obolibrary.org/obo/PR_Q9H9S5> <http://purl.obolibrary.org/obo/PR_000029067>)
@@ -22334,6 +22444,16 @@ AnnotationAssertion(rdfs:comment <http://www.informatics.jax.org/marker/MGI:9776
 AnnotationAssertion(rdfs:label <http://www.informatics.jax.org/marker/MGI:97769> "Prnp (mouse)")
 SubClassOf(<http://www.informatics.jax.org/marker/MGI:97769> <http://purl.obolibrary.org/obo/SO_0001217>)
 SubClassOf(<http://www.informatics.jax.org/marker/MGI:97769> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
+
+# Class: <http://www.informatics.jax.org/marker/MGI:97810> (Ptprc (mouse))
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PRO:DNx") <http://purl.obolibrary.org/obo/IAO_0000115> <http://www.informatics.jax.org/marker/MGI:97810> "A protein coding gene Ptprc in mouse.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://www.informatics.jax.org/marker/MGI:97810> "gene")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://www.informatics.jax.org/marker/MGI:97810> "MGI:97810")
+AnnotationAssertion(rdfs:comment <http://www.informatics.jax.org/marker/MGI:97810> "Category=external.")
+AnnotationAssertion(rdfs:label <http://www.informatics.jax.org/marker/MGI:97810> "Ptprc (mouse)")
+SubClassOf(<http://www.informatics.jax.org/marker/MGI:97810> <http://purl.obolibrary.org/obo/SO_0001217>)
+SubClassOf(<http://www.informatics.jax.org/marker/MGI:97810> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002160> <http://purl.obolibrary.org/obo/NCBITaxon_10090>))
 
 # Class: <http://www.informatics.jax.org/marker/MGI:97821> (Pvalb (mouse))
 
