@@ -1,7 +1,13 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-03-21/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-04-11/pr_slim.owl
+synonymtypedef: Gene-based ""
+synonymtypedef: PRO-common-name ""
+synonymtypedef: PRO-proteoform-ftid ""
+synonymtypedef: PRO-proteoform-std ""
+synonymtypedef: PRO-short-label ""
+synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-03-21" xsd:string
+property_value: owl:versionInfo "2022-04-11" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3057,9 +3063,9 @@ is_a: PR:000003505 ! leukocyte granule-associated proteinase
 id: PR:000003505
 name: leukocyte granule-associated proteinase
 namespace: protein
-def: "A protein that is a serine protease of the granules from mast cells, cytotoxic T lymphocytes and/or natural killer cells. Leukocyte granule-associated proteinase is a component of the immune system that protect higher organisms against viral infection and cellular transformation. Members of this class have features that are strongly conserved including: consensus sequences at their N-termini and around the three catalytic residues, activation from zymogenic forms, and conserved disulphide bridges." [PMID:11790262, PMID:7952649, PMID:8929545]
+def: "A trypsin that is a serine protease of the granules from mast cells, cytotoxic T lymphocytes and/or natural killer cells. Leukocyte granule-associated proteinase is a component of the immune system that protect higher organisms against viral infection and cellular transformation. Members of this class have features that are strongly conserved including: consensus sequences at their N-termini and around the three catalytic residues, activation from zymogenic forms, and conserved disulphide bridges." [PMID:11790262, PMID:7952649, PMID:8929545]
 comment: Category=family.
-is_a: PR:000000001 ! protein
+is_a: PR:000027795 ! trypsin
 
 [Term]
 id: PR:000003506
@@ -3371,16 +3377,17 @@ is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000007547
-name: fukutin-related protein
+name: ribitol 5-phosphate transferase FKRP
 namespace: protein
 def: "A protein that is a translation product of the human FKRP gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene.
 synonym: "FKRP" EXACT PRO-short-label [PRO:DNx]
+synonym: "fukutin-related protein" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000007597
-name: proto-oncogene c-Fos
+name: protein c-Fos
 namespace: protein
 def: "A protein that is a translation product of the human FOS gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene. Requested by=CL.
@@ -3389,6 +3396,7 @@ synonym: "FOS" EXACT PRO-short-label [PRO:DNx]
 synonym: "G0/G1 switch regulatory protein 7" EXACT []
 synonym: "G0S7" RELATED Gene-based []
 synonym: "proto-oncogene protein c-fos" EXACT []
+synonym: "transcription factor AP-1 subunit c-Fos" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5697,6 +5705,7 @@ name: integrin alpha lacking A domain
 namespace: protein
 def: "An integrin alpha that lacks an A domain. This type of integrin is often cleaved into heavy and light chains." [PRO:DAN]
 comment: Category=family.
+synonym: "fam:ITGAsansA" EXACT PRO-short-label [PRO:DAN]
 xref: PIRSF:PIRSF005666
 is_a: PR:000025796 ! integrin alpha
 
@@ -5800,6 +5809,7 @@ def: "A granzyme B that has had the signal peptide removed." [PRO:DNx]
 comment: Category=modification.
 synonym: "GZMB/SigPep-" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000003499 ! granzyme B
+is_a: PR:000036291 ! trypsin, signal peptide removed form
 intersection_of: PR:000003499 ! granzyme B
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
@@ -5880,6 +5890,15 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000027795
+name: trypsin
+namespace: protein
+def: "A protein that in active form is a serine protease that cleaves peptide bonds on the carboxyl side of lysine or arginine amino acids within amino acid chains." [PRO:DAN, Wikipedia:Trypsin]
+comment: Category=family.
+synonym: "PRSS" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000028409
 name: integrin alpha-IIb, signal peptide removed form (human)
 namespace: protein
@@ -5922,6 +5941,18 @@ def: "A proteolytic cleavage product that is derived from any of the casein milk
 comment: Category=modification.
 synonym: "CN (f)" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000018264 ! proteolytic cleavage product
+
+[Term]
+id: PR:000028941
+name: activated trypsin
+namespace: protein
+def: "A trypsin, signal peptide removed form that has been activated by removal of the propeptide (activation peptide)." [PRO:DAN]
+comment: Category=modification.
+synonym: "PRSS/ProPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000036291 ! trypsin, signal peptide removed form
+intersection_of: PR:000036291 ! trypsin, signal peptide removed form
+intersection_of: lacks_part SO:0001062 ! propeptide
+relationship: lacks_part SO:0001062 ! propeptide
 
 [Term]
 id: PR:000029032
@@ -6054,6 +6085,19 @@ is_a: PR:000000001 ! protein
 intersection_of: PR:000000001 ! protein
 intersection_of: only_in_taxon NCBITaxon:2759 ! Eukaryota
 relationship: only_in_taxon NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: PR:000036291
+name: trypsin, signal peptide removed form
+namespace: protein
+def: "A trypsin that has had the signal peptide removed." [PRO:DAN]
+comment: Category=modification.
+synonym: "PRSS/SigPep-" EXACT PRO-short-label [PRO:DAN]
+synonym: "trypsinogen" EXACT [PRO:DNx]
+is_a: PR:000027795 ! trypsin
+intersection_of: PR:000027795 ! trypsin
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
 id: PR:000036947
@@ -7407,7 +7451,7 @@ is_a: PR:000000001 ! protein
 id: PR:A2ASS6
 name: titin (mouse)
 namespace: protein
-def: "A titin that is encoded in the genome of mouse." [PRO:DNx]
+def: "A titin that is encoded in the genome of mouse." [OMA:A2ASS6, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "connectin (mouse)" EXACT [UniProtKB:A2ASS6]
 synonym: "mTTN" EXACT PRO-short-label [PRO:DNx]
@@ -8015,37 +8059,42 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P01100
-name: proto-oncogene c-Fos (human)
+name: protein c-Fos (human)
 namespace: protein
-def: "A proto-oncogene c-Fos that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01100]
+def: "A protein c-Fos that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01100]
 comment: Category=organism-gene.
 synonym: "cellular oncogene fos (human)" EXACT [UniProtKB:P01100]
 synonym: "FOS" RELATED Gene-based [UniProtKB:P01100]
+synonym: "Fos proto-oncogene, AP-1 transcription factor subunit (human)" EXACT [UniProtKB:P01100]
 synonym: "G0/G1 switch regulatory protein 7 (human)" EXACT [UniProtKB:P01100]
 synonym: "G0S7" RELATED Gene-based [UniProtKB:P01100]
 synonym: "hFOS" EXACT PRO-short-label [PRO:DNx]
+synonym: "proto-oncogene c-Fos (human)" EXACT [UniProtKB:P01100]
+synonym: "transcription factor AP-1 subunit c-Fos (human)" EXACT [UniProtKB:P01100]
 xref: Reactome:R-HSA-450216 "PR:P01100 located_in GO:0005654"
 xref: UniProtKB:P01100
-is_a: PR:000007597 ! proto-oncogene c-Fos
+is_a: PR:000007597 ! protein c-Fos
 is_a: PR:000029067 ! Homo sapiens protein
-intersection_of: PR:000007597 ! proto-oncogene c-Fos
+intersection_of: PR:000007597 ! protein c-Fos
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3796 ! FOS (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P01101
-name: proto-oncogene c-Fos (mouse)
+name: protein c-Fos (mouse)
 namespace: protein
-def: "A proto-oncogene c-Fos that is encoded in the genome of mouse." [OMA:P01101, PRO:DNx]
+def: "A protein c-Fos that is encoded in the genome of mouse." [OMA:P01101, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "cellular oncogene fos (mouse)" EXACT [UniProtKB:P01101]
+synonym: "FBJ osteosarcoma oncogene (mouse)" EXACT [UniProtKB:P01101]
 synonym: "Fos" RELATED Gene-based [UniProtKB:P01101]
 synonym: "mFOS" EXACT PRO-short-label [PRO:DNx]
+synonym: "transcription factor AP-1 subunit c-Fos (mouse)" EXACT [UniProtKB:P01101]
 xref: UniProtKB:P01101
-is_a: PR:000007597 ! proto-oncogene c-Fos
+is_a: PR:000007597 ! protein c-Fos
 is_a: PR:000029032 ! Mus musculus protein
-intersection_of: PR:000007597 ! proto-oncogene c-Fos
+intersection_of: PR:000007597 ! protein c-Fos
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95574 ! Fos (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -8612,7 +8661,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P05555
 name: integrin alpha-M (mouse)
 namespace: protein
-def: "An integrin alpha-M that is encoded in the genome of mouse." [OMA:P05555, PRO:DNx]
+def: "An integrin alpha-M that is encoded in the genome of mouse." [PRO:DNx, UniProtKB:P05555]
 comment: Category=organism-gene.
 synonym: "CD11 antigen-like family member B (mouse)" EXACT [UniProtKB:P05555]
 synonym: "CD11b (mouse)" EXACT [UniProtKB:P05555]
@@ -8772,6 +8821,28 @@ intersection_of: PR:000001880 ! low affinity immunoglobulin epsilon Fc receptor
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3612 ! FCER2 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P06800
+name: receptor-type tyrosine-protein phosphatase C (mouse)
+namespace: protein
+def: "A receptor-type tyrosine-protein phosphatase C that is encoded in the genome of mouse." [OMA:P06800, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "CD45 (mouse)" EXACT [UniProtKB:P06800]
+synonym: "L-CA (mouse)" EXACT [UniProtKB:P06800]
+synonym: "leukocyte common antigen (mouse)" EXACT [UniProtKB:P06800]
+synonym: "Ly-5" RELATED Gene-based [UniProtKB:P06800]
+synonym: "lymphocyte antigen 5 (mouse)" EXACT [UniProtKB:P06800]
+synonym: "mPTPRC" EXACT PRO-short-label [PRO:DNx]
+synonym: "Ptprc" RELATED Gene-based [UniProtKB:P06800]
+synonym: "T200 (mouse)" EXACT [UniProtKB:P06800]
+xref: UniProtKB:P06800
+is_a: PR:000001006 ! receptor-type tyrosine-protein phosphatase C
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001006 ! receptor-type tyrosine-protein phosphatase C
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97810 ! Ptprc (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P06876
@@ -9401,7 +9472,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P10300
 name: T-cell surface glycoprotein CD8 beta chain (mouse)
 namespace: protein
-def: "A T-cell surface glycoprotein CD8 beta chain that is encoded in the genome of mouse." [OMA:P10300, PRO:DNx]
+def: "A T-cell surface glycoprotein CD8 beta chain that is encoded in the genome of mouse." [PRO:CNA]
 comment: Category=organism-gene.
 synonym: "Cd8b" RELATED Gene-based [UniProtKB:P10300]
 synonym: "CD8b (mouse)" EXACT [UniProtKB:P10300]
@@ -11146,6 +11217,7 @@ name: alpha-(1,3)-fucosyltransferase 4 (human)
 namespace: protein
 def: "An alpha-(1,3)-fucosyltransferase 4 that is encoded in the genome of human." [PRO:CNA, UniProtKB:P22083]
 comment: Category=organism-gene.
+synonym: "4-galactosyl-N-acetylglucosaminide 3-alpha-L-fucosyltransferase (human)" RELATED [UniProtKB:P22083]
 synonym: "ELAM-1 ligand fucosyltransferase (human)" EXACT [UniProtKB:P22083]
 synonym: "ELFT" RELATED Gene-based [UniProtKB:P22083]
 synonym: "FCT3A" RELATED Gene-based [UniProtKB:P22083]
@@ -14064,6 +14136,7 @@ name: alpha-(1,3)-fucosyltransferase 4 (mouse)
 namespace: protein
 def: "An alpha-(1,3)-fucosyltransferase 4 that is encoded in the genome of mouse." [OMA:Q11127, PRO:DNx]
 comment: Category=organism-gene.
+synonym: "4-galactosyl-N-acetylglucosaminide 3-alpha-L-fucosyltransferase (mouse)" EXACT [UniProtKB:Q11127]
 synonym: "Elft" RELATED Gene-based [UniProtKB:Q11127]
 synonym: "Fuc-TIV (mouse)" EXACT [UniProtKB:Q11127]
 synonym: "fucosyltransferase 4 (mouse)" EXACT [UniProtKB:Q11127]
@@ -14535,7 +14608,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:Q60675
 name: laminin subunit alpha-2 (mouse)
 namespace: protein
-def: "A laminin subunit alpha-2 that is encoded in the genome of mouse." [PRO:DNx]
+def: "A laminin subunit alpha-2 that is encoded in the genome of mouse." [OMA:Q60675, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "Lama2" RELATED Gene-based [UniProtKB:Q60675]
 synonym: "laminin M chain (mouse)" EXACT [UniProtKB:Q60675]
@@ -14911,7 +14984,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:Q63994
 name: myeloid cell surface antigen CD33 (mouse)
 namespace: protein
-def: "A CD33 molecule that is encoded in the genome of mouse." [OMA:Q63994, PRO:DNx]
+def: "A CD33 molecule that is encoded in the genome of mouse." [PRO:WCB]
 comment: Category=organism-gene.
 synonym: "Cd33" RELATED Gene-based [UniProtKB:Q63994]
 synonym: "CD33 (mouse)" EXACT [UniProtKB:Q63994]
@@ -15134,7 +15207,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:Q8C567
 name: natural cytotoxicity triggering receptor 1 (mouse)
 namespace: protein
-def: "A natural cytotoxicity triggering receptor 1 that is encoded in the genome of mouse." [PRO:WCB]
+def: "A natural cytotoxicity triggering receptor 1 that is encoded in the genome of mouse." [OMA:Q8C567, PRO:WCB]
 comment: Category=organism-gene.
 synonym: "activating receptor 1 (mouse)" EXACT [UniProtKB:Q8C567]
 synonym: "CD335 (mouse)" EXACT [UniProtKB:Q8C567]
@@ -15157,17 +15230,18 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:Q8CG64
-name: fukutin-related protein (mouse)
+name: ribitol 5-phosphate transferase FKRP (mouse)
 namespace: protein
-def: "A fukutin-related protein that is encoded in the genome of mouse." [OMA:Q8CG64, PRO:DNx]
+def: "A ribitol 5-phosphate transferase FKRP that is encoded in the genome of mouse." [OMA:Q8CG64, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "Fkrp" RELATED Gene-based [UniProtKB:Q8CG64]
+synonym: "fukutin-related protein (mouse)" EXACT [UniProtKB:Q8CG64]
 synonym: "mFKRP" EXACT PRO-short-label [PRO:DNx]
 synonym: "ribitol-5-phosphate transferase (mouse)" RELATED [UniProtKB:Q8CG64]
 xref: UniProtKB:Q8CG64
-is_a: PR:000007547 ! fukutin-related protein
+is_a: PR:000007547 ! ribitol 5-phosphate transferase FKRP
 is_a: PR:000029032 ! Mus musculus protein
-intersection_of: PR:000007547 ! fukutin-related protein
+intersection_of: PR:000007547 ! ribitol 5-phosphate transferase FKRP
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2447586 ! Fkrp (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -15677,17 +15751,18 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:Q9H9S5
-name: fukutin-related protein (human)
+name: ribitol 5-phosphate transferase FKRP (human)
 namespace: protein
-def: "A fukutin-related protein that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9H9S5]
+def: "A ribitol 5-phosphate transferase FKRP that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9H9S5]
 comment: Category=organism-gene.
 synonym: "FKRP" RELATED Gene-based [UniProtKB:Q9H9S5]
+synonym: "fukutin-related protein (human)" EXACT [UniProtKB:Q9H9S5]
 synonym: "hFKRP" EXACT PRO-short-label [PRO:DNx]
 synonym: "ribitol-5-phosphate transferase (human)" BROAD [UniProtKB:Q9H9S5]
 xref: UniProtKB:Q9H9S5
-is_a: PR:000007547 ! fukutin-related protein
+is_a: PR:000007547 ! ribitol 5-phosphate transferase FKRP
 is_a: PR:000029067 ! Homo sapiens protein
-intersection_of: PR:000007547 ! fukutin-related protein
+intersection_of: PR:000007547 ! ribitol 5-phosphate transferase FKRP
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17997 ! FKRP (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -20086,6 +20161,15 @@ id: http://www.informatics.jax.org/marker/MGI:97769
 name: Prnp (mouse)
 namespace: gene
 def: "A protein coding gene Prnp in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:97810
+name: Ptprc (mouse)
+namespace: gene
+def: "A protein coding gene Ptprc in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
