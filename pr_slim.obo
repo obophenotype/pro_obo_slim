@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-08-03/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-08-11/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
@@ -7,7 +7,7 @@ synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-08-03" xsd:string
+property_value: owl:versionInfo "2022-08-11" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -4450,6 +4450,17 @@ synonym: "PVALB" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000013879
+name: reelin
+namespace: protein
+def: "A protein that is a translation product of the human RELN gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "reeler protein" EXACT []
+synonym: "RELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "Rl" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000013883
 name: renin
 namespace: protein
@@ -8680,6 +8691,22 @@ xref: Reactome:R-HSA-6806150 "PR:000048962 located_in GO:0030667"
 is_a: PR:000018306 ! receptor-type tyrosine-protein phosphatase C, signal peptide removed form
 is_a: PR:P08575 ! receptor-type tyrosine-protein phosphatase C (human)
 intersection_of: PR:P08575 ! receptor-type tyrosine-protein phosphatase C (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000049039
+name: reelin, signal peptide removed form (human)
+namespace: protein
+def: "A reelin (human) that has had the signal peptide removed. UniProtKB:P78509, 26-3460." [PRO:DNx, Reactome:R-HSA-8854469]
+comment: Category=organism-modification.
+synonym: "hRELN/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000030304" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P78509, 26-3460" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-8854469 "PR:000049039 located_in GO:0005576"
+is_a: PR:P78509 ! reelin (human)
+intersection_of: PR:P78509 ! reelin (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -16217,6 +16244,22 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P78509
+name: reelin (human)
+namespace: protein
+def: "A reelin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P78509]
+comment: Category=organism-gene.
+synonym: "hRELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "RELN" RELATED Gene-based [UniProtKB:P78509]
+xref: UniProtKB:P78509
+is_a: PR:000013879 ! reelin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000013879 ! reelin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9957 ! RELN (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P80188
 name: neutrophil gelatinase-associated lipocalin (human)
 namespace: protein
@@ -17574,6 +17617,24 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000010329 ! tyrosine-protein kinase Mer
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:96965 ! Mertk (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q60841
+name: reelin (mouse)
+namespace: protein
+def: "A reelin that is encoded in the genome of mouse." [OMA:Q60841, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mRELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "reeler protein (mouse)" EXACT [UniProtKB:Q60841]
+synonym: "Reln" RELATED Gene-based [UniProtKB:Q60841]
+synonym: "Rl" RELATED Gene-based [UniProtKB:Q60841]
+xref: UniProtKB:Q60841
+is_a: PR:000013879 ! reelin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000013879 ! reelin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:103022 ! Reln (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -21834,6 +21895,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9957
+name: RELN (human)
+namespace: gene
+def: "A protein coding gene RELN in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9958
 name: REN (human)
 namespace: gene
@@ -21937,6 +22007,15 @@ id: http://www.informatics.jax.org/marker/MGI:103014
 name: Il15 (mouse)
 namespace: gene
 def: "A protein coding gene Il15 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:103022
+name: Reln (mouse)
+namespace: gene
+def: "A protein coding gene Reln in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
