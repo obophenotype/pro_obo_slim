@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-08-11/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-09-15/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
@@ -7,7 +7,7 @@ synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-08-11" xsd:string
+property_value: owl:versionInfo "2022-09-15" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3504,6 +3504,17 @@ synonym: "AP4S1" EXACT PRO-short-label [PRO:DNx]
 synonym: "sigma-1 subunit of AP-4" EXACT []
 synonym: "sigma-4-adaptin" EXACT []
 synonym: "sigma4-adaptin" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000004724
+name: bestrophin-4
+namespace: protein
+def: "A protein that is a translation product of the human BEST4 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "BEST4" EXACT PRO-short-label [PRO:DNx]
+synonym: "vitelliform macular dystrophy 2-like protein 2" EXACT []
+synonym: "VMD2L2" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -18259,6 +18270,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:191641
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q8NFU0
+name: bestrophin-4 (human)
+namespace: protein
+def: "A bestrophin-4 that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q8NFU0]
+comment: Category=organism-gene.
+synonym: "BEST4" RELATED Gene-based [UniProtKB:Q8NFU0]
+synonym: "hBEST4" EXACT PRO-short-label [PRO:DNx]
+synonym: "vitelliform macular dystrophy 2-like protein 2 (human)" EXACT [UniProtKB:Q8NFU0]
+synonym: "VMD2L2" RELATED Gene-based [UniProtKB:Q8NFU0]
+xref: DTO:01100033
+xref: Reactome:R-HSA-2744358 "PR:Q8NFU0 located_in GO:0005886"
+xref: UniProtKB:Q8NFU0
+is_a: PR:000004724 ! bestrophin-4
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004724 ! bestrophin-4
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17106 ! BEST4 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q8R2Q8
 name: bone marrow stromal antigen 2 (mouse)
 namespace: protein
@@ -20477,6 +20508,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1709
 name: CD9 (human)
 namespace: gene
 def: "A protein coding gene CD9 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17106
+name: BEST4 (human)
+namespace: gene
+def: "A protein coding gene BEST4 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
