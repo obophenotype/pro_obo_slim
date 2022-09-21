@@ -11,6 +11,17 @@ mirror/pr.owl:
 	if [ $(MIR) = true ]; then curl -L $(URIBASE)/pr.owl.gz --create-dirs -o mirror/pr.owl.gz --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/pr.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/pr.owl
 
+mirror/pr.owl.gz:
+	if [ $(MIR) = true ]; then curl -L $(URIBASE)/pr.owl.gz --create-dirs -o $@ --retry 4 --max-time 200; fi
+.PRECIOUS: mirror/pr.owl.gz
+
+build/%.db: src/scripts/prefixes.sql mirror/%.owl.gz | build/rdftab
+	rm -rf $@
+	sqlite3 $@ < $<
+	zcat < $(word 2,$^) | ./build/rdftab $@
+	sqlite3 $@ "CREATE INDEX idx_stanza ON statements (stanza);"
+	sqlite3 $@ "ANALYZE;"
+
 pr_slim.owl: mirror/pr.owl seed.txt
 	$(ROBOT) extract -i $< -T seed.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		query --update sparql/inject-subset-declaration.ru --update sparql/inject-synonymtype-declaration.ru --update sparql/postprocess-module.ru \
