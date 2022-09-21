@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-09-15/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-09-20/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
@@ -7,7 +7,7 @@ synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-09-15" xsd:string
+property_value: owl:versionInfo "2022-09-20" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -292,6 +292,27 @@ xref: PIRSF:PIRSF800009
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000000017
+name: interferon gamma
+namespace: protein
+def: "A type II interferon that is a translation product of the human IFNG gene or a 1:1 ortholog thereof. The core domain structure consists of an Interferon gamma domain (Pfam:PF00714) that is four-helical cytokine domain with an additional helix in one of the crossover connections. It is a cytokine produced by lymphocytes activated by specific antigens or mitogens that has important immunoregulatory functions." [PRO:CNA]
+comment: Category=gene.
+synonym: "IFN-gamma" EXACT []
+synonym: "IFNG" EXACT PRO-short-label [PRO:DNx]
+synonym: "immune interferon" EXACT []
+xref: PIRSF:PIRSF001936
+is_a: PR:000024990 ! type II interferon
+
+[Term]
+id: PR:000000030
+name: thrombospondin subgroup B
+namespace: protein
+def: "A protein with a core domain composition consisting of three or four EGF-type repeats, a series of seven contiguous calcium-binding repeats (the thrombospondin type 3 repeats), and a globular carboxyl-terminal domain." [PMID:10842357]
+comment: Category=family.
+xref: PIRSF:PIRSF002479
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000000033
 name: tumor necrosis factor, TNF-like
 namespace: protein
@@ -309,6 +330,17 @@ comment: Category=family.
 synonym: "transforming growth factor beta" EXACT []
 xref: PIRSF:PIRSF001787
 is_a: PR:000000008 ! TGF-beta-like cystine-knot cytokine
+
+[Term]
+id: PR:000000085
+name: cartilage oligomeric matrix protein
+namespace: protein
+def: "A thrombospondin subgroup B that is a translation product of the human COMP gene or a 1:1 ortholog thereof." [PRO:CNA]
+comment: Category=gene.
+synonym: "COMP" EXACT PRO-short-label [PRO:DNx]
+synonym: "thrombospondin-5" EXACT []
+synonym: "TSP5" EXACT []
+is_a: PR:000000030 ! thrombospondin subgroup B
 
 [Term]
 id: PR:000000134
@@ -1444,6 +1476,39 @@ xref: PIRSF:PIRSF001981
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000001368
+name: interleukin-12 subunit alpha
+namespace: protein
+def: "A protein that is a translation product of the human IL12A gene or a 1:1 ortholog thereof. It associates with interleukin-12 subunit beta to form the interleukin-23. Interleukin-12 subunit alpha associates with interleukin-27 subunit beta to form the interleukin-35." [PRO:CNA]
+comment: Category=gene.
+synonym: "CLMF p35" EXACT []
+synonym: "cytotoxic lymphocyte maturation factor 35 kDa subunit" EXACT []
+synonym: "IL-12 subunit p35" EXACT []
+synonym: "IL-12A" EXACT []
+synonym: "IL12A" EXACT PRO-short-label [PRO:DNx]
+synonym: "NK cell stimulatory factor chain 1" EXACT []
+synonym: "NKSF1" RELATED Gene-based []
+xref: PIRSF:PIRSF037684
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000001369
+name: interleukin-12 subunit beta
+namespace: protein
+def: "A protein that is a translation product of the human IL12B gene or a 1:1 ortholog thereof. Interleukin-12 subunit beta associates with interleukin-12 subunit alpha or interleukin-23 subunit alpha to form the interleukin-23." [PRO:CNA]
+comment: Category=gene.
+synonym: "CLMF p40" EXACT []
+synonym: "cytotoxic lymphocyte maturation factor 40 kDa subunit" EXACT []
+synonym: "IL-12 subunit p40" EXACT []
+synonym: "IL-12B" EXACT []
+synonym: "IL12B" EXACT PRO-short-label [PRO:DNx]
+synonym: "NK cell stimulatory factor chain 2" EXACT []
+synonym: "NKSF2" RELATED Gene-based []
+xref: PANTHER:PTHR11321\:SF0
+xref: PIRSF:PIRSF038007
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000001370
 name: interleukin-13
 namespace: protein
@@ -1560,6 +1625,22 @@ xref: PIRSF:PIRSF038753
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000001384
+name: interleukin-23 subunit alpha
+namespace: protein
+def: "A protein that is a translation product of the human IL23A gene or a 1:1 ortholog thereof. Interleukin-23 subunit alpha associates with interleukin-12 subunit beta to form the interleukin-23, a heterodimeric cytokine which functions in innate and adaptive immunity." [PRO:CNA, UniProtKB:Q9NPF7]
+comment: Category=gene.
+synonym: "IL-23 subunit alpha" EXACT []
+synonym: "IL-23-A" EXACT []
+synonym: "IL-23p19" EXACT []
+synonym: "IL23A" EXACT PRO-short-label [PRO:DNx]
+synonym: "interleukin-23 subunit p19" EXACT []
+synonym: "SGRF" RELATED Gene-based []
+synonym: "UNQ2498/PRO5798" RELATED Gene-based []
+xref: PIRSF:PIRSF038754
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000001387
 name: interleukin-3
 namespace: protein
@@ -1632,6 +1713,30 @@ synonym: "IL6" EXACT PRO-short-label [PRO:DNx]
 synonym: "interferon beta-2" EXACT []
 synonym: "interleukin HP-1" EXACT []
 xref: PIRSF:PIRSF001935
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000001395
+name: interleukin-8
+namespace: protein
+def: "A protein that is a translation product of the human CXCL8 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "C-X-C motif chemokine 8" EXACT []
+synonym: "CXCL8" EXACT PRO-short-label [PRO:DNx]
+synonym: "emoctakin" EXACT []
+synonym: "GCP-1" RELATED []
+synonym: "granulocyte chemotactic protein 1" EXACT []
+synonym: "IL-8" EXACT []
+synonym: "IL8" RELATED Gene-based []
+synonym: "MDNCF" EXACT []
+synonym: "MONAP" EXACT []
+synonym: "monocyte-derived neutrophil chemotactic factor" EXACT []
+synonym: "monocyte-derived neutrophil-activating peptide" EXACT []
+synonym: "NAP-1" EXACT []
+synonym: "neutrophil-activating protein 1" EXACT []
+synonym: "protein 3-10C" EXACT []
+synonym: "T-cell chemotactic factor" EXACT []
+xref: PIRSF:PIRSF500564
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -2797,6 +2902,15 @@ synonym: "Trfr" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000001946
+name: tumor necrosis factor ligand superfamily member 10/11
+namespace: protein
+def: "A protein with core architecture consisting of a fairly small cytoplasmic region, a transmembrane domain, and an extracellular domain containing a TNF(Tumour Necrosis Factor) family domain (Pfam:PF00229)." [PRO:WCB]
+comment: Category=family.
+xref: PIRSF:PIRSF038013
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000001950
 name: tumor necrosis factor ligand superfamily member 5
 namespace: protein
@@ -3134,6 +3248,24 @@ synonym: "THBD" EXACT PRO-short-label [PRO:DNx]
 synonym: "THRM" RELATED Gene-based []
 synonym: "TM" EXACT []
 is_a: PR:000001938 ! thrombomodulin-like receptor
+
+[Term]
+id: PR:000002107
+name: tumor necrosis factor ligand superfamily member 11
+namespace: protein
+def: "A tumor necrosis factor ligand superfamily member 10/11 that is a translation product of the human TNFSF11 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "CD254" EXACT []
+synonym: "ODF" EXACT []
+synonym: "OPGL" RELATED Gene-based []
+synonym: "osteoclast differentiation factor" EXACT []
+synonym: "osteoprotegerin ligand" EXACT []
+synonym: "RANKL" RELATED Gene-based []
+synonym: "receptor activator of nuclear factor kappa-B ligand" EXACT []
+synonym: "TNF-related activation-induced cytokine" EXACT []
+synonym: "TNFSF11" EXACT PRO-short-label [PRO:DNx]
+synonym: "TRANCE" RELATED Gene-based []
+is_a: PR:000001946 ! tumor necrosis factor ligand superfamily member 10/11
 
 [Term]
 id: PR:000002112
@@ -3689,6 +3821,16 @@ synonym: "sigma4-adaptin" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000004155
+name: apolipoprotein E
+namespace: protein
+def: "A protein that is a translation product of the human APOE gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "apo-E" EXACT []
+synonym: "APOE" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000004580
 name: beta-2-microglobulin
 namespace: protein
@@ -3827,6 +3969,19 @@ def: "A protein that is a translation product of the human CP gene or a 1:1 orth
 comment: Category=gene.
 synonym: "CP" EXACT PRO-short-label [PRO:DNx]
 synonym: "ferroxidase" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000005867
+name: corticoliberin
+namespace: protein
+def: "A protein that is a translation product of the human CRH gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "corticotropin-releasing factor" EXACT []
+synonym: "corticotropin-releasing hormone" EXACT []
+synonym: "CRF" EXACT []
+synonym: "CRH" EXACT PRO-short-label [PRO:DNx]
+synonym: "Gm1347" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -3972,6 +4127,16 @@ synonym: "DYSF" EXACT PRO-short-label [PRO:DNx]
 synonym: "dystrophy-associated fer-1-like protein" EXACT []
 synonym: "Fer-1-like protein 1" EXACT []
 synonym: "FER1L1" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000007034
+name: elastin
+namespace: protein
+def: "A protein that is a translation product of the human ELN gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "ELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "tropoelastin" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -4123,6 +4288,16 @@ xref: IUPHARobj:1272
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000007856
+name: gastrin
+namespace: protein
+def: "A protein that is a translation product of the human GAST gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "GAS" RELATED Gene-based []
+synonym: "GAST" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000007857
 name: erythroid transcription factor
 namespace: protein
@@ -4149,6 +4324,15 @@ synonym: "GATA2" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000007891
+name: pro-glucagon
+namespace: protein
+def: "A protein that is a translation product of the human GCG gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "GCG" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000007928
 name: glial cell line-derived neurotrophic factor
 namespace: protein
@@ -4166,6 +4350,17 @@ namespace: protein
 def: "A protein that is a translation product of the human GFAP gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene. Requested by=CL.
 synonym: "GFAP" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000008056
+name: glutamate dehydrogenase 1, mitochondrial
+namespace: protein
+def: "A protein that is a translation product of the human GLUD1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "GDH 1" EXACT []
+synonym: "GLUD" RELATED Gene-based []
+synonym: "GLUD1" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -4224,6 +4419,28 @@ synonym: "SGO-T" BROAD [Wikipedia:Aspartate_transaminase]
 synonym: "SGOT" BROAD [Wikipedia:Aspartate_transaminase]
 synonym: "transaminase A" BROAD [PRO:DNx]
 is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000008208
+name: alanine aminotransferase 1
+namespace: protein
+def: "An alanine aminotransferase that is a translation product of the human GPT gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "AAT1" RELATED Gene-based []
+synonym: "alanine transaminase" BROAD [Wikipedia:Alanine_transaminase]
+synonym: "ALAT" BROAD [Wikipedia:Alanine_transaminase]
+synonym: "ALT" BROAD [Wikipedia:Alanine_transaminase]
+synonym: "ALT1" EXACT []
+synonym: "glutamate pyruvate transaminase 1" EXACT []
+synonym: "glutamic--alanine transaminase 1" EXACT []
+synonym: "glutamic--pyruvic transaminase 1" EXACT []
+synonym: "GPT" EXACT PRO-short-label [PRO:DNx]
+synonym: "GPT 1" EXACT []
+synonym: "GPT1" RELATED Gene-based []
+synonym: "serum glutamate-pyruvate transaminase" BROAD [Wikipedia:Alanine_transaminase]
+synonym: "serum glutamic-pyruvic transaminase" BROAD [Wikipedia:Alanine_transaminase]
+synonym: "SGPT" BROAD [Wikipedia:Alanine_transaminase]
+is_a: PR:000050219 ! alanine aminotransferase
 
 [Term]
 id: PR:000008456
@@ -4310,6 +4527,19 @@ synonym: "Hbb-b1" EXACT PRO-short-label [PRO:DNx]
 synonym: "hemoglobin beta-1 chain" EXACT []
 synonym: "hemoglobin beta-major chain" EXACT []
 is_a: PR:000008457 ! beta-globin
+
+[Term]
+id: PR:000008924
+name: interferon beta 1
+namespace: protein
+def: "An interferon beta that is a translation product of the human IFNB1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "fibroblast interferon" EXACT []
+synonym: "IFB" RELATED Gene-based []
+synonym: "IFN-beta" EXACT []
+synonym: "IFNB" RELATED Gene-based []
+synonym: "IFNB1" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000024939 ! interferon beta
 
 [Term]
 id: PR:000008982
@@ -4741,6 +4971,15 @@ synonym: "proto-oncogene c-Myb" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000011107
+name: nebulin
+namespace: protein
+def: "A protein that is a translation product of the human NEB gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "NEB" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000011143
 name: neuropilin and tolloid-like protein 1
 namespace: protein
@@ -4805,6 +5044,20 @@ synonym: "UNQ571/PRO1133" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000012037
+name: alpha-1-acid glycoprotein 1
+namespace: protein
+def: "A protein that is a translation product of the human ORM1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "AGP 1" EXACT []
+synonym: "AGP1" RELATED Gene-based []
+synonym: "OMD 1" EXACT []
+synonym: "Orm-1" RELATED []
+synonym: "ORM1" EXACT PRO-short-label [PRO:DNx]
+synonym: "orosomucoid-1" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000012526
 name: proenkephalin-B
 namespace: protein
@@ -4827,6 +5080,19 @@ synonym: "POMGNT1" EXACT PRO-short-label [PRO:DNx]
 synonym: "POMGnT1" EXACT []
 synonym: "UDP-GlcNAc:alpha-D-mannoside beta-1,2-N-acetylglucosaminyltransferase I.2" EXACT []
 synonym: "UNQ746/PRO1475" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000013164
+name: pancreatic prohormone
+namespace: protein
+def: "A protein that is a translation product of the human PPY gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "obinepitide" EXACT []
+synonym: "pancreatic polypeptide" EXACT []
+synonym: "PNP" RELATED Gene-based []
+synonym: "PP" EXACT []
+synonym: "PPY" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5205,6 +5471,19 @@ synonym: "Trf" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000016275
+name: trefoil factor 2
+namespace: protein
+def: "A protein that is a translation product of the human TFF2 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "SML1" RELATED Gene-based []
+synonym: "SP" EXACT []
+synonym: "spasmolysin" EXACT []
+synonym: "spasmolytic polypeptide" EXACT []
+synonym: "TFF2" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000016283
 name: thyroglobulin
 namespace: protein
@@ -5240,6 +5519,20 @@ synonym: "p24 family protein gamma-1" EXACT []
 synonym: "p24gamma1" EXACT []
 synonym: "putative T1/ST2 receptor-binding protein" EXACT []
 synonym: "TMED1" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000016480
+name: tumor necrosis factor receptor superfamily member 11B
+namespace: protein
+def: "A protein that is a translation product of the human TNFRSF11B gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "OCIF" RELATED Gene-based []
+synonym: "OPG" RELATED Gene-based []
+synonym: "osteoclastogenesis inhibitory factor" EXACT []
+synonym: "osteoprotegerin" EXACT []
+synonym: "TNFRSF11B" EXACT PRO-short-label [PRO:DNx]
+xref: IUPHARobj:1882
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5358,6 +5651,31 @@ synonym: "peptide" NARROW [PRO:DAN]
 synonym: "polypeptide" NARROW [PRO:DAN]
 is_a: PR:000000001 ! protein
 intersection_of: PR:000000001 ! protein
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000018270
+name: interferon gamma, signal peptide removed form
+namespace: protein
+def: "An interferon gamma that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "IFNG/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000017 ! interferon gamma
+intersection_of: PR:000000017 ! interferon gamma
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000018271
+name: interferon gamma proteolytic cleavage product
+namespace: protein
+def: "An interferon gamma that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "IFNG/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000017 ! interferon gamma
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000000017 ! interferon gamma
 intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
@@ -5729,6 +6047,30 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000018432
+name: interleukin-12 subunit alpha, signal peptide removed form
+namespace: protein
+def: "An interleukin-12 subunit alpha that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "IL12A/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000001368 ! interleukin-12 subunit alpha
+intersection_of: PR:000001368 ! interleukin-12 subunit alpha
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000018434
+name: interleukin-12 subunit beta, signal peptide removed form
+namespace: protein
+def: "An interleukin-12 subunit beta that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "IL12B/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000001369 ! interleukin-12 subunit beta
+intersection_of: PR:000001369 ! interleukin-12 subunit beta
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000018435
 name: interleukin-16 proteolytic cleavage product
 namespace: protein
@@ -5837,6 +6179,31 @@ is_a: PR:000001393 ! interleukin-6
 intersection_of: PR:000001393 ! interleukin-6
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000018460
+name: interleukin-8, signal peptide removed form
+namespace: protein
+def: "An interleukin-8 that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "CXCL8/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000001395 ! interleukin-8
+intersection_of: PR:000001395 ! interleukin-8
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000018461
+name: interleukin-8 proteolytic cleavage product
+namespace: protein
+def: "An interleukin-8 that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "CXCL8/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000001395 ! interleukin-8
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000001395 ! interleukin-8
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000018463
@@ -6328,6 +6695,19 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000018721
+name: tumor necrosis factor ligand superfamily member 11 proteolytic cleavage product
+namespace: protein
+def: "A tumor necrosis factor ligand superfamily member 11 that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "TNFSF11/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000018753
 name: lymphotoxin-alpha, signal peptide removed form
 namespace: protein
@@ -6563,6 +6943,18 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000019028
+name: apolipoprotein E, signal peptide removed form
+namespace: protein
+def: "An apolipoprotein E that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "APOE/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000004155 ! apolipoprotein E
+intersection_of: PR:000004155 ! apolipoprotein E
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000019109
 name: beta-2-microglobulin, signal peptide removed form
 namespace: protein
@@ -6647,6 +7039,19 @@ is_a: PR:000005794 ! ceruloplasmin
 intersection_of: PR:000005794 ! ceruloplasmin
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019483
+name: corticoliberin proteolytic cleavage product
+namespace: protein
+def: "A corticoliberin that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "CRH/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000005867 ! corticoliberin
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000005867 ! corticoliberin
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000019499
@@ -6834,6 +7239,56 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000019972
+name: gastrin, signal peptide removed form
+namespace: protein
+def: "A gastrin that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "GAST/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007856 ! gastrin
+intersection_of: PR:000007856 ! gastrin
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019973
+name: gastrin proteolytic cleavage product
+namespace: protein
+def: "A gastrin that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "GAST/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007856 ! gastrin
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000007856 ! gastrin
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000019979
+name: pro-glucagon, signal peptide removed form
+namespace: protein
+def: "A pro-glucagon that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "GCG/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007891 ! pro-glucagon
+intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019980
+name: pro-glucagon proteolytic cleavage product
+namespace: protein
+def: "A pro-glucagon that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "GCG/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007891 ! pro-glucagon
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000020036
 name: aspartate aminotransferase, cytoplasmic, initiator methionine removed form
 namespace: protein
@@ -6842,6 +7297,18 @@ comment: Category=modification.
 synonym: "GOT1/InitMet-" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000008153 ! aspartate aminotransferase, cytoplasmic
 intersection_of: PR:000008153 ! aspartate aminotransferase, cytoplasmic
+intersection_of: lacks_part PR:000021937 ! initiator methionine
+relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
+id: PR:000020057
+name: alanine aminotransferase 1, initiator methionine removed form
+namespace: protein
+def: "An alanine aminotransferase 1 that has had the initiator methionine removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "GPT/InitMet-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000008208 ! alanine aminotransferase 1
+intersection_of: PR:000008208 ! alanine aminotransferase 1
 intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
 
@@ -6955,6 +7422,18 @@ is_a: PR:000008857 ! hemoglobin subunit beta-1
 intersection_of: PR:000008857 ! hemoglobin subunit beta-1
 intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
+id: PR:000020259
+name: interferon beta 1, signal peptide removed form
+namespace: protein
+def: "An interferon beta 1 that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "IFNB1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000008924 ! interferon beta 1
+intersection_of: PR:000008924 ! interferon beta 1
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
 id: PR:000020288
@@ -7265,6 +7744,18 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000020835
+name: alpha-1-acid glycoprotein 1, signal peptide removed form
+namespace: protein
+def: "An alpha-1-acid glycoprotein 1 that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "ORM1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000012037 ! alpha-1-acid glycoprotein 1
+intersection_of: PR:000012037 ! alpha-1-acid glycoprotein 1
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000020915
 name: proenkephalin-B, signal peptide removed form
 namespace: protein
@@ -7286,6 +7777,31 @@ synonym: "PDYN/ClvPrd" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000012526 ! proenkephalin-B
 is_a: PR:000018264 ! proteolytic cleavage product
 intersection_of: PR:000012526 ! proenkephalin-B
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000021065
+name: pancreatic prohormone, signal peptide removed form
+namespace: protein
+def: "A pancreatic prohormone that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "PPY/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000013164 ! pancreatic prohormone
+intersection_of: PR:000013164 ! pancreatic prohormone
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021066
+name: pancreatic prohormone proteolytic cleavage product
+namespace: protein
+def: "A pancreatic prohormone that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "PPY/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000013164 ! pancreatic prohormone
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000013164 ! pancreatic prohormone
 intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
@@ -7499,6 +8015,18 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000021699
+name: tumor necrosis factor receptor superfamily member 11B, signal peptide removed form
+namespace: protein
+def: "A tumor necrosis factor receptor superfamily member 11B that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "TNFRSF11B/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+intersection_of: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000021737
 name: E3 ubiquitin-protein ligase TRIM32, initiator methionine removed form
 namespace: protein
@@ -7636,6 +8164,25 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000024939
+name: interferon beta
+namespace: protein
+comment: Category=family.
+synonym: "IFNB" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000025848 ! type I interferon
+
+[Term]
+id: PR:000024990
+name: type II interferon
+namespace: protein
+def: "A protein that binds to a specific cell surface receptor complex known as the IFN-gamma receptor (IFNGR), a complex of two IFNGR1 and two IFNGR2 chains." [PMID:9607096, PRO:DAN, PRO:MSY]
+comment: Category=family. Note: Some references consider 'gamma' and 'type II' to be synonyms. This is likely because gamma is the only type II interferon identified. However, the classification criteria for each nomenclature system differ.
+synonym: "IFN type II" EXACT []
+synonym: "interferon gamma" RELATED []
+synonym: "interferon type II" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000025402
 name: T cell receptor co-receptor CD8
 namespace: protein
@@ -7718,6 +8265,19 @@ is_a: PR:000037069 ! glycoprotein
 intersection_of: PR:000025407 ! T-cell surface glycoprotein CD8 beta chain isoform 1, signal peptide removed form
 intersection_of: has_part MOD:00693 ! glycosylated residue
 relationship: has_part MOD:00693 ! glycosylated residue
+
+[Term]
+id: PR:000025416
+name: cartilage oligomeric matrix protein proteolytic cleavage product
+namespace: protein
+def: "A cartilage oligomeric matrix protein that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "COMP/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000085 ! cartilage oligomeric matrix protein
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000000085 ! cartilage oligomeric matrix protein
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000025455
@@ -7945,6 +8505,16 @@ is_a: PR:000037069 ! glycoprotein
 intersection_of: PR:000025808 ! receptor-type tyrosine-protein phosphatase C isoform CD45RO, signal peptide removed form
 intersection_of: has_part MOD:00693 ! glycosylated residue
 relationship: has_part MOD:00693 ! glycosylated residue
+
+[Term]
+id: PR:000025848
+name: type I interferon
+namespace: protein
+def: "A protein that consists solely of an Interferon alpha/beta domain (Pfam:PF00143) and which binds to a specific cell surface receptor complex known as the IFN-alpha receptor (IFNAR), a heterodimer of IFNAR1 and IFNAR2 chains." [PMID:15233997, PMID:9607096, PRO:DAN, PRO:MSY]
+comment: Category=family.
+synonym: "IFN type I" EXACT []
+synonym: "interferon type I" EXACT []
+is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000025853
@@ -8681,6 +9251,74 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000044520
+name: interleukin-23 subunit alpha, signal peptide removed form
+namespace: protein
+def: "An interleukin-23 subunit alpha that has had the signal peptide removed. Example: UniProtKB:Q9NPF7, 20-189." [PRO:DAN]
+comment: Category=modification.
+synonym: "IL23A/SigPep-" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000001384 ! interleukin-23 subunit alpha
+intersection_of: PR:000001384 ! interleukin-23 subunit alpha
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000044521
+name: interleukin-23 subunit alpha, signal peptide removed form (human)
+namespace: protein
+def: "An interleukin-23 subunit alpha, signal peptide removed form in human. UniProtKB:Q9NPF7, 20-189." [PRO:DAN]
+comment: Category=organism-modification.
+synonym: "hIL23A/SigPep-" EXACT PRO-short-label [PRO:DAN]
+synonym: "PRO_0000259488" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:Q9NPF7, 20-189" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-447245 "PR:000044521 located_in GO:0005576"
+xref: Reactome:R-HSA-8950224 "PR:000044521 located_in GO:0005788"
+is_a: PR:000044520 ! interleukin-23 subunit alpha, signal peptide removed form
+is_a: PR:Q9NPF7 ! interleukin-23 subunit alpha (human)
+intersection_of: PR:000044520 ! interleukin-23 subunit alpha, signal peptide removed form
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000044522
+name: interleukin-12 subunit alpha, signal peptide removed form (human)
+namespace: protein
+def: "An interleukin-12 subunit alpha, signal peptide removed form in human. UniProtKB:P29459, 23-219." [PRO:DAN]
+comment: Category=organism-modification.
+synonym: "hIL12A/SigPep-" EXACT PRO-short-label [PRO:DAN]
+synonym: "PRO_0000015604" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P29459, 23-219" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-447212 "PR:000044522 located_in GO:0005576"
+xref: Reactome:R-HSA-8950139 "PR:000044522 located_in GO:0005788"
+xref: Reactome:R-HSA-8950449 "PR:000044522 located_in GO:0031906"
+xref: Reactome:R-HSA-8950463 "PR:000044522 located_in GO:0005796"
+is_a: PR:000018432 ! interleukin-12 subunit alpha, signal peptide removed form
+is_a: PR:P29459 ! interleukin-12 subunit alpha (human)
+intersection_of: PR:000018432 ! interleukin-12 subunit alpha, signal peptide removed form
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000044523
+name: interleukin-12 subunit beta, signal peptide removed form (human)
+namespace: protein
+def: "An interleukin-12 subunit beta, signal peptide removed form in human. UniProtKB:P29460, 23-328." [PRO:DAN]
+comment: Category=organism-modification.
+synonym: "hIL12B/SigPep-" EXACT PRO-short-label [PRO:DAN]
+synonym: "PRO_0000010930" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P29460, 23-328" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-447181 "PR:000044523 located_in GO:0005576"
+xref: Reactome:R-HSA-8950126 "PR:000044523 located_in GO:0005788"
+xref: Reactome:R-HSA-8950359 "PR:000044523 located_in GO:0005796"
+xref: Reactome:R-HSA-8950675 "PR:000044523 located_in GO:0031906"
+xref: Reactome:R-HSA-8950760 "PR:000044523 located_in GO:0005829"
+is_a: PR:000018434 ! interleukin-12 subunit beta, signal peptide removed form
+is_a: PR:P29460 ! interleukin-12 subunit beta (human)
+intersection_of: PR:000018434 ! interleukin-12 subunit beta, signal peptide removed form
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000044628
 name: voltage-gated ion channel protein
 namespace: protein
@@ -8867,6 +9505,30 @@ is_a: PR:P15144 ! aminopeptidase N (human)
 intersection_of: PR:P15144 ! aminopeptidase N (human)
 intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000046364
+name: apolipoprotein E, signal peptide removed form (human)
+namespace: protein
+def: "An apolipoprotein E (human) that has had the signal peptide removed. UniProtKB:P02649, 19-317." [PRO:DNx, Reactome:R-HSA-174615, Reactome:R-HSA-174646, Reactome:R-HSA-174651, Reactome:R-HSA-174766, Reactome:R-HSA-174804, Reactome:R-HSA-2429687, Reactome:R-HSA-3221641]
+comment: Category=organism-modification.
+synonym: "hAPOE/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000001987" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P02649, 19-317" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-174615 "PR:000046364 located_in GO:0005886"
+xref: Reactome:R-HSA-174646 "PR:000046364 located_in GO:0005576"
+xref: Reactome:R-HSA-174651 "PR:000046364 located_in GO:0030669"
+xref: Reactome:R-HSA-174766 "PR:000046364 located_in GO:0010008"
+xref: Reactome:R-HSA-174804 "PR:000046364 located_in GO:0031904"
+xref: Reactome:R-HSA-2429687 "PR:000046364 located_in GO:0005769"
+xref: Reactome:R-HSA-3221641 "PR:000046364 located_in GO:0071682"
+xref: Reactome:R-HSA-6784908 "PR:000046364 located_in GO:0005788"
+is_a: PR:000019028 ! apolipoprotein E, signal peptide removed form
+is_a: PR:P02649 ! apolipoprotein E (human)
+intersection_of: PR:P02649 ! apolipoprotein E (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -9412,6 +10074,22 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000047278
+name: elastin, signal peptide removed form (human)
+namespace: protein
+def: "An elastin (human) that has had the signal peptide removed. UniProtKB:P15502, 27-786." [PRO:DNx, Reactome:R-HSA-1454880]
+comment: Category=organism-modification.
+synonym: "hELN/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000021163" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P15502, 27-786" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-1454880 "PR:000047278 located_in GO:0005576"
+is_a: PR:P15502 ! elastin (human)
+intersection_of: PR:P15502 ! elastin (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000047313
 name: erythropoietin, signal peptide removed form (human)
 namespace: protein
@@ -9515,6 +10193,23 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000047517
+name: pro-glucagon, signal peptide removed form (human)
+namespace: protein
+def: "A pro-glucagon (human) that has had the signal peptide removed. UniProtKB:P01275, 21-180." [PRO:DNx, Reactome:R-HSA-381774, Reactome:R-HSA-421418]
+comment: Category=organism-modification.
+synonym: "hGCG/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "UniProtKB:P01275, 21-180" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-381774 "PR:000047517 located_in GO:0005788"
+xref: Reactome:R-HSA-421418 "PR:000047517 located_in GO:0034774"
+is_a: PR:000019979 ! pro-glucagon, signal peptide removed form
+is_a: PR:P01275 ! pro-glucagon (human)
+intersection_of: PR:P01275 ! pro-glucagon (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000047591
 name: aspartate aminotransferase, cytoplasmic, initiator methionine removed form (human)
 namespace: protein
@@ -9546,6 +10241,23 @@ xref: Reactome:R-HSA-2054109 "PR:000047921 located_in GO:0005796"
 xref: Reactome:R-HSA-2090077 "PR:000047921 located_in GO:0043202"
 is_a: PR:P98160 ! basement membrane-specific heparan sulfate proteoglycan core protein (human)
 intersection_of: PR:P98160 ! basement membrane-specific heparan sulfate proteoglycan core protein (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000047963
+name: interferon beta, signal peptide removed form (human)
+namespace: protein
+def: "An interferon beta (human) that has had the signal peptide removed. UniProtKB:P01574, 22-187." [PRO:DNx, Reactome:R-HSA-877351]
+comment: Category=organism-modification.
+synonym: "hIFNB1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000016400" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P01574, 22-187" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-877351 "PR:000047963 located_in GO:0005576"
+is_a: PR:000020259 ! interferon beta 1, signal peptide removed form
+is_a: PR:P01574 ! interferon beta (human)
+intersection_of: PR:P01574 ! interferon beta (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -10169,6 +10881,26 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000048667
+name: alpha-1-acid glycoprotein 1, signal peptide removed form (human)
+namespace: protein
+def: "An alpha-1-acid glycoprotein 1 (human) that has had the signal peptide removed. UniProtKB:P02763, 19-201." [PRO:DNx, Reactome:R-HSA-6799687, Reactome:R-HSA-8848906]
+comment: Category=organism-modification.
+synonym: "hORM1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000017860" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P02763, 19-201" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-6799632 "PR:000048667 located_in GO:0035580"
+xref: Reactome:R-HSA-6799687 "PR:000048667 located_in GO:0005576"
+xref: Reactome:R-HSA-6801026 "PR:000048667 located_in GO:1904724"
+xref: Reactome:R-HSA-8848906 "PR:000048667 located_in GO:0031093"
+is_a: PR:000020835 ! alpha-1-acid glycoprotein 1, signal peptide removed form
+is_a: PR:P02763 ! alpha-1-acid glycoprotein 1 (human)
+intersection_of: PR:P02763 ! alpha-1-acid glycoprotein 1 (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000048711
 name: programmed cell death protein 1, signal peptide removed form (human)
 namespace: protein
@@ -10508,6 +11240,23 @@ synonym: "UniProtKB:Q9Y6Q6, 30-616" EXACT PRO-proteoform-std [PRO:DNx]
 xref: Reactome:R-HSA-5668756 "PR:000049488 located_in GO:0005886"
 is_a: PR:Q9Y6Q6 ! tumor necrosis factor receptor superfamily member 11A (human)
 intersection_of: PR:Q9Y6Q6 ! tumor necrosis factor receptor superfamily member 11A (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000049489
+name: tumor necrosis factor receptor superfamily member 11B, signal peptide removed form (human)
+namespace: protein
+def: "A tumor necrosis factor receptor superfamily member 11B (human) that has had the signal peptide removed. UniProtKB:O00300, 22-401." [PRO:DNx, Reactome:R-HSA-5672848]
+comment: Category=organism-modification.
+synonym: "hTNFRSF11B/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000034587" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:O00300, 22-401" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-5672848 "PR:000049489 located_in GO:0005886"
+is_a: PR:000021699 ! tumor necrosis factor receptor superfamily member 11B, signal peptide removed form
+is_a: PR:O00300 ! tumor necrosis factor receptor superfamily member 11B (human)
+intersection_of: PR:O00300 ! tumor necrosis factor receptor superfamily member 11B (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -11071,6 +11820,21 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:A3RF19
+name: tumor necrosis factor ligand superfamily member 11 (chicken)
+namespace: protein
+def: "A tumor necrosis factor ligand superfamily member 11 that is encoded in the genome of chicken." [PANTHER:PTHR11471\:SF3, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "chick-TNFSF11" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:A3RF19
+is_a: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=66545 ! TNFSF11 (chicken)
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: PR:B0BL87
 name: CD14 molecule (chicken)
 namespace: protein
@@ -11262,6 +12026,26 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:O00300
+name: tumor necrosis factor receptor superfamily member 11B (human)
+namespace: protein
+def: "A tumor necrosis factor receptor superfamily member 11B that is encoded in the genome of human." [PRO:DNx, UniProtKB:O00300]
+comment: Category=organism-gene.
+synonym: "hTNFRSF11B" EXACT PRO-short-label [PRO:DNx]
+synonym: "OCIF" RELATED Gene-based [UniProtKB:O00300]
+synonym: "OPG" RELATED Gene-based [UniProtKB:O00300]
+synonym: "osteoclastogenesis inhibitory factor (human)" EXACT [UniProtKB:O00300]
+synonym: "osteoprotegerin (human)" EXACT [UniProtKB:O00300]
+synonym: "TNFRSF11B" RELATED Gene-based [UniProtKB:O00300]
+xref: UniProtKB:O00300
+is_a: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11909 ! TNFRSF11B (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:O00584
 name: ribonuclease T2 (human)
 namespace: protein
@@ -11311,6 +12095,26 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000016283 ! thyroglobulin
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98733 ! Tg (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:O08712
+name: tumor necrosis factor receptor superfamily member 11B (mouse)
+namespace: protein
+def: "A tumor necrosis factor receptor superfamily member 11B that is encoded in the genome of mouse." [OMA:O08712, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTNFRSF11B" EXACT PRO-short-label [PRO:DNx]
+synonym: "Ocif" RELATED Gene-based [UniProtKB:O08712]
+synonym: "Opg" RELATED Gene-based [UniProtKB:O08712]
+synonym: "osteoclastogenesis inhibitory factor (mouse)" EXACT [UniProtKB:O08712]
+synonym: "osteoprotegerin (mouse)" EXACT [UniProtKB:O08712]
+synonym: "Tnfrsf11b" RELATED Gene-based [UniProtKB:O08712]
+xref: UniProtKB:O08712
+is_a: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016480 ! tumor necrosis factor receptor superfamily member 11B
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:109587 ! Tnfrsf11b (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -11373,6 +12177,32 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:O14788
+name: tumor necrosis factor ligand superfamily member 11 (human)
+namespace: protein
+def: "A tumor necrosis factor ligand superfamily member 11 that is encoded in the genome of human." [PRO:WCB, UniProtKB:O14788]
+comment: Category=organism-gene.
+synonym: "CD254 (human)" EXACT [UniProtKB:O14788]
+synonym: "hTNFSF11" EXACT PRO-short-label [PRO:DNx]
+synonym: "ODF (human)" EXACT [UniProtKB:O14788]
+synonym: "OPGL" RELATED Gene-based [UniProtKB:O14788]
+synonym: "osteoclast differentiation factor (human)" EXACT [UniProtKB:O14788]
+synonym: "osteoprotegerin ligand (human)" EXACT [UniProtKB:O14788]
+synonym: "RANKL" RELATED Gene-based [UniProtKB:O14788]
+synonym: "receptor activator of nuclear factor kappa-B ligand (human)" EXACT [UniProtKB:O14788]
+synonym: "TNF-related activation-induced cytokine (human)" EXACT [UniProtKB:O14788]
+synonym: "TNFSF11" RELATED Gene-based [UniProtKB:O14788]
+synonym: "TRANCE" RELATED Gene-based [UniProtKB:O14788]
+xref: Reactome:R-HSA-5667141 "PR:O14788 located_in GO:0005886"
+xref: UniProtKB:O14788
+is_a: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11926 ! TNFSF11 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:O15273
 name: telethonin (human)
 namespace: protein
@@ -11432,6 +12262,34 @@ intersection_of: PR:000001927 ! sialic acid-binding Ig-like lectin 5
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10874 ! SIGLEC5 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:O35235
+name: tumor necrosis factor ligand superfamily member 11 (mouse)
+namespace: protein
+def: "A tumor necrosis factor ligand superfamily member 11 that is encoded in the genome of mouse." [OMA:O35235, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "CD254 (mouse)" EXACT [UniProtKB:O35235]
+synonym: "mTNFSF11" EXACT PRO-short-label [PRO:DNx]
+synonym: "ODF (mouse)" EXACT [UniProtKB:O35235]
+synonym: "Opgl" RELATED Gene-based [UniProtKB:O35235]
+synonym: "OPGL (mouse)" EXACT [UniProtKB:O35235]
+synonym: "osteoclast differentiation factor (mouse)" EXACT [UniProtKB:O35235]
+synonym: "osteoprotegerin ligand (mouse)" EXACT [UniProtKB:O35235]
+synonym: "Rankl" RELATED Gene-based [UniProtKB:O35235]
+synonym: "RANKL (mouse)" EXACT [UniProtKB:O35235]
+synonym: "receptor activator of nuclear factor kappa-B ligand (mouse)" EXACT [UniProtKB:O35235]
+synonym: "TNF-related activation-induced cytokine (mouse)" EXACT [UniProtKB:O35235]
+synonym: "Tnfsf11" RELATED Gene-based [UniProtKB:O35235]
+synonym: "Trance" RELATED Gene-based [UniProtKB:O35235]
+synonym: "TRANCE (mouse)" EXACT [UniProtKB:O35235]
+xref: UniProtKB:O35235
+is_a: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000002107 ! tumor necrosis factor ligand superfamily member 11
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1100089 ! Tnfsf11 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:O35305
@@ -11918,6 +12776,24 @@ relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/396221 ! LDHA (
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: PR:P00367
+name: glutamate dehydrogenase 1, mitochondrial (human)
+namespace: protein
+def: "A glutamate dehydrogenase 1, mitochondrial that is encoded in the genome of human." [PRO:DNx, UniProtKB:P00367]
+comment: Category=organism-gene.
+synonym: "GDH 1 (human)" EXACT [UniProtKB:P00367]
+synonym: "GLUD" RELATED Gene-based [UniProtKB:P00367]
+synonym: "GLUD1" RELATED Gene-based [UniProtKB:P00367]
+synonym: "hGLUD1" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P00367
+is_a: PR:000008056 ! glutamate dehydrogenase 1, mitochondrial
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000008056 ! glutamate dehydrogenase 1, mitochondrial
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4335 ! GLUD1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P00450
 name: ceruloplasmin (human)
 namespace: protein
@@ -12272,6 +13148,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P01275
+name: pro-glucagon (human)
+namespace: protein
+def: "A pro-glucagon that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01275]
+comment: Category=organism-gene.
+synonym: "GCG" RELATED Gene-based [UniProtKB:P01275]
+synonym: "hGCG" EXACT PRO-short-label [PRO:DNx]
+xref: Reactome:R-HSA-400456 "PR:P01275 located_in GO:0005788"
+xref: UniProtKB:P01275
+is_a: PR:000007891 ! pro-glucagon
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4191 ! GCG (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P01282
 name: VIP peptides (human)
 namespace: protein
@@ -12290,6 +13183,26 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P01298
+name: pancreatic prohormone (human)
+namespace: protein
+def: "A pancreatic prohormone that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01298]
+comment: Category=organism-gene.
+synonym: "hPPY" EXACT PRO-short-label [PRO:DNx]
+synonym: "obinepitide (human)" EXACT [UniProtKB:P01298]
+synonym: "pancreatic polypeptide (human)" EXACT [UniProtKB:P01298]
+synonym: "PNP" RELATED Gene-based [UniProtKB:P01298]
+synonym: "PP (human)" EXACT [UniProtKB:P01298]
+synonym: "PPY" RELATED Gene-based [UniProtKB:P01298]
+xref: UniProtKB:P01298
+is_a: PR:000013164 ! pancreatic prohormone
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000013164 ! pancreatic prohormone
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9327 ! PPY (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P01308
 name: insulin gene translation product (human)
 namespace: protein
@@ -12302,6 +13215,23 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000009054 ! insulin gene translation product
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6081 ! INS (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01350
+name: gastrin (human)
+namespace: protein
+def: "A gastrin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01350]
+comment: Category=organism-gene.
+synonym: "GAS" RELATED Gene-based [UniProtKB:P01350]
+synonym: "GAST" RELATED Gene-based [UniProtKB:P01350]
+synonym: "hGAST" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P01350
+is_a: PR:000007856 ! gastrin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000007856 ! gastrin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4164 ! GAST (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -12348,6 +13278,80 @@ intersection_of: PR:000000134 ! tumor necrosis factor
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11892 ! TNF (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01574
+name: interferon beta (human)
+namespace: protein
+def: "An interferon beta 1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01574]
+comment: Category=organism-gene.
+synonym: "fibroblast interferon (human)" EXACT [UniProtKB:P01574]
+synonym: "hIFNB1" EXACT PRO-short-label [PRO:DNx]
+synonym: "IFB" RELATED Gene-based [UniProtKB:P01574]
+synonym: "IFN-beta (human)" EXACT [UniProtKB:P01574]
+synonym: "IFNB" RELATED Gene-based [UniProtKB:P01574]
+synonym: "IFNB1" RELATED Gene-based [UniProtKB:P01574]
+xref: UniProtKB:P01574
+is_a: PR:000008924 ! interferon beta 1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000008924 ! interferon beta 1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5434 ! IFNB1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01575
+name: interferon beta (mouse)
+namespace: protein
+def: "An interferon beta 1 that is encoded in the genome of mouse." [OMA:P01575, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Ifb" RELATED Gene-based [UniProtKB:P01575]
+synonym: "IFN-beta (mouse)" EXACT [UniProtKB:P01575]
+synonym: "Ifnb" RELATED Gene-based [UniProtKB:P01575]
+synonym: "Ifnb1" RELATED Gene-based [UniProtKB:P01575]
+synonym: "mIFNB1" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P01575
+is_a: PR:000008924 ! interferon beta 1
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000008924 ! interferon beta 1
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:107657 ! Ifnb1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P01579
+name: interferon gamma (human)
+namespace: protein
+def: "An interferon gamma that is encoded in the genome of human." [PRO:CNA, UniProtKB:P01579]
+comment: Category=organism-gene.
+synonym: "hIFNG" EXACT PRO-short-label [PRO:DNx]
+synonym: "IFN-gamma (human)" EXACT [UniProtKB:P01579]
+synonym: "IFNG" RELATED Gene-based [UniProtKB:P01579]
+synonym: "immune interferon (human)" EXACT [UniProtKB:P01579]
+xref: UniProtKB:P01579
+is_a: PR:000000017 ! interferon gamma
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000000017 ! interferon gamma
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5438 ! IFNG (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01580
+name: interferon gamma (mouse)
+namespace: protein
+def: "An interferon gamma that is encoded in the genome of mouse." [OMA:P01580, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "IFN-gamma (mouse)" EXACT [UniProtKB:P01580]
+synonym: "Ifng" RELATED Gene-based [UniProtKB:P01580]
+synonym: "mIFNG" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P01580
+is_a: PR:000000017 ! interferon gamma
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000000017 ! interferon gamma
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:107656 ! Ifng (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P01582
@@ -12787,6 +13791,23 @@ relationship: has_gene_template http://www.ensembl.org/id/ENSGALG00000011306 ! D
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: PR:P02649
+name: apolipoprotein E (human)
+namespace: protein
+def: "An apolipoprotein E that is encoded in the genome of human." [PRO:DNx, UniProtKB:P02649]
+comment: Category=organism-gene.
+synonym: "apo-E (human)" EXACT [UniProtKB:P02649]
+synonym: "APOE" RELATED Gene-based [UniProtKB:P02649]
+synonym: "hAPOE" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P02649
+is_a: PR:000004155 ! apolipoprotein E
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004155 ! apolipoprotein E
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=613 ! APOE (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P02686
 name: myelin basic protein (human)
 namespace: protein
@@ -12860,6 +13881,26 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000007581 ! fibronectin
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3778 ! FN1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P02763
+name: alpha-1-acid glycoprotein 1 (human)
+namespace: protein
+def: "An alpha-1-acid glycoprotein 1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:P02763]
+comment: Category=organism-gene.
+synonym: "AGP 1 (human)" EXACT [UniProtKB:P02763]
+synonym: "AGP1" RELATED Gene-based [UniProtKB:P02763]
+synonym: "hORM1" EXACT PRO-short-label [PRO:DNx]
+synonym: "OMD 1 (human)" EXACT [UniProtKB:P02763]
+synonym: "ORM1" RELATED Gene-based [UniProtKB:P02763]
+synonym: "orosomucoid-1 (human)" EXACT [UniProtKB:P02763]
+xref: UniProtKB:P02763
+is_a: PR:000012037 ! alpha-1-acid glycoprotein 1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000012037 ! alpha-1-acid glycoprotein 1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8498 ! ORM1 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -13872,6 +14913,25 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:104798
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P06850
+name: corticoliberin (human)
+namespace: protein
+def: "A corticoliberin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P06850]
+comment: Category=organism-gene.
+synonym: "corticotropin-releasing factor (human)" EXACT [UniProtKB:P06850]
+synonym: "corticotropin-releasing hormone (human)" EXACT [UniProtKB:P06850]
+synonym: "CRF (human)" EXACT [UniProtKB:P06850]
+synonym: "CRH" RELATED Gene-based [UniProtKB:P06850]
+synonym: "hCRH" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P06850
+is_a: PR:000005867 ! corticoliberin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000005867 ! corticoliberin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2355 ! CRH (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P06876
 name: transcriptional activator Myb (mouse)
 namespace: protein
@@ -14244,6 +15304,23 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000003469 ! early growth response protein 2
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95296 ! Egr2 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P08226
+name: apolipoprotein E (mouse)
+namespace: protein
+def: "An apolipoprotein E that is encoded in the genome of mouse." [OMA:P08226, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "apo-E (mouse)" EXACT [UniProtKB:P08226]
+synonym: "Apoe" RELATED Gene-based [UniProtKB:P08226]
+synonym: "mAPOE" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P08226
+is_a: PR:000004155 ! apolipoprotein E
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000004155 ! apolipoprotein E
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88057 ! Apoe (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -14838,6 +15915,37 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P10145
+name: interleukin-8 (human)
+namespace: protein
+def: "An interleukin-8 that is encoded in the genome of human." [PMID:15623624, SALO:AJ]
+comment: Category=organism-gene. Salivary oral cancer biomarker.
+synonym: "C-X-C motif chemokine 8 (human)" EXACT [UniProtKB:P10145]
+synonym: "chemokine (C-X-C motif) ligand 8 (human)" EXACT [UniProtKB:P10145]
+synonym: "CXCL8" RELATED Gene-based [UniProtKB:P10145]
+synonym: "emoctakin (human)" EXACT [UniProtKB:P10145]
+synonym: "GCP-1 (human)" BROAD [UniProtKB:P10145]
+synonym: "granulocyte chemotactic protein 1 (human)" EXACT [UniProtKB:P10145]
+synonym: "hCXCL8" EXACT PRO-short-label [PRO:DNx]
+synonym: "IL-8 (human)" EXACT [UniProtKB:P10145]
+synonym: "IL8" RELATED Gene-based [UniProtKB:P10145]
+synonym: "MDNCF (human)" EXACT [UniProtKB:P10145]
+synonym: "MONAP (human)" EXACT [UniProtKB:P10145]
+synonym: "monocyte-derived neutrophil chemotactic factor (human)" EXACT [UniProtKB:P10145]
+synonym: "monocyte-derived neutrophil-activating peptide (human)" EXACT [UniProtKB:P10145]
+synonym: "NAP-1 (human)" EXACT [UniProtKB:P10145]
+synonym: "neutrophil-activating protein 1 (human)" EXACT [UniProtKB:P10145]
+synonym: "protein 3-10C (human)" EXACT [UniProtKB:P10145]
+synonym: "T-cell chemotactic factor (human)" EXACT [UniProtKB:P10145]
+xref: UniProtKB:P10145
+is_a: PR:000001395 ! interleukin-8
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001395 ! interleukin-8
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6025 ! CXCL8 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P10153
 name: non-secretory ribonuclease (human)
 namespace: protein
@@ -14935,6 +16043,24 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000005941 ! beta-casein
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88541 ! Csn2 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P10601
+name: pancreatic prohormone (mouse)
+namespace: protein
+def: "A pancreatic prohormone that is encoded in the genome of mouse." [OMA:P10601, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mPPY" EXACT PRO-short-label [PRO:DNx]
+synonym: "pancreatic polypeptide (mouse)" EXACT [UniProtKB:P10601]
+synonym: "PP (mouse)" EXACT [UniProtKB:P10601]
+synonym: "Ppy" RELATED Gene-based [UniProtKB:P10601]
+xref: UniProtKB:P10601
+is_a: PR:000013164 ! pancreatic prohormone
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000013164 ! pancreatic prohormone
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97753 ! Ppy (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -16015,6 +17141,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P15502
+name: elastin (human)
+namespace: protein
+def: "An elastin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P15502]
+comment: Category=organism-gene.
+synonym: "ELN" RELATED Gene-based [UniProtKB:P15502]
+synonym: "hELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "tropoelastin (human)" EXACT [UniProtKB:P15502]
+xref: UniProtKB:P15502
+is_a: PR:000007034 ! elastin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000007034 ! elastin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3327 ! ELN (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P15702
 name: leukosialin (mouse)
 namespace: protein
@@ -17030,6 +18173,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P20929
+name: nebulin (human)
+namespace: protein
+def: "A nebulin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P20929]
+comment: Category=organism-gene.
+synonym: "hNEB" EXACT PRO-short-label [PRO:DNx]
+synonym: "NEB" RELATED Gene-based [UniProtKB:P20929]
+xref: Reactome:R-HSA-390569 "PR:P20929 located_in GO:0005829"
+xref: UniProtKB:P20929
+is_a: PR:000011107 ! nebulin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000011107 ! nebulin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=7720 ! NEB (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P20937
 name: T-cell surface glycoprotein YE1/48 (mouse)
 namespace: protein
@@ -17451,6 +18611,29 @@ relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=6004
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: PR:P24298
+name: alanine aminotransferase 1 (human)
+namespace: protein
+def: "An alanine aminotransferase 1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:P24298]
+comment: Category=organism-gene.
+synonym: "AAT1" RELATED Gene-based [UniProtKB:P24298]
+synonym: "ALT1 (human)" EXACT [UniProtKB:P24298]
+synonym: "glutamate pyruvate transaminase 1 (human)" EXACT [UniProtKB:P24298]
+synonym: "glutamic--alanine transaminase 1 (human)" EXACT [UniProtKB:P24298]
+synonym: "glutamic--pyruvic transaminase 1 (human)" EXACT [UniProtKB:P24298]
+synonym: "GPT" RELATED Gene-based [UniProtKB:P24298]
+synonym: "GPT 1 (human)" EXACT [UniProtKB:P24298]
+synonym: "GPT1" RELATED Gene-based [UniProtKB:P24298]
+synonym: "hGPT" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P24298
+is_a: PR:000008208 ! alanine aminotransferase 1
+is_a: PR:000050341 ! alanine aminotransferase (human)
+intersection_of: PR:000008208 ! alanine aminotransferase 1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4552 ! GPT (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P24529
 name: tyrosine 3-monooxygenase (mouse)
 namespace: protein
@@ -17679,6 +18862,24 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001465 ! high affinity immunoglobulin gamma Fc receptor I
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95498 ! Fcgr1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P26443
+name: glutamate dehydrogenase 1, mitochondrial (mouse)
+namespace: protein
+def: "A glutamate dehydrogenase 1, mitochondrial that is encoded in the genome of mouse." [OMA:P26443, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "GDH 1 (mouse)" EXACT [UniProtKB:P26443]
+synonym: "Glud" RELATED Gene-based [UniProtKB:P26443]
+synonym: "Glud1" RELATED Gene-based [UniProtKB:P26443]
+synonym: "mGLUD1" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P26443
+is_a: PR:000008056 ! glutamate dehydrogenase 1, mitochondrial
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000008056 ! glutamate dehydrogenase 1, mitochondrial
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95753 ! Glud1 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -17940,6 +19141,50 @@ is_a: PR:000036947 ! T-cell surface glycoprotein CD1 (human)
 intersection_of: PR:000002027 ! T-cell surface glycoprotein CD1c
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1636 ! CD1C (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P29459
+name: interleukin-12 subunit alpha (human)
+namespace: protein
+def: "An interleukin-12 subunit alpha that is encoded in the genome of human." [PRO:CNA, UniProtKB:P29459]
+comment: Category=organism-gene.
+synonym: "CLMF p35 (human)" EXACT [UniProtKB:P29459]
+synonym: "cytotoxic lymphocyte maturation factor 35 kDa subunit (human)" EXACT [UniProtKB:P29459]
+synonym: "hIL12A" EXACT PRO-short-label [PRO:DNx]
+synonym: "IL-12 subunit p35 (human)" EXACT [UniProtKB:P29459]
+synonym: "IL-12A (human)" EXACT [UniProtKB:P29459]
+synonym: "IL12A" RELATED Gene-based [UniProtKB:P29459]
+synonym: "NK cell stimulatory factor chain 1 (human)" EXACT [UniProtKB:P29459]
+synonym: "NKSF1" RELATED Gene-based [UniProtKB:P29459]
+xref: UniProtKB:P29459
+is_a: PR:000001368 ! interleukin-12 subunit alpha
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001368 ! interleukin-12 subunit alpha
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5969 ! IL12A (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P29460
+name: interleukin-12 subunit beta (human)
+namespace: protein
+def: "An interleukin-12 subunit beta that is encoded in the genome of human." [PRO:CNA, UniProtKB:P29460]
+comment: Category=organism-gene.
+synonym: "CLMF p40 (human)" EXACT [UniProtKB:P29460]
+synonym: "cytotoxic lymphocyte maturation factor 40 kDa subunit (human)" EXACT [UniProtKB:P29460]
+synonym: "hIL12B" EXACT PRO-short-label [PRO:DNx]
+synonym: "IL-12 subunit p40 (human)" EXACT [UniProtKB:P29460]
+synonym: "IL-12B (human)" EXACT [UniProtKB:P29460]
+synonym: "IL12B" RELATED Gene-based [UniProtKB:P29460]
+synonym: "NK cell stimulatory factor chain 2 (human)" EXACT [UniProtKB:P29460]
+synonym: "NKSF2" RELATED Gene-based [UniProtKB:P29460]
+xref: UniProtKB:P29460
+is_a: PR:000001369 ! interleukin-12 subunit beta
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001369 ! interleukin-12 subunit beta
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5970 ! IL12B (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -18932,6 +20177,46 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P43431
+name: interleukin-12 subunit alpha (mouse)
+namespace: protein
+def: "An interleukin-12 subunit alpha that is encoded in the genome of mouse." [OMA:P43431, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "CLMF p35 (mouse)" EXACT [UniProtKB:P43431]
+synonym: "cytotoxic lymphocyte maturation factor 35 kDa subunit (mouse)" EXACT [UniProtKB:P43431]
+synonym: "IL-12 subunit p35 (mouse)" EXACT [UniProtKB:P43431]
+synonym: "IL-12A (mouse)" EXACT [UniProtKB:P43431]
+synonym: "Il12a" RELATED Gene-based [UniProtKB:P43431]
+synonym: "mIL12A" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P43431
+is_a: PR:000001368 ! interleukin-12 subunit alpha
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001368 ! interleukin-12 subunit alpha
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:96539 ! Il12a (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P43432
+name: interleukin-12 subunit beta (mouse)
+namespace: protein
+def: "An interleukin-12 subunit beta that is encoded in the genome of mouse." [OMA:P43432, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "CLMF p40 (mouse)" EXACT [UniProtKB:P43432]
+synonym: "cytotoxic lymphocyte maturation factor 40 kDa subunit (mouse)" EXACT [UniProtKB:P43432]
+synonym: "IL-12 subunit p40 (mouse)" EXACT [UniProtKB:P43432]
+synonym: "IL-12B (mouse)" EXACT [UniProtKB:P43432]
+synonym: "Il12b" RELATED Gene-based [UniProtKB:P43432]
+synonym: "mIL12B" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P43432
+is_a: PR:000001369 ! interleukin-12 subunit beta
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001369 ! interleukin-12 subunit beta
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:96540 ! Il12b (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P47710
 name: alpha-S1-casein (human)
 namespace: protein
@@ -19100,6 +20385,23 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:107430
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P48757
+name: gastrin (mouse)
+namespace: protein
+def: "A gastrin that is encoded in the genome of mouse." [OMA:P48757, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Gas" RELATED Gene-based [UniProtKB:P48757]
+synonym: "Gast" RELATED Gene-based [UniProtKB:P48757]
+synonym: "mGAST" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P48757
+is_a: PR:000007856 ! gastrin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000007856 ! gastrin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:104768 ! Gast (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P49183
 name: deoxyribonuclease-1 (mouse)
 namespace: protein
@@ -19207,6 +20509,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P49708
+name: interferon gamma (chicken)
+namespace: protein
+def: "An interferon gamma that is encoded in the genome of chicken." [OMA:P49708, PANTHER:PTHR11419\:SF0, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "chick-IFNG" EXACT PRO-short-label [PRO:DNx]
+synonym: "IFN-gamma (chicken)" EXACT [UniProtKB:P49708]
+synonym: "IFNG" RELATED Gene-based [UniProtKB:P49708]
+xref: UniProtKB:P49708
+is_a: PR:000000017 ! interferon gamma
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000000017 ! interferon gamma
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/396054 ! IFNG (chicken)
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: PR:P49715
 name: CCAAT/enhancer-binding protein alpha (human)
 namespace: protein
@@ -19223,6 +20542,24 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000005307 ! CCAAT/enhancer-binding protein alpha
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1833 ! CEBPA (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P49747
+name: cartilage oligomeric matrix protein (human)
+namespace: protein
+def: "A cartilage oligomeric matrix protein that is encoded in the genome of human." [PRO:CNA, UniProtKB:P49747]
+comment: Category=organism-gene.
+synonym: "COMP" RELATED Gene-based [UniProtKB:P49747]
+synonym: "hCOMP" EXACT PRO-short-label [PRO:DNx]
+synonym: "thrombospondin-5 (human)" EXACT [UniProtKB:P49747]
+synonym: "TSP5 (human)" EXACT [UniProtKB:P49747]
+xref: UniProtKB:P49747
+is_a: PR:000000085 ! cartilage oligomeric matrix protein
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000000085 ! cartilage oligomeric matrix protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2227 ! COMP (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -19676,6 +21013,23 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:99480 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P54320
+name: elastin (mouse)
+namespace: protein
+def: "An elastin that is encoded in the genome of mouse." [OMA:P54320, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Eln" RELATED Gene-based [UniProtKB:P54320]
+synonym: "mELN" EXACT PRO-short-label [PRO:DNx]
+synonym: "tropoelastin (mouse)" EXACT [UniProtKB:P54320]
+xref: UniProtKB:P54320
+is_a: PR:000007034 ! elastin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000007034 ! elastin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95317 ! Eln (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P55075
 name: fibroblast growth factor 8 (human)
 namespace: protein
@@ -19695,6 +21049,22 @@ intersection_of: PR:000007499 ! fibroblast growth factor 8
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3686 ! FGF8 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P55095
+name: pro-glucagon (mouse)
+namespace: protein
+def: "A pro-glucagon that is encoded in the genome of mouse." [OMA:P55095, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Gcg" RELATED Gene-based [UniProtKB:P55095]
+synonym: "mGCG" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P55095
+is_a: PR:000007891 ! pro-glucagon
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95674 ! Gcg (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P55097
@@ -20039,6 +21409,22 @@ is_a: PR:000029063 ! Gallus gallus protein
 intersection_of: PR:000009054 ! insulin gene translation product
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=4941 ! INS (chicken)
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P68259
+name: pro-glucagon (chicken)
+namespace: protein
+def: "A pro-glucagon that is encoded in the genome of chicken." [OMA:P68259, PANTHER:PTHR11418\:SF0, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "chick-GCG" EXACT PRO-short-label [PRO:DNx]
+synonym: "GCG" RELATED Gene-based [UniProtKB:P68259]
+xref: UniProtKB:P68259
+is_a: PR:000007891 ! pro-glucagon
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/396196 ! GCG (chicken)
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
@@ -20715,6 +22101,46 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000014362 ! runt-related transcription factor 1
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:99852 ! Runx1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q03403
+name: trefoil factor 2 (human)
+namespace: protein
+def: "A trefoil factor 2 that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q03403]
+comment: Category=organism-gene.
+synonym: "hTFF2" EXACT PRO-short-label [PRO:DNx]
+synonym: "SML1" RELATED Gene-based [UniProtKB:Q03403]
+synonym: "SP (human)" EXACT [UniProtKB:Q03403]
+synonym: "spasmolysin (human)" EXACT [UniProtKB:Q03403]
+synonym: "spasmolytic polypeptide (human)" EXACT [UniProtKB:Q03403]
+synonym: "TFF2" RELATED Gene-based [UniProtKB:Q03403]
+xref: UniProtKB:Q03403
+is_a: PR:000016275 ! trefoil factor 2
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016275 ! trefoil factor 2
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11756 ! TFF2 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q03404
+name: trefoil factor 2 (mouse)
+namespace: protein
+def: "A trefoil factor 2 that is encoded in the genome of mouse." [OMA:Q03404, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTFF2" EXACT PRO-short-label [PRO:DNx]
+synonym: "Sml1" RELATED Gene-based [UniProtKB:Q03404]
+synonym: "Sp" RELATED Gene-based [UniProtKB:Q03404]
+synonym: "SP (mouse)" EXACT [UniProtKB:Q03404]
+synonym: "spasmolytic polypeptide (mouse)" EXACT [UniProtKB:Q03404]
+synonym: "Tff2" RELATED Gene-based [UniProtKB:Q03404]
+xref: UniProtKB:Q03404
+is_a: PR:000016275 ! trefoil factor 2
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016275 ! trefoil factor 2
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1306805 ! Tff2 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -22360,6 +23786,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:191705
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q8CIT0
+name: corticoliberin (mouse)
+namespace: protein
+def: "A corticoliberin that is encoded in the genome of mouse." [OMA:Q8CIT0, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "corticotropin-releasing factor (mouse)" EXACT [UniProtKB:Q8CIT0]
+synonym: "corticotropin-releasing hormone (mouse)" EXACT [UniProtKB:Q8CIT0]
+synonym: "CRF (mouse)" EXACT [UniProtKB:Q8CIT0]
+synonym: "Crh" RELATED Gene-based [UniProtKB:Q8CIT0]
+synonym: "Gm1347" RELATED Gene-based [UniProtKB:Q8CIT0]
+synonym: "mCRH" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q8CIT0
+is_a: PR:000005867 ! corticoliberin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000005867 ! corticoliberin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88496 ! Crh (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q8CIZ8
 name: von Willebrand factor (mouse)
 namespace: protein
@@ -22415,6 +23861,28 @@ intersection_of: PR:000004724 ! bestrophin-4
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=17106 ! BEST4 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q8QZR5
+name: alanine aminotransferase 1 (mouse)
+namespace: protein
+def: "An alanine aminotransferase 1 that is encoded in the genome of mouse." [OMA:Q8QZR5, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "ALT1 (mouse)" EXACT [UniProtKB:Q8QZR5]
+synonym: "glutamate pyruvate transaminase 1 (mouse)" EXACT [UniProtKB:Q8QZR5]
+synonym: "glutamic--alanine transaminase 1 (mouse)" EXACT [UniProtKB:Q8QZR5]
+synonym: "glutamic--pyruvic transaminase 1 (mouse)" EXACT [UniProtKB:Q8QZR5]
+synonym: "Gpt" RELATED Gene-based [UniProtKB:Q8QZR5]
+synonym: "GPT 1 (mouse)" EXACT [UniProtKB:Q8QZR5]
+synonym: "Gpt1" RELATED Gene-based [UniProtKB:Q8QZR5]
+synonym: "mGPT" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q8QZR5
+is_a: PR:000008208 ! alanine aminotransferase 1
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000008208 ! alanine aminotransferase 1
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95802 ! Gpt (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:Q8R2Q8
@@ -22976,6 +24444,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:192341
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q9EQ14
+name: interleukin-23 subunit alpha (mouse)
+namespace: protein
+def: "An interleukin-23 subunit alpha that is encoded in the genome of mouse." [OMA:Q9EQ14, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "IL-23 subunit alpha (mouse)" EXACT [UniProtKB:Q9EQ14]
+synonym: "IL-23-A (mouse)" EXACT [UniProtKB:Q9EQ14]
+synonym: "IL-23p19 (mouse)" EXACT [UniProtKB:Q9EQ14]
+synonym: "Il23a" RELATED Gene-based [UniProtKB:Q9EQ14]
+synonym: "interleukin-23 subunit p19 (mouse)" EXACT [UniProtKB:Q9EQ14]
+synonym: "mIL23A" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q9EQ14
+is_a: PR:000001384 ! interleukin-23 subunit alpha
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001384 ! interleukin-23 subunit alpha
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1932410 ! Il23a (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q9ER75
 name: iroquois-class homeodomain protein IRX-6 (mouse)
 namespace: protein
@@ -23268,6 +24756,28 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:Q9NPF7
+name: interleukin-23 subunit alpha (human)
+namespace: protein
+def: "An interleukin-23 subunit alpha that is encoded in the genome of human." [PRO:CNA, UniProtKB:Q9NPF7]
+comment: Category=organism-gene.
+synonym: "hIL23A" EXACT PRO-short-label [PRO:DNx]
+synonym: "IL-23 subunit alpha (human)" EXACT [UniProtKB:Q9NPF7]
+synonym: "IL-23-A (human)" EXACT [UniProtKB:Q9NPF7]
+synonym: "IL-23p19 (human)" EXACT [UniProtKB:Q9NPF7]
+synonym: "IL23A" RELATED Gene-based [UniProtKB:Q9NPF7]
+synonym: "interleukin-23 subunit p19 (human)" EXACT [UniProtKB:Q9NPF7]
+synonym: "SGRF" RELATED Gene-based [UniProtKB:Q9NPF7]
+synonym: "UNQ2498/PRO5798" RELATED Gene-based [UniProtKB:Q9NPF7]
+xref: UniProtKB:Q9NPF7
+is_a: PR:000001384 ! interleukin-23 subunit alpha
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001384 ! interleukin-23 subunit alpha
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=15488 ! IL23A (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q9NPY3
 name: complement component C1q receptor (human)
 namespace: protein
@@ -23417,6 +24927,23 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000000775 ! short transient receptor potential cation channel TRPC3
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:109526 ! Trpc3 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q9R0G6
+name: cartilage oligomeric matrix protein (mouse)
+namespace: protein
+def: "A cartilage oligomeric matrix protein that is encoded in the genome of mouse." [OMA:Q9R0G6, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Comp" RELATED Gene-based [UniProtKB:Q9R0G6]
+synonym: "COMP (mouse)" EXACT [UniProtKB:Q9R0G6]
+synonym: "mCOMP" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q9R0G6
+is_a: PR:000000085 ! cartilage oligomeric matrix protein
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000000085 ! cartilage oligomeric matrix protein
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88469 ! Comp (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -24133,6 +25660,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=66545
+name: TNFSF11 (chicken)
+namespace: gene
+def: "A protein coding gene TNFSF11 in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: http://birdgenenames.org/cgnc/GeneReport?id=72010
 name: CG-16 (chicken)
 namespace: gene
@@ -24457,6 +25993,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11756
+name: TFF2 (human)
+namespace: gene
+def: "A protein coding gene TFF2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11763
 name: TFRC (human)
 namespace: gene
@@ -24520,10 +26065,28 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11909
+name: TNFRSF11B (human)
+namespace: gene
+def: "A protein coding gene TNFRSF11B in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11922
 name: CD27 (human)
 namespace: gene
 def: "A protein coding gene CD27 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=11926
+name: TNFSF11 (human)
+namespace: gene
+def: "A protein coding gene TNFSF11 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -24704,6 +26267,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=14675
 name: IRX6 (human)
 namespace: gene
 def: "A protein coding gene IRX6 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=15488
+name: IL23A (human)
+namespace: gene
+def: "A protein coding gene IL23A in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -25267,6 +26839,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2227
+name: COMP (human)
+namespace: gene
+def: "A protein coding gene COMP in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=225
 name: ADAR (human)
 namespace: gene
@@ -25307,6 +26888,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2336
 name: CR2 (human)
 namespace: gene
 def: "A protein coding gene CR2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2355
+name: CRH (human)
+namespace: gene
+def: "A protein coding gene CRH in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -25460,6 +27050,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3239
 name: EGR2 (human)
 namespace: gene
 def: "A protein coding gene EGR2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3327
+name: ELN (human)
+namespace: gene
+def: "A protein coding gene ELN in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -25663,6 +27262,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4164
+name: GAST (human)
+namespace: gene
+def: "A protein coding gene GAST in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4170
 name: GATA1 (human)
 namespace: gene
@@ -25690,6 +27298,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4191
+name: GCG (human)
+namespace: gene
+def: "A protein coding gene GCG in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4232
 name: GDNF (human)
 namespace: gene
@@ -25703,6 +27320,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4235
 name: GFAP (human)
 namespace: gene
 def: "A protein coding gene GFAP in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4335
+name: GLUD1 (human)
+namespace: gene
+def: "A protein coding gene GLUD1 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -25784,6 +27410,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4540
 name: CXCR3 (human)
 namespace: gene
 def: "A protein coding gene CXCR3 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4552
+name: GPT (human)
+namespace: gene
+def: "A protein coding gene GPT in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -25888,6 +27523,24 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5434
+name: IFNB1 (human)
+namespace: gene
+def: "A protein coding gene IFNB1 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5438
+name: IFNG (human)
+namespace: gene
+def: "A protein coding gene IFNG in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5464
 name: IGF1 (human)
 namespace: gene
@@ -25946,6 +27599,24 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5962
 name: IL10 (human)
 namespace: gene
 def: "A protein coding gene IL10 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5969
+name: IL12A (human)
+namespace: gene
+def: "A protein coding gene IL12A in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5970
+name: IL12B (human)
+namespace: gene
+def: "A protein coding gene IL12B in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -26122,6 +27793,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6025
+name: CXCL8 (human)
+namespace: gene
+def: "A protein coding gene CXCL8 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6026
 name: CXCR1 (human)
 namespace: gene
@@ -26162,6 +27842,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6106
 name: FOXP3 (human)
 namespace: gene
 def: "A protein coding gene FOXP3 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=613
+name: APOE (human)
+namespace: gene
+def: "A protein coding gene APOE in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -26554,6 +28243,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=7720
+name: NEB (human)
+namespace: gene
+def: "A protein coding gene NEB in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=775
 name: SERPINC1 (human)
 namespace: gene
@@ -26576,6 +28274,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=7939
 name: NPPA (human)
 namespace: gene
 def: "A protein coding gene NPPA in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8498
+name: ORM1 (human)
+namespace: gene
+def: "A protein coding gene ORM1 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -26639,6 +28346,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=914
 name: B2M (human)
 namespace: gene
 def: "A protein coding gene B2M in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9327
+name: PPY (human)
+namespace: gene
+def: "A protein coding gene PPY in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -26932,6 +28648,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:104768
+name: Gast (mouse)
+namespace: gene
+def: "A protein coding gene Gast in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:104797
 name: Lta (mouse)
 namespace: gene
@@ -27139,6 +28864,24 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:107656
+name: Ifng (mouse)
+namespace: gene
+def: "A protein coding gene Ifng in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:107657
+name: Ifnb1 (mouse)
+namespace: gene
+def: "A protein coding gene Ifnb1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:107674
 name: Cd1d1 (mouse)
 namespace: gene
@@ -27265,6 +29008,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:109587
+name: Tnfrsf11b (mouse)
+namespace: gene
+def: "A protein coding gene Tnfrsf11b in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:1099452
 name: Mtm1 (mouse)
 namespace: gene
@@ -27278,6 +29030,15 @@ id: http://www.informatics.jax.org/marker/MGI:1099800
 name: Nfkb2 (mouse)
 namespace: gene
 def: "A protein coding gene Nfkb2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:1100089
+name: Tnfsf11 (mouse)
+namespace: gene
+def: "A protein coding gene Tnfsf11 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -27350,6 +29111,15 @@ id: http://www.informatics.jax.org/marker/MGI:1298397
 name: Sncg (mouse)
 namespace: gene
 def: "A protein coding gene Sncg in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:1306805
+name: Tff2 (mouse)
+namespace: gene
+def: "A protein coding gene Tff2 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -27724,6 +29494,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:1932410
+name: Il23a (mouse)
+namespace: gene
+def: "A protein coding gene Il23a in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:1934028
 name: Ntng1 (mouse)
 namespace: gene
@@ -27890,6 +29669,15 @@ id: http://www.informatics.jax.org/marker/MGI:87991
 name: Alb (mouse)
 namespace: gene
 def: "A protein coding gene Alb in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:88057
+name: Apoe (mouse)
+namespace: gene
+def: "A protein coding gene Apoe in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28156,6 +29944,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:88469
+name: Comp (mouse)
+namespace: gene
+def: "A protein coding gene Comp in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:88476
 name: Cp (mouse)
 namespace: gene
@@ -28169,6 +29966,15 @@ id: http://www.informatics.jax.org/marker/MGI:88489
 name: Cr2 (mouse)
 namespace: gene
 def: "A protein coding gene Cr2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:88496
+name: Crh (mouse)
+namespace: gene
+def: "A protein coding gene Crh in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28241,6 +30047,15 @@ id: http://www.informatics.jax.org/marker/MGI:95296
 name: Egr2 (mouse)
 namespace: gene
 def: "A protein coding gene Egr2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:95317
+name: Eln (mouse)
+namespace: gene
+def: "A protein coding gene Eln in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28381,10 +30196,28 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:95674
+name: Gcg (mouse)
+namespace: gene
+def: "A protein coding gene Gcg in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:95697
 name: Gfap (mouse)
 namespace: gene
 def: "A protein coding gene Gfap in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:95753
+name: Glud1 (mouse)
+namespace: gene
+def: "A protein coding gene Glud1 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28403,6 +30236,15 @@ id: http://www.informatics.jax.org/marker/MGI:95792
 name: Got2 (mouse)
 namespace: gene
 def: "A protein coding gene Got2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:95802
+name: Gpt (mouse)
+namespace: gene
+def: "A protein coding gene Gpt in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28484,6 +30326,24 @@ id: http://www.informatics.jax.org/marker/MGI:96537
 name: Il10 (mouse)
 namespace: gene
 def: "A protein coding gene Il10 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:96539
+name: Il12a (mouse)
+namespace: gene
+def: "A protein coding gene Il12a in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:96540
+name: Il12b (mouse)
+namespace: gene
+def: "A protein coding gene Il12b in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -28862,6 +30722,15 @@ id: http://www.informatics.jax.org/marker/MGI:97612
 name: Plaur (mouse)
 namespace: gene
 def: "A protein coding gene Plaur in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:97753
+name: Ppy (mouse)
+namespace: gene
+def: "A protein coding gene Ppy in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -29317,6 +31186,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: http://www.ncbi.nlm.nih.gov/gene/396054
+name: IFNG (chicken)
+namespace: gene
+def: "A protein coding gene IFNG in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: http://www.ncbi.nlm.nih.gov/gene/396099
 name: ESR1 (chicken)
 namespace: gene
@@ -29348,6 +31226,15 @@ id: http://www.ncbi.nlm.nih.gov/gene/396191
 name: TFRC (chicken)
 namespace: gene
 def: "A protein coding gene TFRC in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://www.ncbi.nlm.nih.gov/gene/396196
+name: GCG (chicken)
+namespace: gene
+def: "A protein coding gene GCG in chicken." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
