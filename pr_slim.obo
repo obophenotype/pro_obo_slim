@@ -1002,6 +1002,24 @@ xref: PANTHER:PTHR24227\:SF213
 is_a: PR:000001128 ! chemokine receptor
 
 [Term]
+id: PR:000001224
+name: medium-wave-sensitive opsin
+namespace: protein
+def: "An animal opsin that is a translation product of the human OPN1MW, OPN1MW2, or OPN1MW3 genes, 1:1 orthologs thereof, or a semi-ortholog thereof." [PRO:DAN, PRO:WCB]
+comment: Category=gene. Note: The human OPN1MW, OPN1MW2, and OPN1MW3 genes encode identical proteins.
+synonym: "Gcp" RELATED []
+synonym: "GOP" EXACT []
+synonym: "green cone photoreceptor pigment" EXACT []
+synonym: "green-sensitive opsin" EXACT []
+synonym: "M opsin" EXACT []
+synonym: "medium wavelength-sensitive cone opsin" EXACT []
+synonym: "OPN1MW" EXACT PRO-short-label [PRO:DNx]
+synonym: "Opn1mw" RELATED []
+synonym: "OPN1MW2" RELATED []
+xref: IUPHARobj:2962
+is_a: PR:000001119 ! animal opsin
+
+[Term]
 id: PR:000001226
 name: high affinity interleukin-8 receptor
 namespace: protein
@@ -1021,6 +1039,20 @@ synonym: "Mopn" RELATED Gene-based []
 synonym: "OPN4" EXACT PRO-short-label [PRO:DNx]
 synonym: "opsin-4" EXACT []
 xref: IUPHARobj:2758
+is_a: PR:000001119 ! animal opsin
+
+[Term]
+id: PR:000001244
+name: long-wave-sensitive opsin 1
+namespace: protein
+def: "An animal opsin that is a translation product of the human OPN1LW gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "OPN1LW" EXACT PRO-short-label [PRO:DNx]
+synonym: "RCP" RELATED Gene-based []
+synonym: "red cone photoreceptor pigment" EXACT []
+synonym: "red-sensitive opsin" EXACT []
+synonym: "ROP" EXACT []
+xref: IUPHARobj:2961
 is_a: PR:000001119 ! animal opsin
 
 [Term]
@@ -11796,6 +11828,25 @@ relationship: has_component PR:000050468 {maxCardinality="2"} ! hemoglobin subun
 relationship: has_component PR:000050468 {minCardinality="1"} ! hemoglobin subunit beta N-1-deoxyfructosylated 1
 
 [Term]
+id: PR:000050522
+name: medium-wave-sensitive opsin (human)
+namespace: protein
+def: "A medium-wave-sensitive opsin that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-family. Note: The OPN1MW, OPN1MW2, and OPN1MW3 genes encode identical proteins.
+synonym: "hOPN1MW" EXACT PRO-short-label [PRO:DAN]
+synonym: "OPN1MW" NARROW Gene-based [UniProtKB:P04001]
+synonym: "OPN1MW2" NARROW Gene-based [UniProtKB:P0DN77]
+synonym: "OPN1MW3" NARROW Gene-based [UniProtKB:P0DN78]
+is_a: PR:000001224 ! medium-wave-sensitive opsin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001224 ! medium-wave-sensitive opsin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+union_of: PR:P04001 ! medium-wave-sensitive opsin 1 (human)
+union_of: PR:P0DN77 ! medium-wave-sensitive opsin 2 (human)
+union_of: PR:P0DN78 ! medium-wave-sensitive opsin 3 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:A1EA95
 name: interleukin-7 receptor alpha chain (chicken)
 namespace: protein
@@ -14124,6 +14175,50 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95697 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P04000
+name: long-wave-sensitive opsin 1 (human)
+namespace: protein
+def: "A long-wave-sensitive opsin 1 that is encoded in the genome of human." [PRO:WCB, UniProtKB:P04000]
+comment: Category=organism-gene.
+synonym: "hOPN1LW" EXACT PRO-short-label [PRO:DNx]
+synonym: "OPN1LW" RELATED Gene-based [UniProtKB:P04000]
+synonym: "RCP" RELATED Gene-based [UniProtKB:P04000]
+synonym: "red cone photoreceptor pigment (human)" EXACT [UniProtKB:P04000]
+synonym: "red-sensitive opsin (human)" EXACT [UniProtKB:P04000]
+synonym: "ROP (human)" EXACT [UniProtKB:P04000]
+xref: DTO:02100475
+xref: Reactome:R-HSA-419769 "PR:P04000 located_in GO:0042622"
+xref: UniProtKB:P04000
+is_a: PR:000001244 ! long-wave-sensitive opsin 1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001244 ! long-wave-sensitive opsin 1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9936 ! OPN1LW (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P04001
+name: medium-wave-sensitive opsin 1 (human)
+namespace: protein
+def: "A medium-wave-sensitive opsin (human) that is a translation product of the OPN1MW gene in human." [PRO:DAN, UniProtKB:P04001]
+comment: Category=organism-gene. Note: The proteins encoded by OPN1MW (this class), OPN1MW2 (PR:P0DN77), and OPN1MW3 (PR:P0DN78) are identical.
+synonym: "GCP" RELATED Gene-based [UniProtKB:P04001]
+synonym: "GOP (human)" BROAD [UniProtKB:P04001]
+synonym: "green cone photoreceptor pigment (human)" BROAD [UniProtKB:P04001]
+synonym: "green-sensitive opsin (human)" BROAD [UniProtKB:P04001]
+synonym: "hOPN1MW1" EXACT PRO-short-label [PRO:DNx]
+synonym: "OPN1MW" RELATED Gene-based [UniProtKB:P04001]
+xref: DTO:02100474
+xref: Reactome:R-HSA-391835 "PR:P04001 located_in GO:0097381"
+xref: UniProtKB:P04001
+is_a: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4206 ! OPN1MW (human)
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4206 ! OPN1MW (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P04053
 name: DNA nucleotidylexotransferase (human)
 namespace: protein
@@ -15907,6 +16002,46 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000025853 ! primate-type serum amyloid A-2 protein
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10514 ! SAA2 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P0DN77
+name: medium-wave-sensitive opsin 2 (human)
+namespace: protein
+def: "A medium-wave-sensitive opsin (human) that is a translation product of the OPN1MW2 gene in human." [PRO:DAN, UniProtKB:P0DN77]
+comment: Category=organism-gene. Note: The proteins encoded by OPN1MW (PR:P04001), OPN1MW2 (this class), and OPN1MW3 (PR:P0DN78) are identical.
+synonym: "GOP (human)" BROAD [UniProtKB:P0DN77]
+synonym: "green cone photoreceptor pigment (human)" BROAD [UniProtKB:P0DN77]
+synonym: "green-sensitive opsin (human)" BROAD [UniProtKB:P0DN77]
+synonym: "hOPN1MW2" EXACT PRO-short-label [PRO:DNx]
+synonym: "OPN1MW2" RELATED Gene-based [UniProtKB:P0DN77]
+synonym: "opsin 1 cone pigments medium-wave-sensitive 2 (human)" EXACT [UniProtKB:P0DN77]
+xref: UniProtKB:P0DN77
+is_a: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=26952 ! OPN1MW2 (human)
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=26952 ! OPN1MW2 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P0DN78
+name: medium-wave-sensitive opsin 3 (human)
+namespace: protein
+def: "A medium-wave-sensitive opsin (human) that is a translation product of the OPN1MW3 gene in human." [PRO:DAN, UniProtKB:P0DN78]
+comment: Category=organism-gene. Note: The proteins encoded by OPN1MW (PR:P04001), OPN1MW2 (PR:P0DN77), and OPN1MW3 (this class) are identical.
+synonym: "GOP (human)" BROAD [UniProtKB:P0DN78]
+synonym: "green cone photoreceptor pigment (human)" BROAD [UniProtKB:P0DN78]
+synonym: "green-sensitive opsin (human)" BROAD [UniProtKB:P0DN78]
+synonym: "hOPN1MW3" EXACT PRO-short-label [PRO:DNx]
+synonym: "OPN1MW3" RELATED Gene-based [UniProtKB:P0DN78]
+synonym: "opsin 1 cone pigments medium-wave-sensitive 3 (human)" EXACT [UniProtKB:P0DN78]
+xref: UniProtKB:P0DN78
+is_a: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: PR:000050522 ! medium-wave-sensitive opsin (human)
+intersection_of: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=51831 ! OPN1MW3 (human)
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=51831 ! OPN1MW3 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -27067,6 +27202,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=26952
+name: OPN1MW2 (human)
+namespace: gene
+def: "A protein coding gene OPN1MW2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2770
 name: DES (human)
 namespace: gene
@@ -27382,6 +27526,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4206
+name: OPN1MW (human)
+namespace: gene
+def: "A protein coding gene OPN1MW in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=4232
 name: GDNF (human)
 namespace: gene
@@ -27575,6 +27728,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5141
 name: HP (human)
 namespace: gene
 def: "A protein coding gene HP in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=51831
+name: OPN1MW3 (human)
+namespace: gene
+def: "A protein coding gene OPN1MW3 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -28529,6 +28691,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9832
 name: RAG2 (human)
 namespace: gene
 def: "A protein coding gene RAG2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9936
+name: OPN1LW (human)
+namespace: gene
+def: "A protein coding gene OPN1LW in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
