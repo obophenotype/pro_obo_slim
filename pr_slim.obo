@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-11-08/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-11-26/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
@@ -7,7 +7,7 @@ synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-11-08" xsd:string
+property_value: owl:versionInfo "2022-11-26" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3964,6 +3964,28 @@ synonym: "Gm294" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000005388
+name: glycoprotein hormones alpha chain
+namespace: protein
+def: "A protein that is a translation product of the human CGA gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "anterior pituitary glycoprotein hormones common subunit alpha" EXACT []
+synonym: "CG-alpha" EXACT []
+synonym: "CGA" EXACT PRO-short-label [PRO:DNx]
+synonym: "choriogonadotropin alpha chain" EXACT []
+synonym: "chorionic gonadotrophin subunit alpha" EXACT []
+synonym: "follicle-stimulating hormone alpha chain" EXACT []
+synonym: "follitropin alpha chain" EXACT []
+synonym: "FSH-alpha" EXACT []
+synonym: "LSH-alpha" EXACT []
+synonym: "luteinizing hormone alpha chain" EXACT []
+synonym: "lutropin alpha chain" EXACT []
+synonym: "thyroid-stimulating hormone alpha chain" EXACT []
+synonym: "thyrotropin alpha chain" EXACT []
+synonym: "TSH-alpha" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000005444
 name: chondrolectin
 namespace: protein
@@ -4409,6 +4431,21 @@ namespace: protein
 def: "A protein that is a translation product of the human GFAP gene or a 1:1 ortholog thereof." [PRO:DNx]
 comment: Category=gene. Requested by=CL.
 synonym: "GFAP" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000007973
+name: appetite-regulating hormone
+namespace: protein
+def: "A protein that is a translation product of the human GHRL gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "GHRL" EXACT PRO-short-label [PRO:DNx]
+synonym: "growth hormone secretagogue" EXACT []
+synonym: "growth hormone-releasing peptide" EXACT []
+synonym: "motilin-related peptide" EXACT []
+synonym: "MTLRP" RELATED Gene-based []
+synonym: "protein M46" EXACT []
+synonym: "UNQ524/PRO1066" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5607,6 +5644,20 @@ synonym: "TRIM32" EXACT PRO-short-label [PRO:DNx]
 synonym: "tripartite motif-containing protein 32" EXACT []
 synonym: "zinc finger protein HT2A" EXACT []
 is_a: PR:000044733 ! tripartite motif-containing protein
+
+[Term]
+id: PR:000016724
+name: thyrotropin subunit beta
+namespace: protein
+def: "A glycoprotein hormone beta chain that is a translation product of the human TSHB gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "thyroid-stimulating hormone subunit beta" EXACT []
+synonym: "thyrotropin alfa" EXACT []
+synonym: "thyrotropin beta chain" EXACT []
+synonym: "TSH-B" EXACT []
+synonym: "TSH-beta" EXACT []
+synonym: "TSHB" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000044813 ! glycoprotein hormone beta chain
 
 [Term]
 id: PR:000016798
@@ -7076,6 +7127,18 @@ intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
 
 [Term]
+id: PR:000019321
+name: glycoprotein hormones alpha chain, signal peptide removed form
+namespace: protein
+def: "A glycoprotein hormones alpha chain that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "CGA/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000005388 ! glycoprotein hormones alpha chain
+intersection_of: PR:000005388 ! glycoprotein hormones alpha chain
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000019356
 name: creatine kinase B-type, initiator methionine removed form
 namespace: protein
@@ -7344,6 +7407,31 @@ synonym: "GCG/ClvPrd" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000007891 ! pro-glucagon
 is_a: PR:000018264 ! proteolytic cleavage product
 intersection_of: PR:000007891 ! pro-glucagon
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000019998
+name: appetite-regulating hormone, signal peptide removed form
+namespace: protein
+def: "An appetite-regulating hormone that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "GHRL/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007973 ! appetite-regulating hormone
+intersection_of: PR:000007973 ! appetite-regulating hormone
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019999
+name: appetite-regulating hormone proteolytic cleavage product
+namespace: protein
+def: "An appetite-regulating hormone that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "GHRL/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000007973 ! appetite-regulating hormone
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000007973 ! appetite-regulating hormone
 intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
@@ -8098,6 +8186,31 @@ intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
 
 [Term]
+id: PR:000021741
+name: thyrotropin subunit beta, signal peptide removed form
+namespace: protein
+def: "A thyrotropin subunit beta that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "TSHB/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000016724 ! thyrotropin subunit beta
+intersection_of: PR:000016724 ! thyrotropin subunit beta
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021742
+name: thyrotropin subunit beta proteolytic cleavage product
+namespace: protein
+def: "A thyrotropin subunit beta that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "TSHB/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000016724 ! thyrotropin subunit beta
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000016724 ! thyrotropin subunit beta
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000021745
 name: transthyretin, signal peptide removed form
 namespace: protein
@@ -8221,6 +8334,48 @@ is_a: PR:000023540 ! alkaline phosphatase
 intersection_of: PR:000023540 ! alkaline phosphatase
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000024866
+name: osteocalcin pre-pro-protein
+namespace: protein
+def: "An osteocalcin that has not been proteolytically processed." [PRO:DAN]
+comment: Category=modification.
+synonym: "OC-prepro" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000030444 ! osteocalcin
+intersection_of: PR:000030444 ! osteocalcin
+intersection_of: has_part SO:0000418 ! signal_peptide
+intersection_of: has_part SO:0001062 ! propeptide
+relationship: has_part SO:0000418 ! signal_peptide
+relationship: has_part SO:0001062 ! propeptide
+
+[Term]
+id: PR:000024871
+name: osteocalcin pro-protein
+namespace: protein
+def: "An osteocalcin that has had the signal peptide removed but retains the propeptide." [PRO:DAN]
+comment: Category=modification.
+synonym: "OCpro" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000030444 ! osteocalcin
+intersection_of: PR:000030444 ! osteocalcin
+intersection_of: has_part SO:0001062 ! propeptide
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: has_part SO:0001062 ! propeptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000024920
+name: osteocalcin peptide
+namespace: protein
+def: "An osteocalcin that has had both the signal peptide and the propeptide removed." [PRO:DAN]
+comment: Category=modification.
+synonym: "OC" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000030444 ! osteocalcin
+intersection_of: PR:000030444 ! osteocalcin
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+intersection_of: lacks_part SO:0001062 ! propeptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0001062 ! propeptide
 
 [Term]
 id: PR:000024939
@@ -8746,6 +8901,18 @@ synonym: "PRSS" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000028269
+name: thyroid stimulating hormone
+namespace: protein
+def: "A protein-containing complex that is a heterodimer of an alpha subunit (CGA) common to several glycoprotein hormones and a beta subunit (TSHB) unique to thyroid stimulating hormone." [PRO:MSY]
+comment: Category=complex. Requested by=GOC.
+synonym: "thyrotropin" EXACT []
+synonym: "TSH" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+relationship: has_component PR:000005388 {cardinality="1"} ! glycoprotein hormones alpha chain
+relationship: has_component PR:000016724 {cardinality="1"} ! thyrotropin subunit beta
+
+[Term]
 id: PR:000028364
 name: von Willebrand factor, signal peptide removed form (human)
 namespace: protein
@@ -8947,6 +9114,18 @@ def: "A tandem-copy polyubiquitin that is a translation product of the human UBB
 comment: Category=gene.
 synonym: "UBB" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000036929 ! tandem-copy polyubiquitin
+
+[Term]
+id: PR:000030444
+name: osteocalcin
+namespace: protein
+def: "A protein that is a translation product of the human BGLAP gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "BGLAP" EXACT PRO-short-label [PRO:DNx]
+synonym: "BGP" EXACT []
+synonym: "bone Gla protein" EXACT []
+synonym: "gamma-carboxyglutamic acid-containing protein" EXACT []
+is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000030460
@@ -9457,6 +9636,15 @@ synonym: "fam:LILR" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000044813
+name: glycoprotein hormone beta chain
+namespace: protein
+def: "A protein with a core domain composition consisting of a signal peptide followed by a single copy of the Cys_knot (Pfam:PF00007) domain. The Cysteine knot is a protein structural motif containing three disulfide bridges." [Pfam:PF00007, PRO:CNA]
+comment: Category=family.
+xref: PANTHER:PTHR11515
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000045358
 name: insulin family protein
 namespace: protein
@@ -9614,6 +9802,21 @@ xref: TDR:1015
 is_a: PR:000019109 ! beta-2-microglobulin, signal peptide removed form
 is_a: PR:P61769 ! beta-2-microglobulin (human)
 intersection_of: PR:P61769 ! beta-2-microglobulin (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000046480
+name: osteocalcin, signal peptide removed form (human)
+namespace: protein
+def: "An osteocalcin (human) that has had the signal peptide removed. UniProtKB:P02818, 24-100." [PRO:DNx, Reactome:R-HSA-6807212]
+comment: Category=organism-modification.
+synonym: "hBGLAP/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "UniProtKB:P02818, 24-100" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-6807212 "PR:000046480 located_in GO:0005788"
+is_a: PR:P02818 ! osteocalcin (human)
+intersection_of: PR:P02818 ! osteocalcin (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -11423,6 +11626,15 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000050174
+name: immunoglobulin heavy chain protein
+namespace: protein
+def: "A protein that is a translation product of some mRNA produced by a somatically recombined immunoglobulin heavy chain locus." [GOC:add, PRO:ADD]
+comment: Category=family. Requested by=IEDB. Note: In human, the IgH locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/349. In mouse, the locus is described by MGI:96442.
+synonym: "IgH" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000050216
 name: receptor-type tyrosine-protein phosphatase C isoform CD45R
 namespace: protein
@@ -11466,6 +11678,110 @@ xref: Reactome:R-HSA-113595 "PR:000050249 located_in GO:0005829"
 is_a: PR:000029067 ! Homo sapiens protein
 is_a: PR:000035728 ! ubiquitin
 intersection_of: PR:000035728 ! ubiquitin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050252
+name: IgG heavy chain protein
+namespace: protein
+def: "An immunoglobulin heavy chain protein in which the constant region is encoded by some IgG gene segment." [PRO:DAN]
+comment: Category=family. Requested by=IEDB. Note: In human, IgG constant gene segments are IgG1, IgG2, IgG3, and IgG4.
+synonym: "IgHG" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma" EXACT [PRO:DAN]
+is_a: PR:000050174 ! immunoglobulin heavy chain protein
+
+[Term]
+id: PR:000050253
+name: IgG1 heavy chain protein
+namespace: protein
+def: "An IgG heavy chain protein in which the constant region is encoded by the IgG1 gene segment." [PRO:DAN]
+comment: Category=seqgroup. Requested by=IEDB.
+synonym: "IgHG1" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G1 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma 1 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma 1" EXACT [PRO:DAN]
+is_a: PR:000050252 ! IgG heavy chain protein
+
+[Term]
+id: PR:000050255
+name: IgG3 heavy chain protein
+namespace: protein
+def: "An IgG heavy chain protein in which the constant region is encoded by the IgG3 gene segment." [PRO:DAN]
+comment: Category=seqgroup. Requested by=IEDB.
+synonym: "IgHG3" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G3 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma 3 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma 3" EXACT [PRO:DAN]
+is_a: PR:000050252 ! IgG heavy chain protein
+
+[Term]
+id: PR:000050259
+name: IgG2a heavy chain protein
+namespace: protein
+def: "An IgG heavy chain protein in which the constant region is encoded by the IgG2a gene segment." [PRO:DAN]
+comment: Category=seqgroup. Requested by=IEDB.
+synonym: "IgHG2a" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G2a heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma 2a heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma 2a" EXACT [PRO:DAN]
+is_a: PR:000050252 ! IgG heavy chain protein
+
+[Term]
+id: PR:000050260
+name: IgG2b heavy chain protein
+namespace: protein
+def: "An IgG heavy chain protein in which the constant region is encoded by the IgG2b gene segment." [PRO:DAN]
+comment: Category=seqgroup. Requested by=IEDB.
+synonym: "IgHG2b" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G2b heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma 2b heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma 2b" EXACT [PRO:DAN]
+is_a: PR:000050252 ! IgG heavy chain protein
+
+[Term]
+id: PR:000050261
+name: IgG2c heavy chain protein
+namespace: protein
+def: "An IgG heavy chain protein in which the constant region is encoded by the IgG2c gene segment." [PRO:DAN]
+comment: Category=seqgroup. Requested by=IEDB.
+synonym: "IgHG2c" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin G2c heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin gamma 2c heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain gamma 2c" EXACT [PRO:DAN]
+is_a: PR:000050252 ! IgG heavy chain protein
+
+[Term]
+id: PR:000050291
+name: IgG1 heavy chain protein (human)
+namespace: protein
+def: "An IgG1 heavy chain protein that is encoded in the genome of human." [GOC:add, PRO:ADD, PRO:DAN]
+comment: Category=organism-seqgroup. Requested by=HIPC. Requested by=CL.
+synonym: "hIgHG1" EXACT PRO-short-label [GOC:add, PRO:ADD]
+synonym: "immunoglobulin G1 heavy chain (human)" EXACT [GOC:add, PRO:ADD]
+synonym: "immunoglobulin gamma 1 heavy chain (human)" EXACT [GOC:add, PRO:ADD]
+synonym: "immunoglobulin heavy chain gamma 1 (human)" EXACT [GOC:add, PRO:ADD]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050253 ! IgG1 heavy chain protein
+intersection_of: PR:000050253 ! IgG1 heavy chain protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050293
+name: IgG3 heavy chain protein (human)
+namespace: protein
+def: "An IgG3 heavy chain protein that is encoded in the genome of human." [GOC:add, PRO:ADD, PRO:DAN]
+comment: Category=organism-seqgroup. Requested by=HIPC. Requested by=CL.
+synonym: "hIgHG3" EXACT PRO-short-label [GOC:add, PRO:ADD]
+synonym: "immunoglobulin G3 heavy chain (human)" EXACT [GOC:add, PRO:ADD]
+synonym: "immunoglobulin gamma 3 heavy chain (human)" EXACT [GOC:add, PRO:ADD]
+synonym: "immunoglobulin heavy chain gamma 3 (human)" EXACT [GOC:add, PRO:ADD]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050255 ! IgG3 heavy chain protein
+intersection_of: PR:000050255 ! IgG3 heavy chain protein
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
@@ -12569,6 +12885,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:127715
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:O57340
+name: thyrotropin subunit beta (chicken)
+namespace: protein
+def: "A thyrotropin subunit beta that is encoded in the genome of chicken." [OMA:O57340, PANTHER:PTHR11515\:SF5, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "chick-TSHB" EXACT PRO-short-label [PRO:DNx]
+synonym: "thyroid-stimulating hormone subunit beta (chicken)" EXACT [UniProtKB:O57340]
+synonym: "thyrotropin beta chain (chicken)" EXACT [UniProtKB:O57340]
+synonym: "TSH-B (chicken)" EXACT [UniProtKB:O57340]
+synonym: "TSH-beta (chicken)" EXACT [UniProtKB:O57340]
+synonym: "TSHB" RELATED Gene-based [UniProtKB:O57340]
+xref: UniProtKB:O57340
+is_a: PR:000016724 ! thyrotropin subunit beta
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000016724 ! thyrotropin subunit beta
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/395937 ! TSHB (chicken)
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: PR:O57579
 name: aminopeptidase Ey (chicken)
 namespace: protein
@@ -13172,6 +13508,82 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000012526 ! proenkephalin-B
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8820 ! PDYN (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01215
+name: glycoprotein hormones alpha chain (human)
+namespace: protein
+def: "A glycoprotein hormones alpha chain that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01215]
+comment: Category=organism-gene.
+synonym: "anterior pituitary glycoprotein hormones common subunit alpha (human)" EXACT [UniProtKB:P01215]
+synonym: "CG-alpha (human)" EXACT [UniProtKB:P01215]
+synonym: "CGA" RELATED Gene-based [UniProtKB:P01215]
+synonym: "choriogonadotropin alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "chorionic gonadotrophin subunit alpha (human)" EXACT [UniProtKB:P01215]
+synonym: "follicle-stimulating hormone alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "follitropin alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "FSH-alpha (human)" EXACT [UniProtKB:P01215]
+synonym: "hCGA" EXACT PRO-short-label [PRO:DNx]
+synonym: "LSH-alpha (human)" EXACT [UniProtKB:P01215]
+synonym: "luteinizing hormone alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "lutropin alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "thyroid-stimulating hormone alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "thyrotropin alpha chain (human)" EXACT [UniProtKB:P01215]
+synonym: "TSH-alpha (human)" EXACT [UniProtKB:P01215]
+xref: UniProtKB:P01215
+is_a: PR:000005388 ! glycoprotein hormones alpha chain
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000005388 ! glycoprotein hormones alpha chain
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1885 ! CGA (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P01216
+name: glycoprotein hormones alpha chain (mouse)
+namespace: protein
+def: "A glycoprotein hormones alpha chain that is encoded in the genome of mouse." [OMA:P01216, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "anterior pituitary glycoprotein hormones common subunit alpha (mouse)" EXACT [UniProtKB:P01216]
+synonym: "Cga" RELATED Gene-based [UniProtKB:P01216]
+synonym: "follicle-stimulating hormone alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "follitropin alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "FSH-alpha (mouse)" EXACT [UniProtKB:P01216]
+synonym: "LSH-alpha (mouse)" EXACT [UniProtKB:P01216]
+synonym: "luteinizing hormone alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "lutropin alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "mCGA" EXACT PRO-short-label [PRO:DNx]
+synonym: "thyroid-stimulating hormone alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "thyrotropin alpha chain (mouse)" EXACT [UniProtKB:P01216]
+synonym: "TSH-alpha (mouse)" EXACT [UniProtKB:P01216]
+xref: UniProtKB:P01216
+is_a: PR:000005388 ! glycoprotein hormones alpha chain
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000005388 ! glycoprotein hormones alpha chain
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88390 ! Cga (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P01222
+name: thyrotropin subunit beta (human)
+namespace: protein
+def: "A thyrotropin subunit beta that is encoded in the genome of human." [PRO:DNx, UniProtKB:P01222]
+comment: Category=organism-gene.
+synonym: "hTSHB" EXACT PRO-short-label [PRO:DNx]
+synonym: "thyroid-stimulating hormone subunit beta (human)" EXACT [UniProtKB:P01222]
+synonym: "thyrotropin alfa (human)" EXACT [UniProtKB:P01222]
+synonym: "thyrotropin beta chain (human)" EXACT [UniProtKB:P01222]
+synonym: "TSH-B (human)" EXACT [UniProtKB:P01222]
+synonym: "TSH-beta (human)" EXACT [UniProtKB:P01222]
+synonym: "TSHB" RELATED Gene-based [UniProtKB:P01222]
+xref: UniProtKB:P01222
+is_a: PR:000016724 ! thyrotropin subunit beta
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016724 ! thyrotropin subunit beta
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12372 ! TSHB (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -14130,6 +14542,25 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000009978 ! lactotransferrin
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6720 ! LTF (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P02818
+name: osteocalcin (human)
+namespace: protein
+def: "An osteocalcin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P02818]
+comment: Category=organism-gene.
+synonym: "BGLAP" RELATED Gene-based [UniProtKB:P02818]
+synonym: "BGP (human)" EXACT [UniProtKB:P02818]
+synonym: "bone Gla protein (human)" EXACT [UniProtKB:P02818]
+synonym: "gamma-carboxyglutamic acid-containing protein (human)" EXACT [UniProtKB:P02818]
+synonym: "hBGLAP" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P02818
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000030444 ! osteocalcin
+intersection_of: PR:000030444 ! osteocalcin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1043 ! BGLAP (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -16792,6 +17223,26 @@ intersection_of: PR:000007431 ! high affinity immunoglobulin epsilon receptor su
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3609 ! FCER1A (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P12656
+name: thyrotropin subunit beta (mouse)
+namespace: protein
+def: "A thyrotropin subunit beta that is encoded in the genome of mouse." [OMA:P12656, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTSHB" EXACT PRO-short-label [PRO:DNx]
+synonym: "thyroid-stimulating hormone subunit beta (mouse)" EXACT [UniProtKB:P12656]
+synonym: "thyrotropin beta chain (mouse)" EXACT [UniProtKB:P12656]
+synonym: "TSH-B (mouse)" EXACT [UniProtKB:P12656]
+synonym: "TSH-beta (mouse)" EXACT [UniProtKB:P12656]
+synonym: "Tshb" RELATED Gene-based [UniProtKB:P12656]
+xref: UniProtKB:P12656
+is_a: PR:000016724 ! thyrotropin subunit beta
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016724 ! thyrotropin subunit beta
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98848 ! Tshb (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P12724
@@ -24626,6 +25077,27 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:193241
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q9EQX0
+name: appetite-regulating hormone (mouse)
+namespace: protein
+def: "An appetite-regulating hormone that is encoded in the genome of mouse." [OMA:Q9EQX0, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Ghrl" RELATED Gene-based [UniProtKB:Q9EQX0]
+synonym: "growth hormone secretagogue (mouse)" EXACT [UniProtKB:Q9EQX0]
+synonym: "growth hormone-releasing peptide (mouse)" EXACT [UniProtKB:Q9EQX0]
+synonym: "mGHRL" EXACT PRO-short-label [PRO:DNx]
+synonym: "motilin-related peptide (mouse)" EXACT [UniProtKB:Q9EQX0]
+synonym: "Mtlrp" RELATED Gene-based [UniProtKB:Q9EQX0]
+synonym: "protein M46 (mouse)" EXACT [UniProtKB:Q9EQX0]
+xref: UniProtKB:Q9EQX0
+is_a: PR:000007973 ! appetite-regulating hormone
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000007973 ! appetite-regulating hormone
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1930008 ! Ghrl (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q9ER75
 name: iroquois-class homeodomain protein IRX-6 (mouse)
 namespace: protein
@@ -25143,6 +25615,28 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000009793 ! LIM/homeobox protein Lhx3
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6595 ! LHX3 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q9UBU3
+name: appetite-regulating hormone (human)
+namespace: protein
+def: "An appetite-regulating hormone that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9UBU3]
+comment: Category=organism-gene.
+synonym: "GHRL" RELATED Gene-based [UniProtKB:Q9UBU3]
+synonym: "growth hormone secretagogue (human)" EXACT [UniProtKB:Q9UBU3]
+synonym: "growth hormone-releasing peptide (human)" EXACT [UniProtKB:Q9UBU3]
+synonym: "hGHRL" EXACT PRO-short-label [PRO:DNx]
+synonym: "motilin-related peptide (human)" EXACT [UniProtKB:Q9UBU3]
+synonym: "MTLRP" RELATED Gene-based [UniProtKB:Q9UBU3]
+synonym: "protein M46 (human)" EXACT [UniProtKB:Q9UBU3]
+synonym: "UNQ524/PRO1066" RELATED Gene-based [UniProtKB:Q9UBU3]
+xref: UniProtKB:Q9UBU3
+is_a: PR:000007973 ! appetite-regulating hormone
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000007973 ! appetite-regulating hormone
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=18129 ! GHRL (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -25942,6 +26436,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1043
+name: BGLAP (human)
+namespace: gene
+def: "A protein coding gene BGLAP in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10471
 name: RUNX1 (human)
 namespace: gene
@@ -26306,6 +26809,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12335
 name: TRPC3 (human)
 namespace: gene
 def: "A protein coding gene TRPC3 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=12372
+name: TSHB (human)
+namespace: gene
+def: "A protein coding gene TSHB in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -26941,6 +27453,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=18129
+name: GHRL (human)
+namespace: gene
+def: "A protein coding gene GHRL in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=18149
 name: A4GALT (human)
 namespace: gene
@@ -26981,6 +27502,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1836
 name: CEBPE (human)
 namespace: gene
 def: "A protein coding gene CEBPE in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1885
+name: CGA (human)
+namespace: gene
+def: "A protein coding gene CGA in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -29749,6 +30279,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:1930008
+name: Ghrl (mouse)
+namespace: gene
+def: "A protein coding gene Ghrl in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:1932410
 name: Il23a (mouse)
 namespace: gene
@@ -30167,6 +30706,15 @@ id: http://www.informatics.jax.org/marker/MGI:88354
 name: Cdh1 (mouse)
 namespace: gene
 def: "A protein coding gene Cdh1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:88390
+name: Cga (mouse)
+namespace: gene
+def: "A protein coding gene Cga in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -31198,6 +31746,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:98848
+name: Tshb (mouse)
+namespace: gene
+def: "A protein coding gene Tshb in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:98864
 name: Ttn (mouse)
 namespace: gene
@@ -31436,6 +31993,15 @@ id: http://www.ncbi.nlm.nih.gov/gene/395796
 name: RPS27A (chicken)
 namespace: gene
 def: "A protein coding gene RPS27A in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://www.ncbi.nlm.nih.gov/gene/395937
+name: TSHB (chicken)
+namespace: gene
+def: "A protein coding gene TSHB in chicken." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
