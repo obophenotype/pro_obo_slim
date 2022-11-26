@@ -5,7 +5,6 @@ synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
-synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
 property_value: owl:versionInfo "2022-11-26" xsd:string
 
@@ -177,13 +176,6 @@ def: "Any macromolecular complex composed of two or more polypeptide subunits, w
 comment: Note that although at some level almost all cellular components can be thought of as protein complexes, this term is intended to exclude structures composed of the same repeating subunit or subunits, for example microtubules. Protein complexes encompassed by this term are generally not structural, and usually have a defined set of subunits.
 synonym: "protein-protein complex" EXACT []
 is_a: GO:0005575 ! cellular_component
-
-[Term]
-id: MOD:00693
-name: glycosylated residue
-namespace: PSI-MOD
-synonym: "GlycoRes" EXACT PSI-MOD-label []
-is_a: MOD:00764 ! glycoconjugated residue
 
 [Term]
 id: MOD:00764
@@ -8463,9 +8455,6 @@ comment: Category=modification.
 synonym: "CD8A/iso:1/SigPep-/GlycoRes+" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000025406 ! T-cell surface glycoprotein CD8 alpha chain isoform 1, signal peptide removed form
 is_a: PR:000037069 ! glycoprotein
-intersection_of: PR:000025406 ! T-cell surface glycoprotein CD8 alpha chain isoform 1, signal peptide removed form
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000025409
@@ -8476,9 +8465,6 @@ comment: Category=modification.
 synonym: "CD8B/iso:1/SigPep-/GlycoRes+" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000025407 ! T-cell surface glycoprotein CD8 beta chain isoform 1, signal peptide removed form
 is_a: PR:000037069 ! glycoprotein
-intersection_of: PR:000025407 ! T-cell surface glycoprotein CD8 beta chain isoform 1, signal peptide removed form
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000025416
@@ -8689,9 +8675,6 @@ synonym: "B220" EXACT []
 synonym: "PTPRC/iso:CD45R/SigPep-/GlycoRes+" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000025805 ! receptor-type tyrosine-protein phosphatase C isoform CD45RABC, signal peptide removed form
 is_a: PR:000037069 ! glycoprotein
-intersection_of: PR:000025805 ! receptor-type tyrosine-protein phosphatase C isoform CD45RABC, signal peptide removed form
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000025814
@@ -8702,9 +8685,6 @@ comment: Category=modification.
 synonym: "PTPRC/iso:CD45RA/SigPep-/GlycoRes+" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000025806 ! receptor-type tyrosine-protein phosphatase C isoform CD45RA, signal peptide removed form
 is_a: PR:000037069 ! glycoprotein
-intersection_of: PR:000025806 ! receptor-type tyrosine-protein phosphatase C isoform CD45RA, signal peptide removed form
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000025816
@@ -8716,9 +8696,6 @@ synonym: "PTPRC/iso:CD45RO/SigPep-/GlycoRes+" EXACT PRO-short-label [PRO:DNx]
 synonym: "T200" BROAD [PRO:DNx]
 is_a: PR:000025808 ! receptor-type tyrosine-protein phosphatase C isoform CD45RO, signal peptide removed form
 is_a: PR:000037069 ! glycoprotein
-intersection_of: PR:000025808 ! receptor-type tyrosine-protein phosphatase C isoform CD45RO, signal peptide removed form
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000025848
@@ -9430,9 +9407,6 @@ synonym: "glycated protein" EXACT [PRO:DAN]
 synonym: "glycosylated protein" EXACT [PRO:DAN]
 synonym: "Prot/GlycoRes+" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000000001 ! protein
-intersection_of: PR:000000001 ! protein
-intersection_of: has_part MOD:00693 ! glycosylated residue
-relationship: has_part MOD:00693 ! glycosylated residue
 
 [Term]
 id: PR:000037272
