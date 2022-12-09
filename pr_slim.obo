@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-11-26/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-12-09/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-11-26" xsd:string
+property_value: owl:versionInfo "2022-12-09" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -738,6 +738,24 @@ xref: PIRSF:PIRSF800006
 is_a: PR:000030035 ! G-protein coupled receptor
 
 [Term]
+id: PR:000001107
+name: D(1)-like dopamine receptor
+namespace: protein
+def: "A dopamine receptor that is a product of the DRD1 or DRD5 gene. The active form binds dopamine and its activity is mediated by G proteins that cause activation of adenylate cyclase." [PRO:WCB, Wikipedia:Dopamine_receptor]
+comment: Category=family.
+xref: PIRSF:PIRSF038629
+is_a: PR:000044633 ! dopamine receptor
+
+[Term]
+id: PR:000001108
+name: D(2)-like dopamine receptor
+namespace: protein
+def: "A dopamine receptor that is a product of the DRD2, DRD3, or DRD4 gene. The active form binds dopamine and its activity is mediated by G proteins that cause inhibition of adenylate cyclase." [PRO:WCB, Wikipedia:Dopamine_receptor]
+comment: Category=family.
+xref: PIRSF:PIRSF038553
+is_a: PR:000044633 ! dopamine receptor
+
+[Term]
 id: PR:000001119
 name: animal opsin
 namespace: protein
@@ -784,6 +802,30 @@ synonym: "IL-1 beta" EXACT []
 synonym: "IL1B" EXACT PRO-short-label [PRO:DNx]
 synonym: "IL1F2" RELATED Gene-based []
 is_a: PR:000001091 ! interleukin-1
+
+[Term]
+id: PR:000001175
+name: D(1A) dopamine receptor
+namespace: protein
+def: "A D(1)-like dopamine receptor that is a translation product of the human DRD1 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "dopamine D1 receptor" EXACT []
+synonym: "DRD1" EXACT PRO-short-label [PRO:DNx]
+synonym: "Drd1a" RELATED Gene-based []
+synonym: "Gpcr15" RELATED Gene-based []
+xref: IUPHARobj:214
+is_a: PR:000001107 ! D(1)-like dopamine receptor
+
+[Term]
+id: PR:000001177
+name: D(2) dopamine receptor
+namespace: protein
+def: "A D(2)-like dopamine receptor that is a translation product of the human DRD2 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "dopamine D2 receptor" EXACT []
+synonym: "DRD2" EXACT PRO-short-label [PRO:DNx]
+xref: IUPHARobj:215
+is_a: PR:000001108 ! D(2)-like dopamine receptor
 
 [Term]
 id: PR:000001197
@@ -9544,6 +9586,15 @@ intersection_of: capable_of GO:0005244 ! voltage-gated ion channel activity
 relationship: capable_of GO:0005244 ! voltage-gated ion channel activity
 
 [Term]
+id: PR:000044633
+name: dopamine receptor
+namespace: protein
+def: "A rhodopsin-like G-protein coupled receptor that is a translation product of the human DRD1 to DRD5 genes, 1:1 orthologs thereof, or pro-orthologs thereof." [PRO:XQ]
+comment: Category=family. Pro-orthology refers to, in this case, after-speciation gene duplication in the non-human species (aka 1:many orthology).
+xref: IUPHARfam:20
+is_a: PR:000001094 ! rhodopsin-like G-protein coupled receptor
+
+[Term]
 id: PR:000044657
 name: transient receptor potential channel protein
 namespace: protein
@@ -17515,6 +17566,25 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P14416
+name: D(2) dopamine receptor (human)
+namespace: protein
+def: "A D(2) dopamine receptor that is encoded in the genome of human." [PRO:WCB, UniProtKB:P14416]
+comment: Category=organism-gene.
+synonym: "dopamine D2 receptor (human)" EXACT [UniProtKB:P14416]
+synonym: "DRD2" RELATED Gene-based [UniProtKB:P14416]
+synonym: "hDRD2" EXACT PRO-short-label [PRO:DNx]
+xref: DTO:02100082
+xref: Reactome:R-HSA-390816 "PR:P14416 located_in GO:0005886"
+xref: UniProtKB:P14416
+is_a: PR:000001177 ! D(2) dopamine receptor
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001177 ! D(2) dopamine receptor
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3023 ! DRD2 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P14676
 name: prolactin (chicken)
 namespace: protein
@@ -18860,6 +18930,25 @@ intersection_of: PR:000004580 ! beta-2-microglobulin
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/414830 ! B2M (chicken)
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P21728
+name: D(1A) dopamine receptor (human)
+namespace: protein
+def: "A D(1A) dopamine receptor that is encoded in the genome of human." [PRO:WCB, UniProtKB:P21728]
+comment: Category=organism-gene.
+synonym: "dopamine D1 receptor (human)" EXACT [UniProtKB:P21728]
+synonym: "DRD1" RELATED Gene-based [UniProtKB:P21728]
+synonym: "hDRD1" EXACT PRO-short-label [PRO:DNx]
+xref: DTO:02100081
+xref: Reactome:R-HSA-390853 "PR:P21728 located_in GO:0005886"
+xref: UniProtKB:P21728
+is_a: PR:000001175 ! D(1A) dopamine receptor
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001175 ! D(1A) dopamine receptor
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3020 ! DRD1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P21757
@@ -21872,6 +21961,23 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P61168
+name: D(2) dopamine receptor (mouse)
+namespace: protein
+def: "A D(2) dopamine receptor that is encoded in the genome of mouse." [OMA:P61168, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "dopamine D2 receptor (mouse)" EXACT [UniProtKB:P61168]
+synonym: "Drd2" RELATED Gene-based [UniProtKB:P61168]
+synonym: "mDRD2" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P61168
+is_a: PR:000001177 ! D(2) dopamine receptor
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001177 ! D(2) dopamine receptor
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:94924 ! Drd2 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P61278
 name: somatostatin (human)
 namespace: protein
@@ -23846,6 +23952,25 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000007636 ! forkhead box protein N1
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:102949 ! Foxn1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q61616
+name: D(1A) dopamine receptor (mouse)
+namespace: protein
+def: "A D(1A) dopamine receptor that is encoded in the genome of mouse." [OMA:Q61616, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "dopamine D1 receptor (mouse)" EXACT [UniProtKB:Q61616]
+synonym: "Drd1" RELATED Gene-based [UniProtKB:Q61616]
+synonym: "Drd1a" RELATED Gene-based [UniProtKB:Q61616]
+synonym: "Gpcr15" RELATED Gene-based [UniProtKB:Q61616]
+synonym: "mDRD1" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:Q61616
+is_a: PR:000001175 ! D(1A) dopamine receptor
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001175 ! D(1A) dopamine receptor
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:99578 ! Drd1 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -27751,6 +27876,24 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3020
+name: DRD1 (human)
+namespace: gene
+def: "A protein coding gene DRD1 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3023
+name: DRD2 (human)
+namespace: gene
+def: "A protein coding gene DRD2 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=3097
 name: DYSF (human)
 namespace: gene
@@ -30820,6 +30963,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:94924
+name: Drd2 (mouse)
+namespace: gene
+def: "A protein coding gene Drd2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:95296
 name: Egr2 (mouse)
 namespace: gene
@@ -31805,6 +31957,15 @@ id: http://www.informatics.jax.org/marker/MGI:99480
 name: Cebpa (mouse)
 namespace: gene
 def: "A protein coding gene Cebpa in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:99578
+name: Drd1 (mouse)
+namespace: gene
+def: "A protein coding gene Drd1 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
