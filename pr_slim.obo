@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-12-09/pr_slim.owl
+data-version: pr/obophenotype/releases/2022-12-16/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-12-09" xsd:string
+property_value: owl:versionInfo "2022-12-16" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -176,6 +176,15 @@ def: "Any macromolecular complex composed of two or more polypeptide subunits, w
 comment: Note that although at some level almost all cellular components can be thought of as protein complexes, this term is intended to exclude structures composed of the same repeating subunit or subunits, for example microtubules. Protein complexes encompassed by this term are generally not structural, and usually have a defined set of subunits.
 synonym: "protein-protein complex" EXACT []
 is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0071746
+name: IgA immunoglobulin complex, circulating
+namespace: cellular_component
+def: "A protein complex composed of two identical immunoglobulin heavy chains of an IgA isotype and two identical immunoglobulin light chains, held together by disulfide bonds, sometimes complexed with J chain or J chain and secretory component, and present in the extracellular space, in mucosal areas or other tissues, or circulating in the blood or lymph." [GOC:add, ISBN:0781765196, PMID:16362985]
+comment: Note that an IgA immunoglobulin complex has the function of antigen binding if a suitable antigen is available.
+synonym: "IgA antibody" EXACT [GOC:add]
+is_a: GO:0032991 ! protein-containing complex
 
 [Term]
 id: MOD:00764
@@ -3914,6 +3923,19 @@ synonym: "sigma4-adaptin" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000004126
+name: serum amyloid P-component
+namespace: protein
+def: "A protein that is a translation product of the human APCS gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "9.5S alpha-1-glycoprotein" EXACT []
+synonym: "APCS" EXACT PRO-short-label [PRO:DNx]
+synonym: "PTX2" RELATED Gene-based []
+synonym: "SAP" EXACT []
+xref: IUPHARobj:2839
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000004155
 name: apolipoprotein E
 namespace: protein
@@ -4573,6 +4595,24 @@ synonym: "SGPT" BROAD [Wikipedia:Alanine_transaminase]
 is_a: PR:000050219 ! alanine aminotransferase
 
 [Term]
+id: PR:000008438
+name: hepcidin
+namespace: protein
+def: "A protein that is a translation product of the human HAMP gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "HAMP" EXACT PRO-short-label [PRO:DNx]
+synonym: "Hamp1" RELATED []
+synonym: "HEPC" RELATED Gene-based []
+synonym: "Hepc1" RELATED []
+synonym: "LEAP-1" EXACT []
+synonym: "LEAP1" RELATED Gene-based []
+synonym: "liver-expressed antimicrobial peptide 1" EXACT []
+synonym: "PLTR" EXACT []
+synonym: "putative liver tumor regressor" EXACT []
+synonym: "UNQ487/PRO1003" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000008456
 name: hemoglobin subunit alpha
 namespace: protein
@@ -5213,6 +5253,21 @@ synonym: "UNQ746/PRO1475" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000013021
+name: serum paraoxonase/arylesterase 1
+namespace: protein
+def: "A protein that is a translation product of the human PON1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "A-esterase 1" EXACT []
+synonym: "aromatic esterase 1" EXACT []
+synonym: "K-45" EXACT []
+synonym: "PON" RELATED Gene-based []
+synonym: "PON 1" EXACT []
+synonym: "PON1" EXACT PRO-short-label [PRO:DNx]
+synonym: "serum aryldialkylphosphatase 1" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000013164
 name: pancreatic prohormone
 namespace: protein
@@ -5401,6 +5456,22 @@ synonym: "urinary protein 1" EXACT []
 synonym: "urine protein 1" EXACT []
 synonym: "Utg" RELATED Gene-based []
 is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000014678
+name: alpha-1-antitrypsin
+namespace: protein
+def: "A serpin that is a translation product of the human SERPINA1 gene or a 1:1 ortholog thereof." [PRO:CNA]
+comment: Category=gene.
+synonym: "AAT" RELATED Gene-based []
+synonym: "alpha-1 protease inhibitor" EXACT []
+synonym: "alpha-1-antiproteinase" BROAD [PRO:DNx]
+synonym: "PI" RELATED Gene-based []
+synonym: "PRO0684" RELATED Gene-based []
+synonym: "PRO2209" RELATED Gene-based []
+synonym: "serpin A1" EXACT []
+synonym: "SERPINA1" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000025875 ! serpin
 
 [Term]
 id: PR:000014781
@@ -7087,6 +7158,31 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000019004
+name: serum amyloid P-component, signal peptide removed form
+namespace: protein
+def: "A serum amyloid P-component that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "APCS/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000004126 ! serum amyloid P-component
+intersection_of: PR:000004126 ! serum amyloid P-component
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019005
+name: serum amyloid P-component proteolytic cleavage product
+namespace: protein
+def: "A serum amyloid P-component that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "APCS/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000004126 ! serum amyloid P-component
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000004126 ! serum amyloid P-component
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000019028
 name: apolipoprotein E, signal peptide removed form
 namespace: protein
@@ -7492,6 +7588,19 @@ is_a: PR:000008208 ! alanine aminotransferase 1
 intersection_of: PR:000008208 ! alanine aminotransferase 1
 intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
+id: PR:000020108
+name: hepcidin proteolytic cleavage product
+namespace: protein
+def: "A hepcidin that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "HAMP/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000008438 ! hepcidin
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000008438 ! hepcidin
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000020113
@@ -7962,6 +8071,18 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000021037
+name: serum paraoxonase/arylesterase 1, initiator methionine removed form
+namespace: protein
+def: "A serum paraoxonase/arylesterase 1 that has had the initiator methionine removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "PON1/InitMet-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000013021 ! serum paraoxonase/arylesterase 1
+intersection_of: PR:000013021 ! serum paraoxonase/arylesterase 1
+intersection_of: lacks_part PR:000021937 ! initiator methionine
+relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
 id: PR:000021065
 name: pancreatic prohormone, signal peptide removed form
 namespace: protein
@@ -8107,6 +8228,31 @@ is_a: PR:000014505 ! uteroglobin
 intersection_of: PR:000014505 ! uteroglobin
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021415
+name: alpha-1-antitrypsin, signal peptide removed form
+namespace: protein
+def: "An alpha-1-antitrypsin that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "SERPINA1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000014678 ! alpha-1-antitrypsin
+intersection_of: PR:000014678 ! alpha-1-antitrypsin
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021416
+name: alpha-1-antitrypsin proteolytic cleavage product
+namespace: protein
+def: "An alpha-1-antitrypsin that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "SERPINA1/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000014678 ! alpha-1-antitrypsin
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000014678 ! alpha-1-antitrypsin
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000021467
@@ -9780,6 +9926,23 @@ relationship: lacks_part PR:000021937 ! initiator methionine
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000046352
+name: serum amyloid P-component, signal peptide removed form (human)
+namespace: protein
+def: "A serum amyloid P-component (human) that has had the signal peptide removed. UniProtKB:P02743, 20-223." [PRO:DNx, Reactome:R-HSA-976737]
+comment: Category=organism-modification.
+synonym: "hAPCS/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000023540" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P02743, 20-223" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-976737 "PR:000046352 located_in GO:0005576"
+is_a: PR:000019004 ! serum amyloid P-component, signal peptide removed form
+is_a: PR:P02743 ! serum amyloid P-component (human)
+intersection_of: PR:P02743 ! serum amyloid P-component (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000046364
 name: apolipoprotein E, signal peptide removed form (human)
 namespace: protein
@@ -11339,6 +11502,26 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000049204
+name: alpha-1-antitrypsin, signal peptide removed form (human)
+namespace: protein
+def: "An alpha-1-antitrypsin (human) that has had the signal peptide removed. UniProtKB:P01009, 25-418." [PRO:DNx, Reactome:R-HSA-141755, Reactome:R-HSA-141757]
+comment: Category=organism-modification.
+synonym: "hSERPINA1/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000032377" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P01009, 25-418" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-141755 "PR:000049204 located_in GO:0031093"
+xref: Reactome:R-HSA-141757 "PR:000049204 located_in GO:0005576"
+xref: Reactome:R-HSA-6804783 "PR:000049204 located_in GO:1904813"
+xref: Reactome:R-HSA-8956709 "PR:000049204 located_in GO:0005788"
+is_a: PR:000021415 ! alpha-1-antitrypsin, signal peptide removed form
+is_a: PR:P01009 ! alpha-1-antitrypsin (human)
+intersection_of: PR:P01009 ! alpha-1-antitrypsin (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000049206
 name: antithrombin-III, signal peptide removed form (human)
 namespace: protein
@@ -11651,6 +11834,20 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000050159
+name: IgA1 immunoglobulin complex, circulating (human)
+namespace: protein
+def: "An IgA immunoglobulin complex, circulating that in monomeric form is composed of two identical immunoglobulin heavy chains of the secretory isoform of the IgA1 isotype and two identical immunoglobulin light chains (kappa or lambda), held together by disulfide bonds, sometimes complexed with J chain or J chain and secretory component, and present in the extracellular space, in mucosal areas or other tissues, or circulating in the blood or lymph." [GOC:add, ISBN:0781765196, PMID:16362985, PRO:ADD]
+comment: Category=organism-complex. Requested by=HIPC. Requested by=CL.
+synonym: "hIgA1/circulating" EXACT PRO-short-label [PRO:DAN]
+synonym: "IgA antibody (human)" BROAD [GOC:add, PRO:ADD]
+synonym: "IgA1 antibody (human)" EXACT [GOC:add, PRO:ADD]
+is_a: GO:0071746 ! IgA immunoglobulin complex, circulating
+relationship: has_component PR:000050183 ! immunoglobulin light chain protein (human)
+relationship: has_component PR:000050376 ! IgA1 heavy chain protein, secretory isoform (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000050174
 name: immunoglobulin heavy chain protein
 namespace: protein
@@ -11658,6 +11855,112 @@ def: "A protein that is a translation product of some mRNA produced by a somatic
 comment: Category=family. Requested by=IEDB. Note: In human, the IgH locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/349. In mouse, the locus is described by MGI:96442.
 synonym: "IgH" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000050175
+name: immunoglobulin light chain protein
+namespace: protein
+def: "A protein that is a translation product of some mRNA produced by a somatically recombined immunoglobulin light chain locus." [GOC:add, PRO:ADD]
+comment: Category=family. Note: In human, the kappa light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/351, and the lambda light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/353. In mouse, the kappa locus is described by MGI:96494, and the lambda locus is described by MGI:96526.
+synonym: "IgL" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000050176
+name: IgA heavy chain protein
+namespace: protein
+def: "An immunoglobulin heavy chain protein in which the constant region is encoded either by the IgA1 gene segment or the IgA2 gene segment." [PRO:DAN]
+comment: Category=family. Requested by=IEDB.
+synonym: "IgHA" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin A heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin alpha heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain alpha" EXACT [PRO:DAN]
+is_a: PR:000050174 ! immunoglobulin heavy chain protein
+
+[Term]
+id: PR:000050177
+name: IgA1 heavy chain protein
+namespace: protein
+def: "An IgA heavy chain protein in which the constant region is encoded by the IgA1 gene segment." [PRO:DAN]
+comment: Category=gene. Requested by=IEDB.
+synonym: "IgHA1" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin A1 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin alpha 1 heavy chain" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain alpha 1" EXACT [PRO:DAN]
+is_a: PR:000050176 ! IgA heavy chain protein
+
+[Term]
+id: PR:000050179
+name: IgA1 heavy chain protein (human)
+namespace: protein
+def: "An IgA1 heavy chain protein that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-gene.
+synonym: "hIgHA1" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin A1 heavy chain (human)" EXACT [PRO:DAN]
+synonym: "immunoglobulin alpha 1 heavy chain (human)" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain alpha 1 (human)" EXACT [PRO:DAN]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050177 ! IgA1 heavy chain protein
+intersection_of: PR:000050177 ! IgA1 heavy chain protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050181
+name: Ig kappa light chain protein
+namespace: protein
+def: "An immunoglobulin light chain protein that is produced from the immunoglobulin kappa locus." [PRO:DAN]
+comment: Category=gene. Note: In human, the kappa light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/351. In mouse, the kappa locus is described by MGI:96494.
+synonym: "IgKappa" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000050175 ! immunoglobulin light chain protein
+
+[Term]
+id: PR:000050182
+name: Ig lambda light chain protein
+namespace: protein
+def: "An immunoglobulin light chain protein that is produced from the immunoglobulin lambda locus." [PRO:DAN]
+comment: Category=gene. Note: In human, the lambda light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/353. In mouse, the lambda locus is described by MGI:96526.
+synonym: "IgLambda" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000050175 ! immunoglobulin light chain protein
+
+[Term]
+id: PR:000050183
+name: immunoglobulin light chain protein (human)
+namespace: protein
+def: "An immunoglobulin light chain protein that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-family. Note: The kappa light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/351, and the lambda light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/353.
+synonym: "hIgL" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050175 ! immunoglobulin light chain protein
+union_of: PR:000050184 ! Ig kappa light chain protein (human)
+union_of: PR:000050185 ! Ig lambda light chain protein (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050184
+name: Ig kappa light chain protein (human)
+namespace: protein
+def: "An Ig kappa light chain protein that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-gene. Note: The kappa light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/351.
+synonym: "hIgKappa" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050181 ! Ig kappa light chain protein
+intersection_of: PR:000050181 ! Ig kappa light chain protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050185
+name: Ig lambda light chain protein (human)
+namespace: protein
+def: "An Ig lambda light chain protein that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-gene. Note: The lambda light chain locus is described by https://www.genenames.org/cgi-bin/genefamilies/set/353.
+synonym: "hIgLambda" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000050182 ! Ig lambda light chain protein
+intersection_of: PR:000050182 ! Ig lambda light chain protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:000050216
@@ -12089,6 +12392,34 @@ intersection_of: PR:000002015 ! MHC class II histocompatibility antigen alpha ch
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95900 ! H2-Ea (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:000050372
+name: IgA1 heavy chain protein, secretory isoform
+namespace: protein
+def: "An IgA1 heavy chain protein that is a translation product of some mRNA polyadenylated at a site 5' to the membrane exons, thus preventing their incorporation the final spliced mRNA." [GOC:add, PRO:ADD, PRO:DAN]
+comment: Category=seqgroup. Requested by=HIPC. Requested by=CL.
+synonym: "IgHA1/iso:secretory" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin A1 heavy chain, secretory isoform" EXACT [PRO:DAN]
+synonym: "immunoglobulin alpha 1 heavy chain, secretory isoform" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain alpha 1, secretory isoform" EXACT [PRO:DAN]
+is_a: PR:000050177 ! IgA1 heavy chain protein
+
+[Term]
+id: PR:000050376
+name: IgA1 heavy chain protein, secretory isoform (human)
+namespace: protein
+def: "An IgA1 heavy chain protein, secretory isoform that is encoded in the genome of human. This is a translation product of an IgA1 mRNA polyadenylated at a site 5' to the membrane exons, thus preventing their incorporation the final spliced mRNA." [GOC:add, PRO:ADD, PRO:DAN]
+comment: Category=organism-seqgroup. Requested by=HIPC. Requested by=CL.
+synonym: "hIgHA1/iso:secretory" EXACT PRO-short-label [PRO:DAN]
+synonym: "immunoglobulin A1 heavy chain, secretory isoform (human)" EXACT [PRO:DAN]
+synonym: "immunoglobulin alpha 1 heavy chain, secretory isoform (human)" EXACT [PRO:DAN]
+synonym: "immunoglobulin heavy chain alpha 1, secretory isoform (human)" EXACT [PRO:DAN]
+is_a: PR:000050179 ! IgA1 heavy chain protein (human)
+is_a: PR:000050372 ! IgA1 heavy chain protein, secretory isoform
+intersection_of: PR:000050372 ! IgA1 heavy chain protein, secretory isoform
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:000050388
@@ -13396,6 +13727,29 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P01009
+name: alpha-1-antitrypsin (human)
+namespace: protein
+def: "An alpha-1-antitrypsin that is encoded in the genome of human." [PRO:CNA, UniProtKB:P01009]
+comment: Category=organism-gene.
+synonym: "AAT" RELATED Gene-based [UniProtKB:P01009]
+synonym: "alpha-1 protease inhibitor (human)" EXACT [UniProtKB:P01009]
+synonym: "alpha-1-antiproteinase (human)" EXACT [UniProtKB:P01009]
+synonym: "hSERPINA1" EXACT PRO-short-label [PRO:DNx]
+synonym: "PI" RELATED Gene-based [UniProtKB:P01009]
+synonym: "PRO0684" RELATED Gene-based [UniProtKB:P01009]
+synonym: "PRO2209" RELATED Gene-based [UniProtKB:P01009]
+synonym: "serpin A1 (human)" EXACT [UniProtKB:P01009]
+synonym: "SERPINA1" RELATED Gene-based [UniProtKB:P01009]
+xref: UniProtKB:P01009
+is_a: PR:000014678 ! alpha-1-antitrypsin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000014678 ! alpha-1-antitrypsin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8941 ! SERPINA1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P01019
 name: angiotensinogen (human)
 namespace: protein
@@ -14377,6 +14731,25 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000005897 ! C-reactive protein
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=2367 ! CRP (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P02743
+name: serum amyloid P-component (human)
+namespace: protein
+def: "A serum amyloid P-component that is encoded in the genome of human." [PRO:DNx, UniProtKB:P02743]
+comment: Category=organism-gene.
+synonym: "9.5S alpha-1-glycoprotein (human)" EXACT [UniProtKB:P02743]
+synonym: "APCS" RELATED Gene-based [UniProtKB:P02743]
+synonym: "hAPCS" EXACT PRO-short-label [PRO:DNx]
+synonym: "PTX2" RELATED Gene-based [UniProtKB:P02743]
+synonym: "SAP (human)" EXACT [UniProtKB:P02743]
+xref: UniProtKB:P02743
+is_a: PR:000004126 ! serum amyloid P-component
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004126 ! serum amyloid P-component
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=584 ! APCS (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -17168,6 +17541,25 @@ relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_rep
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P12246
+name: serum amyloid P-component (mouse)
+namespace: protein
+def: "A serum amyloid P-component that is encoded in the genome of mouse." [OMA:P12246, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Apcs" RELATED Gene-based [UniProtKB:P12246]
+synonym: "mAPCS" EXACT PRO-short-label [PRO:DNx]
+synonym: "Ptx2" RELATED Gene-based [UniProtKB:P12246]
+synonym: "Sap" RELATED Gene-based [UniProtKB:P12246]
+synonym: "SAP (mouse)" EXACT [UniProtKB:P12246]
+xref: UniProtKB:P12246
+is_a: PR:000004126 ! serum amyloid P-component
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000004126 ! serum amyloid P-component
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98229 ! Apcs (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P12277
 name: creatine kinase B-type (human)
 namespace: protein
@@ -19670,6 +20062,28 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:96553 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P27169
+name: serum paraoxonase/arylesterase 1 (human)
+namespace: protein
+def: "A serum paraoxonase/arylesterase 1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:P27169]
+comment: Category=organism-gene.
+synonym: "A-esterase 1 (human)" EXACT [UniProtKB:P27169]
+synonym: "aromatic esterase 1 (human)" EXACT [UniProtKB:P27169]
+synonym: "hPON1" EXACT PRO-short-label [PRO:DNx]
+synonym: "K-45 (human)" EXACT [UniProtKB:P27169]
+synonym: "PON" RELATED Gene-based [UniProtKB:P27169]
+synonym: "PON 1 (human)" EXACT [UniProtKB:P27169]
+synonym: "PON1" RELATED Gene-based [UniProtKB:P27169]
+synonym: "serum aryldialkylphosphatase 1 (human)" EXACT [UniProtKB:P27169]
+xref: UniProtKB:P27169
+is_a: PR:000013021 ! serum paraoxonase/arylesterase 1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000013021 ! serum paraoxonase/arylesterase 1
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9204 ! PON1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P27177
 name: major prion protein homolog (chicken)
 namespace: protein
@@ -21651,6 +22065,27 @@ relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/417891 ! LUM (c
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: PR:P52430
+name: serum paraoxonase/arylesterase 1 (mouse)
+namespace: protein
+def: "A serum paraoxonase/arylesterase 1 that is encoded in the genome of mouse." [OMA:P52430, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "A-esterase 1 (mouse)" EXACT [UniProtKB:P52430]
+synonym: "aromatic esterase 1 (mouse)" EXACT [UniProtKB:P52430]
+synonym: "mPON1" EXACT PRO-short-label [PRO:DNx]
+synonym: "Pon" RELATED Gene-based [UniProtKB:P52430]
+synonym: "PON 1 (mouse)" EXACT [UniProtKB:P52430]
+synonym: "Pon1" RELATED Gene-based [UniProtKB:P52430]
+synonym: "serum aryldialkylphosphatase 1 (mouse)" EXACT [UniProtKB:P52430]
+xref: UniProtKB:P52430
+is_a: PR:000013021 ! serum paraoxonase/arylesterase 1
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000013021 ! serum paraoxonase/arylesterase 1
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:103295 ! Pon1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P53412
 name: LIM/homeobox protein Lhx3 (chicken)
 namespace: protein
@@ -22319,6 +22754,29 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000009725 ! neutrophil gelatinase-associated lipocalin
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=6526 ! LCN2 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P81172
+name: hepcidin (human)
+namespace: protein
+def: "A hepcidin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P81172]
+comment: Category=organism-gene.
+synonym: "HAMP" RELATED Gene-based [UniProtKB:P81172]
+synonym: "HEPC" RELATED Gene-based [UniProtKB:P81172]
+synonym: "hHAMP" EXACT PRO-short-label [PRO:DNx]
+synonym: "LEAP-1 (human)" EXACT [UniProtKB:P81172]
+synonym: "LEAP1" RELATED Gene-based [UniProtKB:P81172]
+synonym: "liver-expressed antimicrobial peptide 1 (human)" EXACT [UniProtKB:P81172]
+synonym: "PLTR (human)" EXACT [UniProtKB:P81172]
+synonym: "putative liver tumor regressor (human)" EXACT [UniProtKB:P81172]
+synonym: "UNQ487/PRO1003" RELATED Gene-based [UniProtKB:P81172]
+xref: UniProtKB:P81172
+is_a: PR:000008438 ! hepcidin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000008438 ! hepcidin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=15598 ! HAMP (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -27111,6 +27569,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=15598
+name: HAMP (human)
+namespace: gene
+def: "A protein coding gene HAMP in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=1569
 name: CCK (human)
 namespace: gene
@@ -28470,6 +28937,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=584
+name: APCS (human)
+namespace: gene
+def: "A protein coding gene APCS in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=5870
 name: IGLL1 (human)
 namespace: gene
@@ -29217,6 +29693,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=8941
+name: SERPINA1 (human)
+namespace: gene
+def: "A protein coding gene SERPINA1 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9053
 name: PLAUR (human)
 namespace: gene
@@ -29230,6 +29715,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=914
 name: B2M (human)
 namespace: gene
 def: "A protein coding gene B2M in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9204
+name: PON1 (human)
+namespace: gene
+def: "A protein coding gene PON1 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -29491,6 +29985,15 @@ id: http://www.informatics.jax.org/marker/MGI:103294
 name: Prg2 (mouse)
 namespace: gene
 def: "A protein coding gene Prg2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:103295
+name: Pon1 (mouse)
+namespace: gene
+def: "A protein coding gene Pon1 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -31714,6 +32217,15 @@ id: http://www.informatics.jax.org/marker/MGI:97849
 name: Rag2 (mouse)
 namespace: gene
 def: "A protein coding gene Rag2 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:98229
+name: Apcs (mouse)
+namespace: gene
+def: "A protein coding gene Apcs in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
