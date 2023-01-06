@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2022-12-16/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-01-06/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2022-12-16" xsd:string
+property_value: owl:versionInfo "2023-01-06" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -2888,6 +2888,24 @@ synonym: "siglec-5" EXACT []
 synonym: "siglec-F" EXACT []
 synonym: "SIGLEC5" EXACT PRO-short-label [PRO:DNx]
 synonym: "Siglecf" RELATED []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000001928
+name: sialic acid-binding Ig-like lectin 6
+namespace: protein
+def: "A protein that is a translation product of the human SIGLEC6 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene. There is no mouse ortholog.
+synonym: "CD327" EXACT []
+synonym: "CD33 antigen-like 1" EXACT []
+synonym: "CD33L" RELATED Gene-based []
+synonym: "CD33L1" RELATED Gene-based []
+synonym: "CDw327" EXACT []
+synonym: "OB-BP1" EXACT []
+synonym: "OBBP1" RELATED Gene-based []
+synonym: "obesity-binding protein 1" EXACT []
+synonym: "siglec-6" EXACT []
+synonym: "SIGLEC6" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -11577,6 +11595,22 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000049246
+name: sialic acid-binding Ig-like lectin 6, signal peptide removed form (human)
+namespace: protein
+def: "A sialic acid-binding Ig-like lectin 6 (human) that has had the signal peptide removed. UniProtKB:O43699, 27-453." [PRO:DNx, Reactome:R-HSA-197708]
+comment: Category=organism-modification.
+synonym: "hSIGLEC6/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000014946" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:O43699, 27-453" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-197708 "PR:000049246 located_in GO:0005886"
+is_a: PR:O43699 ! sialic acid-binding Ig-like lectin 6 (human)
+intersection_of: PR:O43699 ! sialic acid-binding Ig-like lectin 6 (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000049250
 name: tyrosine-protein phosphatase non-receptor type substrate 1, signal peptide removed form (human)
 namespace: protein
@@ -13120,6 +13154,31 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000001786 ! prominin-1
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9454 ! PROM1 (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:O43699
+name: sialic acid-binding Ig-like lectin 6 (human)
+namespace: protein
+def: "A sialic acid-binding Ig-like lectin 6 that is encoded in the genome of human." [PRO:WCB, UniProtKB:O43699]
+comment: Category=organism-gene.
+synonym: "CD327 (human)" EXACT [UniProtKB:O43699]
+synonym: "CD33 antigen-like 1 (human)" EXACT [UniProtKB:O43699]
+synonym: "CD33L" RELATED Gene-based [UniProtKB:O43699]
+synonym: "CD33L1" RELATED Gene-based [UniProtKB:O43699]
+synonym: "CDw327 (human)" EXACT [UniProtKB:O43699]
+synonym: "hSIGLEC6" EXACT PRO-short-label [PRO:DNx]
+synonym: "OB-BP1 (human)" EXACT [UniProtKB:O43699]
+synonym: "OBBP1" RELATED Gene-based [UniProtKB:O43699]
+synonym: "obesity-binding protein 1 (human)" EXACT [UniProtKB:O43699]
+synonym: "siglec-6 (human)" EXACT [UniProtKB:O43699]
+synonym: "SIGLEC6" RELATED Gene-based [UniProtKB:O43699]
+xref: UniProtKB:O43699
+is_a: PR:000001928 ! sialic acid-binding Ig-like lectin 6
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001928 ! sialic acid-binding Ig-like lectin 6
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10875 ! SIGLEC6 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -25350,6 +25409,28 @@ relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/396317 ! ALPL (
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: PR:Q920G3
+name: sialic acid-binding Ig-like lectin 5 (mouse)
+namespace: protein
+def: "A sialic acid-binding Ig-like lectin 6 that is encoded in the genome of mouse." [PRO:WCB]
+comment: Category=organism-gene.
+synonym: "CD170 (mouse)" EXACT [UniProtKB:Q920G3]
+synonym: "mSiglec-F" EXACT [UniProtKB:Q920G3]
+synonym: "mSIGLEC6" EXACT PRO-short-label [PRO:DNx]
+synonym: "sialic acid-binding Ig-like lectin F (mouse)" EXACT [UniProtKB:Q920G3]
+synonym: "siglec-5 (mouse)" RELATED [UniProtKB:Q920G3]
+synonym: "siglec-F (mouse)" EXACT [UniProtKB:Q920G3]
+synonym: "Siglec5" RELATED Gene-based [UniProtKB:Q920G3]
+synonym: "Siglecf" RELATED Gene-based [UniProtKB:Q920G3]
+xref: UniProtKB:Q920G3
+is_a: PR:000001928 ! sialic acid-binding Ig-like lectin 6
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000001928 ! sialic acid-binding Ig-like lectin 6
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2681107 ! Siglec5 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q921I1
 name: serotransferrin (mouse)
 namespace: protein
@@ -27114,6 +27195,15 @@ id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10874
 name: SIGLEC5 (human)
 namespace: gene
 def: "A protein coding gene SIGLEC5 in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=10875
+name: SIGLEC6 (human)
+namespace: gene
+def: "A protein coding gene SIGLEC6 in human." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -31011,6 +31101,15 @@ id: http://www.informatics.jax.org/marker/MGI:2674311
 name: Sspo (mouse)
 namespace: gene
 def: "A protein coding gene Sspo in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2681107
+name: Siglec5 (mouse)
+namespace: gene
+def: "A protein coding gene Siglec5 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
