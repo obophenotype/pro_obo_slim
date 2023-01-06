@@ -3964,6 +3964,20 @@ synonym: "APOE" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000004528
+name: tyrosine-protein kinase receptor UFO
+namespace: protein
+def: "A protein that is a translation product of the human AXL gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "adhesion-related kinase" EXACT []
+synonym: "Ark" RELATED Gene-based []
+synonym: "AXL" EXACT PRO-short-label [PRO:DNx]
+synonym: "AXL oncogene" EXACT []
+synonym: "UFO" RELATED Gene-based []
+xref: IUPHARobj:1835
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000004580
 name: beta-2-microglobulin
 namespace: protein
@@ -9980,6 +9994,22 @@ xref: Reactome:R-HSA-6784908 "PR:000046364 located_in GO:0005788"
 is_a: PR:000019028 ! apolipoprotein E, signal peptide removed form
 is_a: PR:P02649 ! apolipoprotein E (human)
 intersection_of: PR:P02649 ! apolipoprotein E (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000046449
+name: tyrosine-protein kinase receptor UFO, signal peptide removed form (human)
+namespace: protein
+def: "A tyrosine-protein kinase receptor UFO (human) that has had the signal peptide removed. UniProtKB:P30530, 26-894." [PRO:DNx, Reactome:R-HSA-197705]
+comment: Category=organism-modification.
+synonym: "hAXL/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000024481" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P30530, 26-894" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-197705 "PR:000046449 located_in GO:0005886"
+is_a: PR:P30530 ! tyrosine-protein kinase receptor UFO (human)
+intersection_of: PR:P30530 ! tyrosine-protein kinase receptor UFO (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -20400,6 +20430,25 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98257 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P30530
+name: tyrosine-protein kinase receptor UFO (human)
+namespace: protein
+def: "A tyrosine-protein kinase receptor UFO that is encoded in the genome of human." [PRO:DNx, UniProtKB:P30530]
+comment: Category=organism-gene.
+synonym: "AXL" RELATED Gene-based [UniProtKB:P30530]
+synonym: "AXL oncogene (human)" EXACT [UniProtKB:P30530]
+synonym: "hAXL" EXACT PRO-short-label [PRO:DNx]
+synonym: "UFO" RELATED Gene-based [UniProtKB:P30530]
+xref: DTO:03100553
+xref: UniProtKB:P30530
+is_a: PR:000004528 ! tyrosine-protein kinase receptor UFO
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004528 ! tyrosine-protein kinase receptor UFO
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=905 ! AXL (human)
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P30559
 name: oxytocin receptor (human)
 namespace: protein
@@ -23136,6 +23185,25 @@ intersection_of: PR:000011178 ! nuclear factor NF-kappa-B p100 subunit
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: has_gene_template http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=7795 ! NFKB2 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q00993
+name: tyrosine-protein kinase receptor UFO (mouse)
+namespace: protein
+def: "A tyrosine-protein kinase receptor UFO that is encoded in the genome of mouse." [OMA:Q00993, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "adhesion-related kinase (mouse)" EXACT [UniProtKB:Q00993]
+synonym: "Ark" RELATED Gene-based [UniProtKB:Q00993]
+synonym: "Axl" RELATED Gene-based [UniProtKB:Q00993]
+synonym: "mAXL" EXACT PRO-short-label [PRO:DNx]
+synonym: "Ufo" RELATED Gene-based [UniProtKB:Q00993]
+xref: UniProtKB:Q00993
+is_a: PR:000004528 ! tyrosine-protein kinase receptor UFO
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000004528 ! tyrosine-protein kinase receptor UFO
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1347244 ! Axl (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:Q01151
@@ -29792,6 +29860,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=905
+name: AXL (human)
+namespace: gene
+def: "A protein coding gene AXL in human." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=9053
 name: PLAUR (human)
 namespace: gene
@@ -30777,6 +30854,15 @@ id: http://www.informatics.jax.org/marker/MGI:1346525
 name: Sgcd (mouse)
 namespace: gene
 def: "A protein coding gene Sgcd in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:1347244
+name: Axl (mouse)
+namespace: gene
+def: "A protein coding gene Axl in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
