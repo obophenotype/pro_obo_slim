@@ -25,6 +25,7 @@ build/%.db: src/scripts/prefixes.sql mirror/%.owl.gz | build/rdftab
 pr_slim.owl: mirror/pr.owl seed.txt
 	$(ROBOT) extract -i $< -T seed.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --term MOD:00693 \
+		remove --select "<http://www.genenames.org/cgi-bin/gene_symbol_report*>" \
 		query --update sparql/inject-subset-declaration.ru --update sparql/inject-synonymtype-declaration.ru --update sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
 .PRECIOUS: pr_slim.owl
