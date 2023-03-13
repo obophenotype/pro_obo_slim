@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2023-03-11/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-03-13/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2023-03-11" xsd:string
+property_value: owl:versionInfo "2023-03-13" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -3718,6 +3718,22 @@ synonym: "semenogelase" EXACT []
 synonym: "seminin" EXACT []
 xref: IUPHARobj:2373
 is_a: PR:000027795 ! trypsin
+
+[Term]
+id: PR:000003110
+name: TGF-beta receptor type-3
+namespace: protein
+def: "A protein that is a translation product of the human TGFBR3 gene or a 1:1 ortholog thereof." [PRO:CNA]
+comment: Category=gene.
+synonym: "betaglycan" EXACT []
+synonym: "TGF-beta receptor type 3" EXACT []
+synonym: "TGF-beta receptor type III" EXACT []
+synonym: "TGFBR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "TGFR-3" EXACT []
+synonym: "transforming growth factor beta receptor III" EXACT []
+xref: IUPHARobj:1796
+xref: PIRSF:PIRSF002558
+is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000003171
@@ -15835,6 +15851,27 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:132831
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:O88393
+name: transforming growth factor beta receptor type 3 (mouse)
+namespace: protein
+def: "A TGF-beta receptor type-3 that is encoded in the genome of mouse." [OMA:O88393, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "betaglycan (mouse)" EXACT [UniProtKB:O88393]
+synonym: "mTGFBR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "TGF-beta receptor type 3 (mouse)" EXACT [UniProtKB:O88393]
+synonym: "TGF-beta receptor type III (mouse)" EXACT [UniProtKB:O88393]
+synonym: "Tgfbr3" RELATED Gene-based [UniProtKB:O88393]
+synonym: "TGFR-3 (mouse)" EXACT [UniProtKB:O88393]
+synonym: "transforming growth factor beta receptor III (mouse)" EXACT [UniProtKB:O88393]
+xref: UniProtKB:O88393
+is_a: PR:000003110 ! TGF-beta receptor type-3
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000003110 ! TGF-beta receptor type-3
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:104637 ! Tgfbr3 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:O88410
 name: C-X-C chemokine receptor type 3 (mouse)
 namespace: protein
@@ -27257,6 +27294,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:95525 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q03167
+name: transforming growth factor beta receptor type 3 (human)
+namespace: protein
+def: "A TGF-beta receptor type-3 that is encoded in the genome of human." [PRO:CNA, UniProtKB:Q03167]
+comment: Category=organism-gene.
+synonym: "betaglycan (human)" EXACT [UniProtKB:Q03167]
+synonym: "hTGFBR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "TGF-beta receptor type 3 (human)" EXACT [UniProtKB:Q03167]
+synonym: "TGF-beta receptor type III (human)" EXACT [UniProtKB:Q03167]
+synonym: "TGFBR3" RELATED Gene-based [UniProtKB:Q03167]
+synonym: "TGFR-3 (human)" EXACT [UniProtKB:Q03167]
+synonym: "transforming growth factor beta receptor III (human)" EXACT [UniProtKB:Q03167]
+xref: UniProtKB:Q03167
+is_a: PR:000003110 ! TGF-beta receptor type-3
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000003110 ! TGF-beta receptor type-3
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q03347
 name: runt-related transcription factor 1 (mouse)
 namespace: protein
@@ -31888,6 +31945,15 @@ id: http://www.informatics.jax.org/marker/MGI:104618
 name: Ccr1 (mouse)
 namespace: gene
 def: "A protein coding gene Ccr1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:104637
+name: Tgfbr3 (mouse)
+namespace: gene
+def: "A protein coding gene Tgfbr3 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
