@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2023-03-13/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-03-23/pr_slim.owl
 synonymtypedef: Gene-based ""
+synonymtypedef: PRO-common-name ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2023-03-13" xsd:string
+property_value: owl:versionInfo "2023-03-23" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -211,7 +212,9 @@ is_a: PR:000025513 ! modified amino-acid residue
 id: NCBITaxon:10090
 name: Mus musculus
 namespace: ncbi_taxonomy
-is_a: NCBITaxon:2759 ! Eukaryota
+synonym: "m" RELATED PRO-short-label [PRO:DAN]
+synonym: "mouse" RELATED PRO-common-name []
+is_a: NCBITaxon:9989 ! Rodentia
 
 [Term]
 id: NCBITaxon:2759
@@ -221,28 +224,56 @@ synonym: "euk-" RELATED PRO-short-label [PRO:DAN]
 is_a: OBI:0100026 ! organism
 
 [Term]
+id: NCBITaxon:33154
+name: Opisthokonta
+namespace: ncbi_taxonomy
+synonym: "Fungi/Metazoa group" RELATED []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
 id: NCBITaxon:33208
 name: Metazoa
 namespace: ncbi_taxonomy
-is_a: NCBITaxon:2759 ! Eukaryota
+synonym: "metazoan-" RELATED PRO-short-label [PRO:DAN]
+is_a: NCBITaxon:33154 ! Opisthokonta
+
+[Term]
+id: NCBITaxon:40674
+name: Mammalia
+namespace: ncbi_taxonomy
+synonym: "mammal" EXACT PRO-common-name []
+synonym: "mammal-" RELATED PRO-short-label [PRO:DAN]
+is_a: NCBITaxon:33208 ! Metazoa
 
 [Term]
 id: NCBITaxon:8657
 name: Naja oxiana
 namespace: ncbi_taxonomy
-is_a: NCBITaxon:2759 ! Eukaryota
+synonym: "cobra" EXACT PRO-common-name [PRO:DAN]
+is_a: NCBITaxon:33208 ! Metazoa
 
 [Term]
 id: NCBITaxon:9031
 name: Gallus gallus
 namespace: ncbi_taxonomy
-is_a: NCBITaxon:2759 ! Eukaryota
+synonym: "chick-" RELATED PRO-short-label [PRO:DAN]
+synonym: "chicken" RELATED PRO-common-name []
+is_a: NCBITaxon:33208 ! Metazoa
 
 [Term]
 id: NCBITaxon:9606
 name: Homo sapiens
 namespace: ncbi_taxonomy
-is_a: NCBITaxon:2759 ! Eukaryota
+synonym: "h" RELATED PRO-short-label [PRO:DAN]
+synonym: "human" RELATED PRO-common-name [PRO:DAN]
+is_a: NCBITaxon:40674 ! Mammalia
+
+[Term]
+id: NCBITaxon:9989
+name: Rodentia
+namespace: ncbi_taxonomy
+synonym: "rodent" EXACT PRO-common-name []
+is_a: NCBITaxon:40674 ! Mammalia
 
 [Term]
 id: OBI:0100026
@@ -260,7 +291,6 @@ comment: The definition above excludes protein complexes, which some also consid
 synonym: "native protein" NARROW [IEDB:BP]
 synonym: "natural protein" EXACT [PRO:DAN]
 is_a: PR:000018263 ! amino acid chain
-is_a: PR:000050567 ! protein-containing material entity
 intersection_of: PR:000018263 ! amino acid chain
 intersection_of: has_gene_template SO:0000704 ! gene
 intersection_of: output_of GO:0006412 ! translation
@@ -272,7 +302,7 @@ relationship: output_of GO:0006412 ! translation
 id: PR:000000008
 name: TGF-beta-like cystine-knot cytokine
 namespace: protein
-def: "A protein that has a core domain composition consisting of a signal peptide, a variable propeptide region and a Transforming growth factor beta like domain (Pfam:PF00019), which is a cystine-knot domain containing four conserved beta strands, S1-S4, which form two antiparallel beta sheets (SI-S2 and S3-S4) interconnected by three disulfide bridges in a knot-like topology. Cystines [II-V] and [III-VI] form a ring through which the remaining disulfide bond (Cys[I-IV]) penetrates. Insertion of different variable regions into this common motif has given rise to various subclasses of the growth factor cystine-knot domain." [PRO:CNA]
+def: "A protein with a core domain composition consisting of a signal peptide, a variable propeptide region and a Transforming growth factor beta like domain (Pfam:PF00019), which is a cystine-knot domain containing four conserved beta strands, S1-S4, which form two antiparallel beta sheets (SI-S2 and S3-S4) interconnected by three disulfide bridges in a knot-like topology. Cystines [II-V] and [III-VI] form a ring through which the remaining disulfide bond (Cys[I-IV]) penetrates. Insertion of different variable regions into this common motif has given rise to various subclasses of the growth factor cystine-knot domain." [PRO:CNA]
 comment: Category=family.
 synonym: "TGF-beta superfamily" RELATED []
 xref: PIRSF:PIRSF800009
@@ -294,7 +324,7 @@ is_a: PR:000024990 ! type II interferon
 id: PR:000000030
 name: thrombospondin subgroup B
 namespace: protein
-def: "A protein that has a core domain composition consisting of three or four EGF-type repeats, a series of seven contiguous calcium-binding repeats (the thrombospondin type 3 repeats), and a globular carboxyl-terminal domain." [PMID:10842357]
+def: "A protein with a core domain composition consisting of three or four EGF-type repeats, a series of seven contiguous calcium-binding repeats (the thrombospondin type 3 repeats), and a globular carboxyl-terminal domain." [PMID:10842357]
 comment: Category=family.
 xref: PIRSF:PIRSF002479
 is_a: PR:000000001 ! protein
@@ -303,7 +333,7 @@ is_a: PR:000000001 ! protein
 id: PR:000000033
 name: tumor necrosis factor, TNF-like
 namespace: protein
-def: "A protein that has a core domain composition consisting of an N-terminal cytosolic domain, a type II transmembrane domain and a C-terminal TNF domain (Pfam:PF00229)." [PRO:CNA]
+def: "A protein with a core domain composition consisting of an N-terminal cytosolic domain, a type II transmembrane domain and a C-terminal TNF domain (Pfam:PF00229)." [PRO:CNA]
 comment: Category=family.
 xref: PIRSF:PIRSF001873
 is_a: PR:000000001 ! protein
@@ -356,6 +386,7 @@ comment: Category=gene.
 synonym: "TGF-beta-1" EXACT []
 synonym: "TGFB" RELATED Gene-based []
 synonym: "TGFB1" EXACT PRO-short-label [PRO:DNx]
+xref: PANTHER:PTHR11848\:SF32
 is_a: PR:000000046 ! TGF-beta
 
 [Term]
@@ -371,6 +402,7 @@ synonym: "glioblastoma-derived T-cell suppressor factor" EXACT []
 synonym: "polyergin" EXACT []
 synonym: "TGF-beta-2" EXACT []
 synonym: "TGFB2" EXACT PRO-short-label [PRO:DNx]
+xref: PANTHER:PTHR11848\:SF33
 is_a: PR:000000046 ! TGF-beta
 
 [Term]
@@ -381,13 +413,14 @@ def: "A TGF-beta that is a translation product of the human TGFB3 gene or a 1:1 
 comment: Category=gene.
 synonym: "TGF-beta-3" EXACT []
 synonym: "TGFB3" EXACT PRO-short-label [PRO:DNx]
+xref: PANTHER:PTHR11848\:SF34
 is_a: PR:000000046 ! TGF-beta
 
 [Term]
 id: PR:000000675
 name: platelet-derived growth factor with CUB domain
 namespace: protein
-def: "A protein that has a core domain composition consisting of a signal peptide, a CUB domain (Pfam:PF00431), and a C-terminal Platelet-derived growth factor (PDGF) domain (Pfam:PF00341)." [PRO:CNA]
+def: "A protein with a core domain composition consisting of a signal peptide, a CUB domain (Pfam:PF00431), and a C-terminal Platelet-derived growth factor (PDGF) domain (Pfam:PF00341)." [PRO:CNA]
 comment: Category=family.
 xref: PIRSF:PIRSF038533
 is_a: PR:000000001 ! protein
@@ -615,7 +648,7 @@ is_a: PR:000001006 ! receptor-type tyrosine-protein phosphatase C
 id: PR:000001018
 name: CD3 subunit with immunoglobulin domain
 namespace: protein
-def: "A protein that has a core domain composition consisting of an extracellular N-terminal domain that adopts an immunoglobulin fold, a transmembrane domain, and an intracellular C-terminal domain with a single copy of the Immunoreceptor tyrosine-based activation motif (Pfam:PF02189) (ITAM). It constitutes the invariant subunit of the T cell antigen receptor (TCR). TCR is a surface receptor on T cells responsible for recognizing MHC-restricted antigens and initiating the cellular immune response." [PMID:16473826, PMID:1724736]
+def: "A protein with a core domain composition consisting of an extracellular N-terminal domain that adopts an immunoglobulin fold, a transmembrane domain, and an intracellular C-terminal domain with a single copy of the Immunoreceptor tyrosine-based activation motif (Pfam:PF02189) (ITAM). It constitutes the invariant subunit of the T cell antigen receptor (TCR). TCR is a surface receptor on T cells responsible for recognizing MHC-restricted antigens and initiating the cellular immune response." [PMID:16473826, PMID:1724736]
 comment: Category=family.
 synonym: "CD3 subunit with Ig-like domain" EXACT []
 xref: PIRSF:PIRSF001993
@@ -724,6 +757,7 @@ synonym: "Lyt2" RELATED Gene-based []
 synonym: "MAL" RELATED Gene-based []
 synonym: "T-cell surface glycoprotein Lyt-2" EXACT []
 synonym: "T-lymphocyte differentiation antigen T8/Leu-2" EXACT []
+xref: PANTHER:PTHR10441\:SF1
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -761,7 +795,7 @@ is_a: PR:000030035 ! G-protein coupled receptor
 id: PR:000001091
 name: interleukin-1
 namespace: protein
-def: "A protein that has a core domain composition consisting of a propeptide region and an Interleukin-1 / 18 domain." [PMID:8001745, PRO:CNA]
+def: "A protein with a core domain composition consisting of a propeptide region and an Interleukin-1 / 18 domain." [PMID:8001745, PRO:CNA]
 comment: Category=family.
 xref: PIRSF:PIRSF001937
 is_a: PR:000000001 ! protein
@@ -1086,6 +1120,7 @@ synonym: "MDR-15" EXACT []
 synonym: "MDR15" RELATED Gene-based []
 synonym: "monocyte-derived receptor 15" EXACT []
 xref: IUPHARobj:72
+xref: PANTHER:PTHR24227\:SF213
 is_a: PR:000001128 ! chemokine receptor
 
 [Term]
@@ -1379,6 +1414,7 @@ synonym: "signaling lymphocytic activation molecule 2" EXACT []
 synonym: "SLAM family member 2" EXACT []
 synonym: "SLAMF2" EXACT []
 synonym: "TCT.1" EXACT []
+xref: PANTHER:PTHR12080\:SF3
 xref: PIRSF:PIRSF001973
 is_a: PR:000000001 ! protein
 
@@ -1443,6 +1479,7 @@ synonym: "hly9-beta" EXACT []
 synonym: "leukocyte differentiation antigen CD84" EXACT []
 synonym: "signaling lymphocytic activation molecule 5" EXACT []
 synonym: "SLAMF5" RELATED Gene-based []
+xref: PANTHER:PTHR12080\:SF6
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -1666,6 +1703,7 @@ synonym: "IL-12B" EXACT []
 synonym: "IL12B" EXACT PRO-short-label [PRO:DNx]
 synonym: "NK cell stimulatory factor chain 2" EXACT []
 synonym: "NKSF2" RELATED Gene-based []
+xref: PANTHER:PTHR11321\:SF0
 xref: PIRSF:PIRSF038007
 is_a: PR:000000001 ! protein
 
@@ -1673,12 +1711,13 @@ is_a: PR:000000001 ! protein
 id: PR:000001370
 name: interleukin-13
 namespace: protein
-def: "A protein that is a translation product of the human IL13 gene or a 1:1 ortholog thereof. Interleukin-13 is a pleiotropic cytokine which may be important in the regulation of the inflammatory and immune responses. It inhibits inflammatory cytokine production and synergises with IL-2 in regulating interferon-gamma synthesis. The sequences of IL-4 and IL-13 are distantly related." [PRO:CNA]
+def: "A protein that is a translation product of the human IL13 gene or a 1:1 ortholog thereof. Interleukin-13 is a pleiotropic cytokine which may be important in the regulation of the inflammatory and immune responses. It inhibits inflammatory cytokine production and synergises with IL-2 in regulating interferon-gamma synthesis. The sequences of IL-4 and IL-13 are distantly related." [PANTHER:PTHR11322, PRO:CNA]
 comment: Category=gene.
 synonym: "IL-13" EXACT []
 synonym: "IL13" EXACT PRO-short-label [PRO:DNx]
 synonym: "NC30" RELATED Gene-based []
 synonym: "T-cell activation protein P600" EXACT []
+xref: PANTHER:PTHR11322
 xref: PIRSF:PIRSF001945
 is_a: PR:000000001 ! protein
 
@@ -1987,6 +2026,7 @@ synonym: "ETC-1" EXACT []
 synonym: "FUN-1" EXACT []
 synonym: "T-lymphocyte activation antigen CD86" EXACT []
 xref: IUPHARobj:2745
+xref: PANTHER:PTHR25462\:SF45
 is_a: PR:000001290 ! B7-related protein
 
 [Term]
@@ -2182,6 +2222,7 @@ synonym: "CSIF" EXACT []
 synonym: "cytokine synthesis inhibitory factor" EXACT []
 synonym: "IL-10" EXACT []
 synonym: "IL10" EXACT PRO-short-label [PRO:DNx]
+xref: PANTHER:PTHR11585\:SF1
 is_a: PR:000001335 ! class 2 cytokine, IL-10 type
 
 [Term]
@@ -2293,13 +2334,14 @@ comment: Category=gene.
 synonym: "OT-R" EXACT []
 synonym: "OXTR" EXACT PRO-short-label [PRO:DNx]
 xref: IUPHARobj:369
+xref: PANTHER:PTHR24241\:SF46
 is_a: PR:000001562 ! vasopressin/oxytocin receptor
 
 [Term]
 id: PR:000001753
 name: transcription factor NF-kappa-B subunit
 namespace: protein
-def: "A protein that has a core domain composition consisting of a Rel homology domain (RHD) (Pfam:PF00554), an IPT/TIG domain (Pfam:PF01833), six copies of the Ankyrin repeat (Pfam:PF00023), a Death domain (Pfam:PF00531) and a C-terminal PEST region." [PRO:JAN]
+def: "A protein with a core domain composition consisting of a Rel homology domain (RHD) (Pfam:PF00554), an IPT/TIG domain (Pfam:PF01833), six copies of the Ankyrin repeat (Pfam:PF00023), a Death domain (Pfam:PF00531) and a C-terminal PEST region." [PRO:JAN]
 comment: Category=family.
 synonym: "transcription factor NF-kappa-B" RELATED []
 xref: PIRSF:PIRSF036310
@@ -2340,11 +2382,9 @@ comment: Category=gene. Requested by=CL.
 synonym: "5'-NT" BROAD []
 synonym: "CD73" EXACT []
 synonym: "ecto-5'-nucleotidase" BROAD []
-synonym: "IMP-specific 5'-nucleotidase" EXACT []
 synonym: "NT5" RELATED Gene-based []
 synonym: "NT5E" EXACT PRO-short-label [PRO:DNx]
 synonym: "NTE" RELATED Gene-based []
-synonym: "thymidylate 5'-phosphatase" EXACT []
 xref: IUPHARobj:1232
 is_a: PR:000000001 ! protein
 
@@ -2469,6 +2509,7 @@ synonym: "CDw150" EXACT []
 synonym: "IPO-3" EXACT []
 synonym: "SLAM" RELATED Gene-based []
 synonym: "SLAMF1" EXACT PRO-short-label [PRO:DNx]
+xref: PANTHER:PTHR12080\:SF1
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -2522,6 +2563,7 @@ synonym: "ly-1" EXACT []
 synonym: "lymphocyte antigen 1" EXACT []
 synonym: "lymphocyte antigen T1/Leu-1" EXACT []
 synonym: "Lyt-1" EXACT []
+xref: PANTHER:PTHR19331\:SF6
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -3405,6 +3447,7 @@ synonym: "PDGFRA" EXACT PRO-short-label [PRO:DNx]
 synonym: "platelet-derived growth factor alpha receptor" EXACT []
 synonym: "RHEPDGFRA" RELATED Gene-based []
 xref: IUPHARobj:1803
+xref: PANTHER:PTHR24416\:SF207
 xref: PIRSF:PIRSF500950
 is_a: PR:000001810 ! CSF-1/PDGF receptor-type tyrosine-protein kinase
 
@@ -3810,7 +3853,7 @@ is_a: PR:000003263 ! collagen type I alpha chain
 id: PR:000003272
 name: insulin receptor-related receptor
 namespace: protein
-def: "A protein that has a core domain composition consisting of a Receptor L domain (Pfam:PF01030) followed by a Furin-like cysteine rich region (Pfam:PF00757) and a second copy of the Receptor L domain (Pfam:PF01030), two to four copies of the Fibronectin type 3 domain (Pfam:PF00041) and a copy of the Protein tyrosine kinase (Pfam:PF07714) domain at the C-terminus." [PRO:JAN]
+def: "A protein with a core domain composition consisting of a Receptor L domain (Pfam:PF01030) followed by a Furin-like cysteine rich region (Pfam:PF00757) and a second copy of the Receptor L domain (Pfam:PF01030), two to four copies of the Fibronectin type 3 domain (Pfam:PF00041) and a copy of the Protein tyrosine kinase (Pfam:PF07714) domain at the C-terminus." [PRO:JAN]
 comment: Category=family.
 synonym: "insulin receptor family" EXACT []
 is_a: PR:000000001 ! protein
@@ -6296,8 +6339,6 @@ synonym: "CCSP" RELATED Gene-based []
 synonym: "clara cell 17 kDa protein" EXACT []
 synonym: "clara cell phospholipid-binding protein" EXACT []
 synonym: "clara cells 10 kDa secretory protein" EXACT []
-synonym: "Club cell phospholipid-binding protein" EXACT []
-synonym: "Club cells 10 kDa secretory protein" EXACT []
 synonym: "PCB-binding protein" EXACT []
 synonym: "SCGB1A1" EXACT PRO-short-label [PRO:DNx]
 synonym: "secretoglobin family 1A member 1" EXACT []
@@ -6715,6 +6756,15 @@ synonym: "VRP" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000017298
+name: vimentin
+namespace: protein
+def: "A protein that is a translation product of the human VIM gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "VIM" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000017299
 name: VIP peptides
 namespace: protein
@@ -6752,11 +6802,11 @@ id: PR:000018263
 name: amino acid chain
 namespace: protein
 def: "An organic amino compound that consists of amino acid residues (unmodified amino-acid residues and/or modified amino-acid residues) linked by peptide bonds or derivatives of such bonds." [PRO:DAN, PRO:JSG]
-comment: Category=polymer.
+comment: Category=external.
 synonym: "peptide" NARROW [PRO:DAN]
 synonym: "polypeptide" NARROW [PRO:DAN]
 is_a: CHEBI:50047 ! organic amino compound
-relationship: has_constituent_monomer CHEBI:33708 {minCardinality="2"} ! amino-acid residue
+relationship: has_part CHEBI:33708 ! amino-acid residue
 
 [Term]
 id: PR:000018264
@@ -9838,6 +9888,18 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000021825
+name: vimentin, initiator methionine removed form
+namespace: protein
+def: "A vimentin that has had the initiator methionine removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "VIM/InitMet-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000017298 ! vimentin
+intersection_of: PR:000017298 ! vimentin
+intersection_of: lacks_part PR:000021937 ! initiator methionine
+relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
 id: PR:000021826
 name: vasoactive intestinal polypeptides proteolytic cleavage product
 namespace: protein
@@ -10905,27 +10967,26 @@ relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000035721
-name: ubiquitin (UBC) (mouse)
+name: ubiquitin (UBC) (human)
 namespace: protein
-def: "A ubiquitin (UBC) in mouse. UniProtKB:P0CG50, (1-76) or (77-152) or (153-228) or (229-304) or (305-380) or (381-456) or (457-532) or (533-608) or (609-684) or (685-734)." [PRO:DAN]
+def: "A ubiquitin (UBC) in human. UniProtKB:P0CG48, (1-76) or (77-152) or (153-228) or (229-304) or (305-380) or (381-456) or (457-532) or (533-608) or (609-684)." [PRO:CNA]
 comment: Category=organism-modification.
-synonym: "mUBC/Clv:ubiq" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P0CG50, (1-76) or (77-152) or (153-228) or (229-304) or (305-380) or (381-456) or (457-532) or (533-608) or (609-684) or (685-734)" EXACT PRO-proteoform-std [PRO:DNx]
-synonym: "UniProtKB:P0CG50, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 153-228" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 229-304" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 305-380" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 381-456" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 457-532" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 533-608" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 609-684" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 685-734" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
-is_a: PR:000029032 ! Mus musculus protein
+synonym: "hUBC/Clv:ubiq" EXACT PRO-short-label [PRO:DAN]
+synonym: "UniProtKB:P0CG48, (1-76) or (77-152) or (153-228) or (229-304) or (305-380) or (381-456) or (457-532) or (533-608) or (609-684)" EXACT [PRO:DNx]
+synonym: "UniProtKB:P0CG48, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 153-228" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 229-304" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 305-380" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 381-456" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 457-532" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 533-608" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 609-684" NARROW PRO-proteoform-std [PRO:DAN]
+synonym: "UniProtKB:P0CG48, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
 is_a: PR:000035720 ! ubiquitin (UBC)
+is_a: PR:P0CG48 ! polyubiquitin-C (human)
 intersection_of: PR:000035720 ! ubiquitin (UBC)
-intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
-relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:000035722
@@ -10993,7 +11054,6 @@ name: ubiquitin
 namespace: protein
 def: "A proteolytic cleavage product that gives rise to a protein that corresponds to the stand-alone version of the Ubiquitin (Pfam:PF00240) domain. Example: UniProtKB:P0CG48, 1-76." [Pfam:PF00240]
 comment: Category=union.
-synonym: "Ubiq" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000018264 ! proteolytic cleavage product
 union_of: PR:000035716 ! ubiquitin (RPS27A)
 union_of: PR:000035720 ! ubiquitin (UBC)
@@ -11388,7 +11448,7 @@ is_a: PR:000000001 ! protein
 id: PR:000044813
 name: glycoprotein hormone beta chain
 namespace: protein
-def: "A protein that has a core domain composition consisting of a signal peptide followed by a single copy of the Cys_knot (Pfam:PF00007) domain. The Cysteine knot is a protein structural motif containing three disulfide bridges." [Pfam:PF00007, PRO:CNA]
+def: "A protein with a core domain composition consisting of a signal peptide followed by a single copy of the Cys_knot (Pfam:PF00007) domain. The Cysteine knot is a protein structural motif containing three disulfide bridges." [Pfam:PF00007, PRO:CNA]
 comment: Category=family.
 xref: PANTHER:PTHR11515
 is_a: PR:000000001 ! protein
@@ -13892,6 +13952,24 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000049657
+name: vimentin, initiator methionine removed form (human)
+namespace: protein
+def: "A vimentin (human) that has had the initiator methionine removed. UniProtKB:P08670, 2-466." [PRO:DNx, Reactome:R-HSA-201600]
+comment: Category=organism-modification.
+synonym: "hVIM/InitMet-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000063754" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P08670, 2-466" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-201600 "PR:000049657 located_in GO:0005829"
+xref: TDR:12637
+is_a: PR:000021825 ! vimentin, initiator methionine removed form
+is_a: PR:P08670 ! vimentin (human)
+intersection_of: PR:P08670 ! vimentin (human)
+intersection_of: lacks_part PR:000021937 ! initiator methionine
+relationship: lacks_part PR:000021937 ! initiator methionine
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000049815
 name: epidermal growth factor receptor, signal peptide removed form (mouse)
 namespace: protein
@@ -14141,7 +14219,6 @@ synonym: "UniProtKB:P0CG48, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
 synonym: "UniProtKB:P62979, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
 synonym: "UniProtKB:P62987, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
 xref: Reactome:R-HSA-113595 "PR:000050249 located_in GO:0005829"
-xref: Reactome:R-HSA-68524 "PR:000050249 located_in GO:0005654"
 is_a: PR:000029067 ! Homo sapiens protein
 is_a: PR:000035728 ! ubiquitin
 intersection_of: PR:000035728 ! ubiquitin
@@ -14409,10 +14486,9 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:000050344
 name: alkaline phosphatase, germ cell type, mature form (human)
 namespace: protein
-def: "An alkaline phosphatase, germ cell type (human) that has had the signal peptide and propeptide removed. UniProtKB:P10696, 20-503." [PRO:DAN]
+def: "An alkaline phosphatase, germ cell type (human) that has had the signal peptide and propeptide removed." [PRO:DAN]
 comment: Category=organism-modification. Requested by=MAxO.
 synonym: "hALPG/mature" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P10696, 20-503" EXACT PRO-proteoform-std [PRO:DAN]
 is_a: PR:P10696 ! alkaline phosphatase, germ cell type (human)
 intersection_of: PR:P10696 ! alkaline phosphatase, germ cell type (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
@@ -14425,10 +14501,9 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:000050345
 name: alkaline phosphatase, placental type, mature form (human)
 namespace: protein
-def: "An alkaline phosphatase, placental type (human) that has had the signal peptide and propeptide removed. UniProtKB:P05187, 23-506." [PRO:DAN]
+def: "An alkaline phosphatase, placental type (human) that has had the signal peptide and propeptide removed." [PRO:DAN]
 comment: Category=organism-modification. Requested by=MAxO.
 synonym: "hALPP/mature" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P05187, 23-506" EXACT PRO-proteoform-std [PRO:DAN]
 is_a: PR:000046326 ! alkaline phosphatase, placental type, signal peptide removed form (human)
 intersection_of: PR:P05187 ! alkaline phosphatase, placental type (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
@@ -14441,10 +14516,9 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:000050346
 name: intestinal-type alkaline phosphatase, mature form (human)
 namespace: protein
-def: "An intestinal-type alkaline phosphatase (human) that has had the signal peptide and propeptide removed. UniProtKB:P09923, 20-503." [PRO:DAN]
+def: "An intestinal-type alkaline phosphatase (human) that has had the signal peptide and propeptide removed." [PRO:DAN]
 comment: Category=organism-modification. Requested by=MAxO.
 synonym: "hALPI/mature" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:PP09923, 20-503" EXACT PRO-proteoform-std [PRO:DAN]
 is_a: PR:000018964 ! intestinal alkaline phosphatase, signal peptide removed form
 is_a: PR:P09923 ! intestinal-type alkaline phosphatase (human)
 intersection_of: PR:P09923 ! intestinal-type alkaline phosphatase (human)
@@ -14458,11 +14532,9 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:000050347
 name: alkaline phosphatase, tissue-nonspecific isozyme, mature form (human)
 namespace: protein
-def: "An alkaline phosphatase, tissue-nonspecific isozyme (human) that has had the signal peptide and propeptide removed. UniProtKB:P05186, 18-501." [PRO:DAN]
+def: "An alkaline phosphatase, tissue-nonspecific isozyme (human) that has had the signal peptide and propeptide removed." [PRO:DAN]
 comment: Category=organism-modification. Requested by=MAxO.
 synonym: "hALPL/mature" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P05186, 18-501" EXACT PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P05186-1, 18-501" NARROW PRO-proteoform-std [PRO:DAN]
 is_a: PR:000018966 ! alkaline phosphatase, tissue-nonspecific isozyme, signal peptide removed form
 is_a: PR:P05186 ! alkaline phosphatase, tissue-nonspecific isozyme (human)
 intersection_of: PR:P05186 ! alkaline phosphatase, tissue-nonspecific isozyme (human)
@@ -14728,21 +14800,6 @@ union_of: PR:P0DN78 ! medium-wave-sensitive opsin 3 (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
-id: PR:000050567
-name: protein-containing material entity
-namespace: protein
-def: "A material entity that minimally consists of a protein." [PRO:DAN]
-comment: Note: This includes single proteins and derivatives thereof (PR:000000001), protein-containing complexes (GO:0032991), and protein aggregates (PR:000050566).
-synonym: "protein" NARROW [PRO:DAN]
-synonym: "protein aggregate" NARROW [PRO:DAN]
-synonym: "protein complex" NARROW [PRO:DAN]
-synonym: "protein-containing complex" NARROW [PRO:DAN]
-is_a: BFO:0000040 ! material entity
-intersection_of: BFO:0000040 ! material entity
-intersection_of: has_part PR:000000001 ! protein
-relationship: has_part PR:000000001 ! protein
-
-[Term]
 id: PR:000059593
 name: fibroblast growth factor 23, signal peptide removed form (mouse)
 namespace: protein
@@ -14756,106 +14813,6 @@ is_a: PR:Q9EPC2 ! fibroblast growth factor 23 (mouse)
 intersection_of: PR:000019886 ! fibroblast growth factor 23, signal peptide removed form
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
-
-[Term]
-id: PR:000059717
-name: ubiquitin (RPS27A) (mouse)
-namespace: protein
-def: "A ubiquitin (RPS27A) in mouse. UniProtKB:P62983, 1-76." [PRO:DAN]
-comment: Category=organism-modification.
-synonym: "mRPS27A/Clv:ubiq" EXACT PRO-short-label [PRO:DAN]
-synonym: "PRO_0000396479" EXACT PRO-proteoform-ftid [PRO:DNx]
-synonym: "UniProtKB:P62983, 1-76" EXACT PRO-proteoform-std [PRO:DNx]
-is_a: PR:000035716 ! ubiquitin (RPS27A)
-is_a: PR:P62983 ! ubiquitin-40S ribosomal protein S27a (mouse)
-intersection_of: PR:000035716 ! ubiquitin (RPS27A)
-intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
-relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
-
-[Term]
-id: PR:000060216
-name: ubiquitin (UBA52) (mouse)
-namespace: protein
-def: "A ubiquitin (UBA52) in mouse. UniProtKB:P62984, 1-76." [PRO:DAN]
-comment: Category=organism-modification.
-synonym: "mUBA52/Clv:ubiq" EXACT PRO-short-label [PRO:DAN]
-synonym: "PRO_0000396435" EXACT PRO-proteoform-ftid [PRO:DAN]
-synonym: "UniProtKB:P62984, 1-76" EXACT PRO-proteoform-std [PRO:DAN]
-is_a: PR:000035722 ! ubiquitin (UBA52)
-is_a: PR:P62984 ! ubiquitin-60S ribosomal protein L40 (mouse)
-intersection_of: PR:000035722 ! ubiquitin (UBA52)
-intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
-relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
-
-[Term]
-id: PR:000060217
-name: ubiquitin (UBB) (mouse)
-namespace: protein
-def: "A ubiquitin (UBB) in mouse. UniProtKB:P0CG49, (1-76) or (77-152) or (153-228)." [PRO:CNA]
-comment: Category=organism-modification.
-synonym: "mUBB/Clv:ubiq" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P0CG49, (1-76) or (77-152) or (153-228) or (229-304)" EXACT PRO-proteoform-std [PRO:DNx]
-synonym: "UniProtKB:P0CG49, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 153-228" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 229-304" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
-is_a: PR:000029032 ! Mus musculus protein
-is_a: PR:000035726 ! ubiquitin (UBB)
-intersection_of: PR:000035726 ! ubiquitin (UBB)
-intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
-relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
-
-[Term]
-id: PR:000060218
-name: ubiquitin (mouse)
-namespace: protein
-def: "A ubiquitin in mouse. Example: UniProtKB:P0CG49, 1-76." [PRO:DAN]
-comment: Category=organism-modification.
-synonym: "mUbiq" EXACT PRO-short-label [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 153-228" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 229-304" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG49, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 153-228" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 229-304" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 305-380" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 381-456" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 457-532" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 533-608" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 609-684" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 685-734" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P0CG50, 77-152" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P62983, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-synonym: "UniProtKB:P62984, 1-76" NARROW PRO-proteoform-std [PRO:DAN]
-is_a: PR:000029032 ! Mus musculus protein
-is_a: PR:000035728 ! ubiquitin
-intersection_of: PR:000035728 ! ubiquitin
-intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
-relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
-
-[Term]
-id: PR:000060228
-name: monoubiquitin
-namespace: protein
-def: "A ubiquitin that is a monomer." [PRO:DAN]
-comment: Category=polymer. Requested by=Reactome.
-synonym: "monoUbiq" EXACT PRO-short-label [PRO:DAN]
-intersection_of: PR:000035728 ! ubiquitin
-intersection_of: has_constituent_monomer PR:000035728 {cardinality="1"} ! ubiquitin
-relationship: has_constituent_monomer PR:000035728 {cardinality="1"} ! ubiquitin
-
-[Term]
-id: PR:000060229
-name: monoubiquitin (human)
-namespace: protein
-def: "A ubiquitin (human) that is a monomer." [PRO:DAN]
-comment: Category=organism-polymer. Requested by=Reactome.
-synonym: "hmonoUbiq" EXACT PRO-short-label [PRO:DAN]
-intersection_of: PR:000050249 ! ubiquitin (human)
-intersection_of: has_constituent_monomer PR:000035728 {cardinality="1"} ! ubiquitin
-relationship: has_constituent_monomer PR:000035728 {cardinality="1"} ! ubiquitin
-relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:A1EA95
@@ -16107,7 +16064,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P00504
 name: aspartate aminotransferase, cytoplasmic (chicken)
 namespace: protein
-def: "An aspartate aminotransferase, cytoplasmic that is encoded in the genome of chicken." [PANTHER:PTHR11879\:SF0, PRO:DNx]
+def: "An aspartate aminotransferase, cytoplasmic that is encoded in the genome of chicken." [OMA:P00504, PANTHER:PTHR11879\:SF0, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "cAspAT (chicken)" EXACT [UniProtKB:P00504]
 synonym: "cCAT (chicken)" EXACT [UniProtKB:P00504]
@@ -16156,7 +16113,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P00508
 name: aspartate aminotransferase, mitochondrial (chicken)
 namespace: protein
-def: "An aspartate aminotransferase, mitochondrial that is encoded in the genome of chicken." [PANTHER:PTHR11879\:SF0, PRO:DNx]
+def: "An aspartate aminotransferase, mitochondrial that is encoded in the genome of chicken." [OMA:P00508, PANTHER:PTHR11879\:SF0, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-GOT2" EXACT PRO-short-label [PRO:DNx]
 synonym: "glutamate oxaloacetate transaminase 2 (chicken)" EXACT [UniProtKB:P00508]
@@ -16349,7 +16306,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P01103
 name: transcriptional activator Myb (chicken)
 namespace: protein
-def: "A myb proto-oncogene protein that is encoded in the genome of chicken." [PANTHER:PTHR10641\:SF154, PRO:DNx]
+def: "A myb proto-oncogene protein that is encoded in the genome of chicken." [OMA:P01103, PANTHER:PTHR10641\:SF154, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-MYB" EXACT PRO-short-label [PRO:DNx]
 synonym: "MYB" RELATED Gene-based [UniProtKB:P01103]
@@ -17297,6 +17254,7 @@ is_a: PR:000006427 ! desmin
 is_a: PR:000029063 ! Gallus gallus protein
 intersection_of: PR:000006427 ! desmin
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://www.ensembl.org/id/ENSGALG00000011306 ! DES (chicken)
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
@@ -18338,7 +18296,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P06212
 name: estrogen receptor (chicken)
 namespace: protein
-def: "An estrogen receptor that is encoded in the genome of chicken." [PANTHER:PTHR24084\:SF217, PRO:DNx]
+def: "An estrogen receptor that is encoded in the genome of chicken." [OMA:P06212, PANTHER:PTHR24084\:SF217, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-ESR1" EXACT PRO-short-label [PRO:DNx]
 synonym: "ER (chicken)" EXACT [UniProtKB:P06212]
@@ -19225,6 +19183,25 @@ intersection_of: PR:000001447 ! cadherin-1
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=377 ! CDH1 (chicken)
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P08670
+name: vimentin (human)
+namespace: protein
+def: "A vimentin that is encoded in the genome of human." [PRO:DNx, UniProtKB:P08670]
+comment: Category=organism-gene.
+synonym: "hVIM" EXACT PRO-short-label [PRO:DNx]
+synonym: "VIM" RELATED Gene-based [UniProtKB:P08670]
+xref: Reactome:R-HSA-9646687 "PR:P08670 located_in GO:0005829"
+xref: Reactome:R-HSA-9657898 "PR:P08670 located_in GO:0005815"
+xref: Reactome:R-HSA-9659977 "PR:P08670 located_in GO:0043202"
+xref: Reactome:R-HSA-9660019 "PR:P08670 located_in GO:0031906"
+xref: UniProtKB:P08670
+is_a: PR:000017298 ! vimentin
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000017298 ! vimentin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P08700
@@ -20237,7 +20214,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P11533
 name: dystrophin (chicken)
 namespace: protein
-def: "A dystrophin that is encoded in the genome of chicken." [PRO:DNx]
+def: "A dystrophin that is encoded in the genome of chicken." [OMA:P11533, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-DMD" EXACT PRO-short-label [PRO:DNx]
 synonym: "DMD" RELATED Gene-based [UniProtKB:P11533]
@@ -20317,8 +20294,8 @@ comment: Category=organism-gene.
 synonym: "CC10" RELATED Gene-based [UniProtKB:P11684]
 synonym: "CCPBP (human)" EXACT [UniProtKB:P11684]
 synonym: "CCSP" RELATED Gene-based [UniProtKB:P11684]
-synonym: "Club cell phospholipid-binding protein (human)" EXACT [UniProtKB:P11684]
-synonym: "Club cells 10 kDa secretory protein (human)" EXACT [UniProtKB:P11684]
+synonym: "clara cell phospholipid-binding protein (human)" EXACT [UniProtKB:P11684]
+synonym: "clara cells 10 kDa secretory protein (human)" EXACT [UniProtKB:P11684]
 synonym: "hSCGB1A1" EXACT PRO-short-label [PRO:DNx]
 synonym: "SCGB1A1" RELATED Gene-based [UniProtKB:P11684]
 synonym: "secretoglobin family 1A member 1 (human)" EXACT [UniProtKB:P11684]
@@ -20338,7 +20315,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P11722
 name: fibronectin (chicken)
 namespace: protein
-def: "A fibronectin that is encoded in the genome of chicken." [PRO:DNx]
+def: "A fibronectin that is encoded in the genome of chicken." [OMA:P11722, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-FN1" EXACT PRO-short-label [PRO:DNx]
 synonym: "FN (chicken)" EXACT [UniProtKB:P11722]
@@ -21374,7 +21351,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P16047
 name: transforming growth factor beta-3 proprotein (chicken)
 namespace: protein
-def: "A TGF-beta 3 that is encoded in the genome of chicken." [PRO:CNA]
+def: "A TGF-beta 3 that is encoded in the genome of chicken." [OMA:P16047, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-TGFB3" EXACT PRO-short-label [PRO:DNx]
 synonym: "TGFB3" RELATED Gene-based [UniProtKB:P16047]
@@ -21992,7 +21969,7 @@ relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 id: PR:P18461
 name: fibroblast growth factor receptor 2 (chicken)
 namespace: protein
-def: "A fibroblast growth factor receptor 2 that is encoded in the genome of chicken." [PRO:CNA]
+def: "A fibroblast growth factor receptor 2 that is encoded in the genome of chicken." [OMA:P18461, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "CEK3" RELATED Gene-based [UniProtKB:P18461]
 synonym: "chick-FGFR2" EXACT PRO-short-label [PRO:DNx]
@@ -22249,6 +22226,22 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P20152
+name: vimentin (mouse)
+namespace: protein
+def: "A vimentin that is encoded in the genome of mouse." [OMA:P20152, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mVIM" EXACT PRO-short-label [PRO:DNx]
+synonym: "Vim" RELATED Gene-based [UniProtKB:P20152]
+xref: UniProtKB:P20152
+is_a: PR:000017298 ! vimentin
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000017298 ! vimentin
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98932 ! Vim (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P20181
 name: neurotrophin-3 (mouse)
 namespace: protein
@@ -22476,16 +22469,13 @@ name: 5'-nucleotidase (human)
 namespace: protein
 def: "A 5'-nucleotidase that is encoded in the genome of human." [PRO:WCB, UniProtKB:P21589]
 comment: Category=organism-gene.
-synonym: "5'-deoxynucleotidase (human)" RELATED [UniProtKB:P21589]
 synonym: "5'-NT (human)" BROAD [UniProtKB:P21589]
 synonym: "CD73 (human)" EXACT [UniProtKB:P21589]
 synonym: "ecto-5'-nucleotidase (human)" BROAD [UniProtKB:P21589]
 synonym: "hNT5E" EXACT PRO-short-label [PRO:DNx]
-synonym: "IMP-specific 5'-nucleotidase (human)" EXACT [UniProtKB:P21589]
 synonym: "NT5" RELATED Gene-based [UniProtKB:P21589]
 synonym: "NT5E" RELATED Gene-based [UniProtKB:P21589]
 synonym: "NTE" RELATED Gene-based [UniProtKB:P21589]
-synonym: "thymidylate 5'-phosphatase (human)" EXACT [UniProtKB:P21589]
 xref: UniProtKB:P21589
 is_a: PR:000001800 ! 5'-nucleotidase
 is_a: PR:000029067 ! Homo sapiens protein
@@ -23907,7 +23897,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P31043
 name: T-cell-specific surface glycoprotein CD28 homolog (chicken)
 namespace: protein
-def: "A T-cell-specific surface glycoprotein CD28 that is encoded in the genome of chicken." [PANTHER:PTHR11494\:SF6, PRO:DNx]
+def: "A T-cell-specific surface glycoprotein CD28 that is encoded in the genome of chicken." [OMA:P31043, PANTHER:PTHR11494\:SF6, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "CD28" RELATED Gene-based [UniProtKB:P31043]
 synonym: "chick-CD28" EXACT PRO-short-label [PRO:DNx]
@@ -24466,7 +24456,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:P36195
 name: DNA nucleotidylexotransferase (chicken)
 namespace: protein
-def: "A DNA nucleotidylexotransferase that is encoded in the genome of chicken." [PRO:DNx]
+def: "A DNA nucleotidylexotransferase that is encoded in the genome of chicken." [OMA:P36195, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-DNTT" EXACT PRO-short-label [PRO:DNx]
 synonym: "DNTT" RELATED Gene-based [UniProtKB:P36195]
@@ -25062,7 +25052,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P48143
 name: VIP peptides (chicken)
 namespace: protein
-def: "A VIP peptides that is encoded in the genome of chicken." [PRO:DNx]
+def: "A VIP peptides that is encoded in the genome of chicken." [OMA:P48143, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-VIP" EXACT PRO-short-label [PRO:DNx]
 synonym: "VIP" RELATED Gene-based [UniProtKB:P48143]
@@ -25115,7 +25105,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P48430
 name: transcription factor SOX-2 (chicken)
 namespace: protein
-def: "A transcription factor SOX-2 that is encoded in the genome of chicken." [PANTHER:PTHR10270\:SF47, PRO:DNx]
+def: "A transcription factor SOX-2 that is encoded in the genome of chicken." [OMA:P48430, PANTHER:PTHR10270\:SF47, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-SOX2" EXACT PRO-short-label [PRO:DNx]
 synonym: "cSox2 (chicken)" EXACT [UniProtKB:P48430]
@@ -26935,7 +26925,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:P98150
 name: nuclear factor NF-kappa-B p100 subunit (chicken)
 namespace: protein
-def: "A nuclear factor NF-kappa-B p100 subunit that is encoded in the genome of chicken." [PRO:DNx]
+def: "A nuclear factor NF-kappa-B p100 subunit that is encoded in the genome of chicken." [OMA:P98150, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-NFKB2" EXACT PRO-short-label [PRO:DNx]
 synonym: "DNA-binding factor KBF2 (chicken)" EXACT [UniProtKB:P98150]
@@ -27540,9 +27530,9 @@ comment: Category=organism-gene.
 synonym: "Cc10" RELATED Gene-based [UniProtKB:Q06318]
 synonym: "CC10 (mouse)" EXACT [UniProtKB:Q06318]
 synonym: "CCPBP (mouse)" EXACT [UniProtKB:Q06318]
-synonym: "Club cell 17 kDa protein (mouse)" EXACT [UniProtKB:Q06318]
-synonym: "Club cell phospholipid-binding protein (mouse)" EXACT [UniProtKB:Q06318]
-synonym: "Club cells 10 kDa secretory protein (mouse)" EXACT [UniProtKB:Q06318]
+synonym: "clara cell 17 kDa protein (mouse)" EXACT [UniProtKB:Q06318]
+synonym: "clara cell phospholipid-binding protein (mouse)" EXACT [UniProtKB:Q06318]
+synonym: "clara cells 10 kDa secretory protein (mouse)" EXACT [UniProtKB:Q06318]
 synonym: "mSCGB1A1" EXACT PRO-short-label [PRO:DNx]
 synonym: "PCB-binding protein (mouse)" EXACT [UniProtKB:Q06318]
 synonym: "Scgb1a1" RELATED Gene-based [UniProtKB:Q06318]
@@ -28373,7 +28363,7 @@ relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 id: PR:Q5ZM39
 name: B-cell lymphoma 6 protein homolog (chicken)
 namespace: protein
-def: "A B-cell lymphoma 6 protein that is encoded in the genome of chicken." [PANTHER:PTHR23228\:SF26, PRO:DNx]
+def: "A B-cell lymphoma 6 protein that is encoded in the genome of chicken." [OMA:Q5ZM39, PANTHER:PTHR23228\:SF26, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "BCL6" RELATED Gene-based [UniProtKB:Q5ZM39]
 synonym: "chick-BCL6" EXACT PRO-short-label [PRO:DNx]
@@ -28669,16 +28659,13 @@ name: 5'-nucleotidase (mouse)
 namespace: protein
 def: "A 5'-nucleotidase that is encoded in the genome of mouse." [OMA:Q61503, PRO:DNx]
 comment: Category=organism-gene.
-synonym: "5'-deoxynucleotidase (mouse)" RELATED [UniProtKB:Q61503]
 synonym: "5'-NT (mouse)" RELATED [UniProtKB:Q61503]
 synonym: "CD73 (mouse)" EXACT [UniProtKB:Q61503]
 synonym: "ecto-5'-nucleotidase (mouse)" RELATED [UniProtKB:Q61503]
-synonym: "IMP-specific 5'-nucleotidase (mouse)" EXACT [UniProtKB:Q61503]
 synonym: "mNT5E" EXACT PRO-short-label [PRO:DNx]
 synonym: "Nt5" RELATED Gene-based [UniProtKB:Q61503]
 synonym: "Nt5e" RELATED Gene-based [UniProtKB:Q61503]
 synonym: "Nte" RELATED Gene-based [UniProtKB:Q61503]
-synonym: "thymidylate 5'-phosphatase (mouse)" EXACT [UniProtKB:Q61503]
 xref: UniProtKB:Q61503
 is_a: PR:000001800 ! 5'-nucleotidase
 is_a: PR:000029032 ! Mus musculus protein
@@ -29704,7 +29691,7 @@ relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 id: PR:Q90997
 name: transferrin receptor protein 1 (chicken)
 namespace: protein
-def: "A transferrin receptor protein 1 that is encoded in the genome of chicken." [PANTHER:PTHR10404\:SF26, PRO:DNx]
+def: "A transferrin receptor protein 1 that is encoded in the genome of chicken." [OMA:Q90997, PANTHER:PTHR10404\:SF26, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-TFRC" EXACT PRO-short-label [PRO:DNx]
 synonym: "TfR (chicken)" EXACT [UniProtKB:Q90997]
@@ -29742,7 +29729,7 @@ relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 id: PR:Q91035
 name: sonic hedgehog protein (chicken)
 namespace: protein
-def: "A sonic hedgehog protein that is encoded in the genome of chicken." [PANTHER:PTHR11889\:SF16, PRO:DNx]
+def: "A sonic hedgehog protein that is encoded in the genome of chicken." [OMA:Q91035, PANTHER:PTHR11889\:SF16, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-SHH" EXACT PRO-short-label [PRO:DNx]
 synonym: "SHH" RELATED Gene-based [UniProtKB:Q91035]
@@ -30723,7 +30710,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:Q9PU41
 name: cholecystokinin (chicken)
 namespace: protein
-def: "A cholecystokinin that is encoded in the genome of chicken." [PRO:DNx]
+def: "A cholecystokinin that is encoded in the genome of chicken." [OMA:Q9PU41, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "CCK" RELATED Gene-based [UniProtKB:Q9PU41]
 synonym: "chick-CCK" EXACT PRO-short-label [PRO:DNx]
@@ -31136,7 +31123,7 @@ relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 id: PR:Q9W770
 name: spondin-1 (chicken)
 namespace: protein
-def: "A spondin-1 that is encoded in the genome of chicken." [PANTHER:PTHR11311\:SF2, PRO:DNx]
+def: "A spondin-1 that is encoded in the genome of chicken." [OMA:Q9W770, PANTHER:PTHR11311\:SF2, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-SPON1" EXACT PRO-short-label [PRO:DNx]
 synonym: "F-spondin (chicken)" EXACT [UniProtKB:Q9W770]
@@ -31377,7 +31364,7 @@ relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 id: PR:Q9YGI5
 name: deoxyribonuclease-1 (chicken)
 namespace: protein
-def: "A deoxyribonuclease-1 that is encoded in the genome of chicken." [PANTHER:PTHR11371\:SF7, PRO:DNx]
+def: "A deoxyribonuclease-1 that is encoded in the genome of chicken." [OMA:Q9YGI5, PANTHER:PTHR11371\:SF7, PRO:DNx]
 comment: Category=organism-gene.
 synonym: "chick-DNASE1" EXACT PRO-short-label [PRO:DNx]
 synonym: "deoxyribonuclease I (chicken)" EXACT [UniProtKB:Q9YGI5]
@@ -31756,6 +31743,15 @@ id: http://birdgenenames.org/cgnc/GeneReport?id=9191
 name: MARCO (chicken)
 namespace: gene
 def: "A protein coding gene MARCO in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://www.ensembl.org/id/ENSGALG00000011306
+name: DES (chicken)
+namespace: gene
+def: "A protein coding gene DES in chicken." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
@@ -34839,6 +34835,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:98932
+name: Vim (mouse)
+namespace: gene
+def: "A protein coding gene Vim in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:98933
 name: Vip (mouse)
 namespace: gene
@@ -35481,21 +35486,10 @@ xref: RO:0002180
 is_transitive: false
 
 [Typedef]
-id: has_constituent_monomer
-name: has_constituent_monomer
-namespace: protein
-def: "A relation that holds between a polymer and its constituent monomers. P has_constituent_monomer c if and only if P has_component multiple instances of c and each instance of c is covalently attached to another instance of c." [PRO:DAN]
-comment: The constituent monomers need not be covalently attached in an end-to-end manner; that is, polymers with internal connections (e.g., polyubiquitin) can use this relation, as can circular polymers (e.g., plasmids) and multi-branched polymers (e.g., glycans). This relation, as non-transitive, allows one to indicate the number of instances of c.
-is_transitive: false
-is_a: has_component ! has_component
-
-[Typedef]
 id: has_gene_template
 name: has_gene_template
 namespace: protein
-def: "See document https://docs.google.com/document/d/15iVMtMyYbQSlvUDgn2XUaDzpwkB0USZI for full definition." [PRO:DAN]
 is_transitive: false
-is_a: RO:0002330
 
 [Typedef]
 id: has_part
@@ -35515,7 +35509,6 @@ is_transitive: false
 id: lacks_part
 name: lacks_part
 namespace: protein
-def: "A negation of the has_part relation." [PRO:DAN]
 is_transitive: false
 
 [Typedef]
