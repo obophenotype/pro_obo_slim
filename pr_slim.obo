@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2023-03-31/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-04-18/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2023-03-31" xsd:string
+property_value: owl:versionInfo "2023-04-18" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -2394,6 +2394,16 @@ xref: IUPHARobj:2927
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000001808
+name: C/C-C motif small inducible chemokine
+namespace: protein
+def: "A protein with core architecture consisting of a Small cytokines (intecrine/chemokine), interleukin-8 like (Pfam:PF00048) domain." [PRO:WCB]
+comment: Category=family.
+synonym: "fam:C/C-C chemokine" EXACT PRO-short-label [PRO:DAN]
+xref: PIRSF:PIRSF001950
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000001809
 name: CD59-like glycoprotein
 namespace: protein
@@ -3307,6 +3317,20 @@ xref: PIRSF:PIRSF038502
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000001989
+name: C-C motif chemokine 17
+namespace: protein
+def: "A C/C-C motif small inducible chemokine that is a translation product of the human CCL17 gene or a 1:1 ortholog thereof." [PRO:WCB]
+comment: Category=gene.
+synonym: "CC chemokine TARC" EXACT []
+synonym: "CCL17" EXACT PRO-short-label [PRO:DNx]
+synonym: "SCYA17" RELATED Gene-based []
+synonym: "small-inducible cytokine A17" EXACT []
+synonym: "TARC" RELATED Gene-based []
+synonym: "thymus and activation-regulated chemokine" EXACT []
+is_a: PR:000001808 ! C/C-C motif small inducible chemokine
+
+[Term]
 id: PR:000002001
 name: receptor-type tyrosine-protein kinase FLT3
 namespace: protein
@@ -4011,6 +4035,16 @@ synonym: "RNA adenosine deaminase 1" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000003761
+name: pituitary adenylate cyclase-activating polypeptide
+namespace: protein
+def: "A protein that is a translation product of the human ADCYAP1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "ADCYAP1" EXACT PRO-short-label [PRO:DNx]
+synonym: "PACAP" RELATED []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000003777
 name: adiponectin
 namespace: protein
@@ -4233,6 +4267,32 @@ synonym: "APOE" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000004168
+name: amyloid-beta precursor protein
+namespace: protein
+def: "A protein that is a translation product of the human APP gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene. Requested by=Alzforum.
+synonym: "A4" RELATED Gene-based []
+synonym: "ABPP" EXACT []
+synonym: "AD1" RELATED Gene-based []
+synonym: "AG" EXACT []
+synonym: "alzheimer disease amyloid A4 protein homolog" EXACT []
+synonym: "alzheimer disease amyloid protein" EXACT []
+synonym: "amyloid beta A4 protein" EXACT []
+synonym: "amyloid precursor protein" EXACT []
+synonym: "amyloid-beta (A4) precursor protein" EXACT []
+synonym: "amyloid-beta A4 protein" EXACT []
+synonym: "amyloidogenic glycoprotein" EXACT []
+synonym: "APP" EXACT PRO-short-label [PRO:DNx]
+synonym: "APPI" EXACT []
+synonym: "cerebral vascular amyloid peptide" EXACT []
+synonym: "CVAP" EXACT []
+synonym: "PN-II" EXACT []
+synonym: "PreA4" EXACT []
+synonym: "protease nexin-II" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000004528
 name: tyrosine-protein kinase receptor UFO
 namespace: protein
@@ -4255,6 +4315,22 @@ comment: Category=gene.
 synonym: "B2M" EXACT PRO-short-label [PRO:DNx]
 synonym: "CDABP0092" RELATED Gene-based []
 synonym: "HDCMA22P" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000004677
+name: breast cancer anti-estrogen resistance protein 3
+namespace: protein
+def: "A protein that is a translation product of the human BCAR3 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "And34" RELATED Gene-based []
+synonym: "BCAR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "novel SH2-containing protein 2" EXACT []
+synonym: "NSP2" RELATED Gene-based []
+synonym: "p130Cas-binding protein AND-34" EXACT []
+synonym: "SH2 domain-containing protein 3B" EXACT []
+synonym: "SH2D3B" RELATED Gene-based []
+synonym: "UNQ271/PRO308" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -5296,6 +5372,30 @@ synonym: "UNQ487/PRO1003" RELATED Gene-based []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000008453
+name: hepatitis A virus cellular receptor 1
+namespace: protein
+def: "A protein that is a translation product of the human HAVCR1 gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "CD365" EXACT []
+synonym: "HAVcr-1" EXACT []
+synonym: "HAVCR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "kidney injury molecule 1" EXACT []
+synonym: "KIM-1" EXACT []
+synonym: "KIM1" RELATED Gene-based []
+synonym: "T cell immunoglobulin and mucin domain-containing protein 1" EXACT []
+synonym: "T cell membrane protein 1" EXACT []
+synonym: "T-cell immunoglobulin and mucin domain-containing protein 1" EXACT []
+synonym: "T-cell immunoglobulin mucin receptor 1" EXACT []
+synonym: "T-cell membrane protein 1" EXACT []
+synonym: "TIM" RELATED []
+synonym: "TIM-1" EXACT []
+synonym: "TIM1" RELATED Gene-based []
+synonym: "TIMD-1" EXACT []
+synonym: "TIMD1" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000008456
 name: hemoglobin subunit alpha
 namespace: protein
@@ -6282,6 +6382,21 @@ synonym: "preprodynorphin" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000012825
+name: tissue-type plasminogen activator
+namespace: protein
+def: "A protein that is a translation product of the human PLAT gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "alteplase" EXACT []
+synonym: "PLAT" EXACT PRO-short-label [PRO:DNx]
+synonym: "reteplase" EXACT []
+synonym: "t-PA" EXACT []
+synonym: "t-plasminogen activator" EXACT []
+synonym: "tPA" EXACT []
+xref: IUPHARobj:2392
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000013016
 name: protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1
 namespace: protein
@@ -6354,6 +6469,20 @@ comment: Category=gene.
 synonym: "parathormone" EXACT []
 synonym: "parathyrin" EXACT []
 synonym: "PTH" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000013433
+name: parathyroid hormone-related protein
+namespace: protein
+def: "A protein that is a translation product of the human PTHLH gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "parathyroid hormone-like protein" EXACT []
+synonym: "PLP" RELATED []
+synonym: "PTH-rP" EXACT []
+synonym: "PTHLH" EXACT PRO-short-label [PRO:DNx]
+synonym: "PTHRP" RELATED Gene-based []
+synonym: "PTHrP" EXACT []
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -6730,6 +6859,20 @@ synonym: "TFF2" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000016279
+name: tissue factor pathway inhibitor
+namespace: protein
+def: "A protein that is a translation product of the human TFPI gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "EPI" EXACT []
+synonym: "extrinsic pathway inhibitor" EXACT []
+synonym: "LACI" RELATED Gene-based []
+synonym: "lipoprotein-associated coagulation inhibitor" EXACT []
+synonym: "TFPI" EXACT PRO-short-label [PRO:DNx]
+synonym: "TFPI1" RELATED Gene-based []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000016283
 name: thyroglobulin
 namespace: protein
@@ -6802,6 +6945,16 @@ synonym: "osteoclastogenesis inhibitory factor" EXACT []
 synonym: "osteoprotegerin" EXACT []
 synonym: "TNFRSF11B" EXACT PRO-short-label [PRO:DNx]
 xref: IUPHARobj:1882
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000016584
+name: thyroid peroxidase
+namespace: protein
+def: "A protein that is a translation product of the human TPO gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "TPO" EXACT PRO-short-label [PRO:DNx]
+xref: IUPHARobj:2526
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -8078,6 +8231,18 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000018642
+name: C-C motif chemokine 17, signal peptide removed form
+namespace: protein
+def: "A C-C motif chemokine 17 that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "CCL17/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000001989 ! C-C motif chemokine 17
+intersection_of: PR:000001989 ! C-C motif chemokine 17
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
 id: PR:000018678
 name: MHC class II histocompatibility antigen alpha chain DRA, signal peptide removed form
 namespace: protein
@@ -8324,6 +8489,19 @@ intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
 [Term]
+id: PR:000018902
+name: pituitary adenylate cyclase-activating polypeptide proteolytic cleavage product
+namespace: protein
+def: "A pituitary adenylate cyclase-activating polypeptide that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "ADCYAP1/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000018910
 name: adiponectin, signal peptide removed form
 namespace: protein
@@ -8483,6 +8661,31 @@ is_a: PR:000004155 ! apolipoprotein E
 intersection_of: PR:000004155 ! apolipoprotein E
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019035
+name: amyloid-beta precursor protein, signal peptide removed form
+namespace: protein
+def: "An amyloid-beta precursor protein that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification. Requested by=Alzforum.
+synonym: "APP/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000004168 ! amyloid-beta precursor protein
+intersection_of: PR:000004168 ! amyloid-beta precursor protein
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000019036
+name: amyloid-beta precursor protein proteolytic cleavage product
+namespace: protein
+def: "An amyloid-beta precursor protein that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification. Requested by=Alzforum.
+synonym: "APP/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000004168 ! amyloid-beta precursor protein
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000004168 ! amyloid-beta precursor protein
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
 
 [Term]
 id: PR:000019109
@@ -9744,6 +9947,31 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000020999
+name: tissue-type plasminogen activator, signal peptide removed form
+namespace: protein
+def: "A tissue-type plasminogen activator that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "PLAT/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000012825 ! tissue-type plasminogen activator
+intersection_of: PR:000012825 ! tissue-type plasminogen activator
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021000
+name: tissue-type plasminogen activator proteolytic cleavage product
+namespace: protein
+def: "A tissue-type plasminogen activator that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "PLAT/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000012825 ! tissue-type plasminogen activator
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000012825 ! tissue-type plasminogen activator
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
 id: PR:000021037
 name: serum paraoxonase/arylesterase 1, initiator methionine removed form
 namespace: protein
@@ -9839,6 +10067,19 @@ synonym: "PTH/ClvPrd" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000013429 ! parathyroid hormone
 is_a: PR:000018264 ! proteolytic cleavage product
 intersection_of: PR:000013429 ! parathyroid hormone
+intersection_of: output_of GO:0016485 ! protein processing
+relationship: output_of GO:0016485 ! protein processing
+
+[Term]
+id: PR:000021172
+name: parathyroid hormone-related protein proteolytic cleavage product
+namespace: protein
+def: "A parathyroid hormone-related protein that has been processed by proteolytic cleavage." [PRO:DNx]
+comment: Category=modification.
+synonym: "PTHLH/ClvPrd" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000013433 ! parathyroid hormone-related protein
+is_a: PR:000018264 ! proteolytic cleavage product
+intersection_of: PR:000013433 ! parathyroid hormone-related protein
 intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
@@ -9999,6 +10240,18 @@ comment: Category=modification.
 synonym: "TF/SigPep-" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000016261 ! serotransferrin
 intersection_of: PR:000016261 ! serotransferrin
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+
+[Term]
+id: PR:000021652
+name: tissue factor pathway inhibitor, signal peptide removed form
+namespace: protein
+def: "A tissue factor pathway inhibitor that has had the signal peptide removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "TFPI/SigPep-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000016279 ! tissue factor pathway inhibitor
+intersection_of: PR:000016279 ! tissue factor pathway inhibitor
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 
@@ -10584,6 +10837,26 @@ synonym: "modified protein residue" NARROW [PRO:DAN]
 is_a: CHEBI:33708 ! amino-acid residue
 
 [Term]
+id: PR:000025580
+name: C99
+namespace: protein
+def: "An amyloid-beta precursor protein proteolytic cleavage product that is the C-terminal product of cleavage by beta-secretase of certain amyloid-beta precursor protein isoforms, signal peptide removed form. Example: UniProtKB:P05067-1, 672-770." [PRO:DAN]
+comment: Category=modification. Requested by=Alzforum.
+synonym: "APP-C99" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000019036 ! amyloid-beta precursor protein proteolytic cleavage product
+relationship: derives_from PR:000019035 ! amyloid-beta precursor protein, signal peptide removed form
+
+[Term]
+id: PR:000025581
+name: C83
+namespace: protein
+def: "An amyloid-beta precursor protein proteolytic cleavage product that is the C-terminal product of cleavage by alpha-secretase of certain amyloid-beta precursor protein isoforms, signal peptide removed form. Example: UniProtKB:P05067-1, 688-770." [PRO:DAN]
+comment: Category=modification. Requested by=Alzforum.
+synonym: "APP-C83" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000019036 ! amyloid-beta precursor protein proteolytic cleavage product
+relationship: derives_from PR:000019035 ! amyloid-beta precursor protein, signal peptide removed form
+
+[Term]
 id: PR:000025670
 name: killer cell lectin-like receptor subfamily B member 1
 namespace: protein
@@ -10599,6 +10872,17 @@ synonym: "Natural killer cell surface protein P1A" EXACT []
 synonym: "NKR-P1A" BROAD [PRO:DNx]
 synonym: "NKRP1A" RELATED Gene-based []
 is_a: PR:000001874 ! KLRB1-like protein
+
+[Term]
+id: PR:000025744
+name: precursor of amyloid-beta precursor protein gamma-secretase C-terminal fragment
+namespace: protein
+def: "An amyloid-beta precursor protein proteolytic cleavage product that gives rise to gamma secretase C-terminal fragments 50, 57, and 59." [PRO:DAN]
+comment: Category=modification. Requested by=Alzforum.
+synonym: "APP-preCTF" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000019036 ! amyloid-beta precursor protein proteolytic cleavage product
+union_of: PR:000025580 ! C99
+union_of: PR:000025581 ! C83
 
 [Term]
 id: PR:000025796
@@ -11363,6 +11647,18 @@ is_a: PR:000018932 ! angiotensinogen proteolytic cleavage product
 relationship: derives_from PR:000036008 ! angiotensin I
 
 [Term]
+id: PR:000036193
+name: amyloid beta peptide
+namespace: protein
+def: "An amyloid-beta precursor protein proteolytic cleavage product that is the N-terminal chain produced by gamma-secretase cleavage of C99." [PMID:19828817, PRO:DAN]
+comment: Category=modification.
+synonym: "Abeta" EXACT PRO-short-label [PRO:DAN]
+synonym: "beta-amyloid protein" EXACT [PRO:DAN]
+synonym: "beta-APP" EXACT []
+is_a: PR:000019036 ! amyloid-beta precursor protein proteolytic cleavage product
+relationship: derives_from PR:000025580 ! C99
+
+[Term]
 id: PR:000036194
 name: eukaryotic protein
 namespace: protein
@@ -11883,6 +12179,29 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000046368
+name: amyloid-beta precursor protein, signal peptide removed form (human)
+namespace: protein
+def: "An amyloid-beta precursor protein (human) that has had the signal peptide removed. UniProtKB:P05067, 18-770." [PRO:DNx, Reactome:R-HSA-139835, Reactome:R-HSA-49335, Reactome:R-HSA-5229077, Reactome:R-HSA-5229136]
+comment: Category=organism-modification.
+synonym: "hAPP/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000000088" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P05067, 18-770" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-139835 "PR:000046368 located_in GO:0031093"
+xref: Reactome:R-HSA-49335 "PR:000046368 located_in GO:0005576"
+xref: Reactome:R-HSA-5229077 "PR:000046368 located_in GO:0031904"
+xref: Reactome:R-HSA-5229136 "PR:000046368 located_in GO:0032588"
+xref: Reactome:R-HSA-8871509 "PR:000046368 located_in GO:0005796"
+xref: Reactome:R-HSA-8956696 "PR:000046368 located_in GO:0005788"
+xref: Reactome:R-HSA-9010038 "PR:000046368 located_in GO:0005886"
+is_a: PR:000019035 ! amyloid-beta precursor protein, signal peptide removed form
+is_a: PR:P05067 ! amyloid-beta precursor protein (human)
+intersection_of: PR:P05067 ! amyloid-beta precursor protein (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000046449
 name: tyrosine-protein kinase receptor UFO, signal peptide removed form (human)
 namespace: protein
@@ -11975,6 +12294,23 @@ xref: Reactome:R-HSA-388539 "PR:000046582 located_in GO:0005576"
 is_a: PR:000019254 ! cholecystokinin, signal peptide removed form
 is_a: PR:P06307 ! cholecystokinin (human)
 intersection_of: PR:P06307 ! cholecystokinin (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000046587
+name: C-C motif chemokine 17, signal peptide removed form (human)
+namespace: protein
+def: "A C-C motif chemokine 17 (human) that has had the signal peptide removed. UniProtKB:Q92583, 24-94." [PRO:DNx, Reactome:R-HSA-443987]
+comment: Category=organism-modification.
+synonym: "hCCL17/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000005211" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:Q92583, 24-94" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-443987 "PR:000046587 located_in GO:0005576"
+is_a: PR:000018642 ! C-C motif chemokine 17, signal peptide removed form
+is_a: PR:Q92583 ! C-C motif chemokine 17 (human)
+intersection_of: PR:Q92583 ! C-C motif chemokine 17 (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -14186,6 +14522,24 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000049428
+name: tissue factor pathway inhibitor, signal peptide removed form (human)
+namespace: protein
+def: "A tissue factor pathway inhibitor (human) that has had the signal peptide removed. UniProtKB:P10646, 29-304." [PRO:DNx, Reactome:R-HSA-140827, Reactome:R-HSA-140832]
+comment: Category=organism-modification.
+synonym: "hTFPI/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000016871" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P10646, 29-304" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-140827 "PR:000049428 located_in GO:0005576"
+xref: Reactome:R-HSA-140832 "PR:000049428 located_in GO:0005886"
+is_a: PR:000021652 ! tissue factor pathway inhibitor, signal peptide removed form
+is_a: PR:P10646 ! tissue factor pathway inhibitor (human)
+intersection_of: PR:P10646 ! tissue factor pathway inhibitor (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000049429
 name: protransforming growth factor alpha, signal peptide removed form (human)
 namespace: protein
@@ -14298,6 +14652,22 @@ xref: Reactome:R-HSA-5672848 "PR:000049489 located_in GO:0005886"
 is_a: PR:000021699 ! tumor necrosis factor receptor superfamily member 11B, signal peptide removed form
 is_a: PR:O00300 ! tumor necrosis factor receptor superfamily member 11B (human)
 intersection_of: PR:O00300 ! tumor necrosis factor receptor superfamily member 11B (human)
+intersection_of: lacks_part SO:0000418 ! signal_peptide
+relationship: lacks_part SO:0000418 ! signal_peptide
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000049530
+name: thyroid peroxidase, signal peptide removed form (human)
+namespace: protein
+def: "A thyroid peroxidase (human) that has had the signal peptide removed. UniProtKB:P07202, 19-933." [PRO:DNx, Reactome:R-HSA-2980604]
+comment: Category=organism-modification.
+synonym: "hTPO/SigPep-" EXACT PRO-short-label [PRO:DNx]
+synonym: "PRO_0000023662" EXACT PRO-proteoform-ftid [PRO:DNx]
+synonym: "UniProtKB:P07202, 19-933" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-2980604 "PR:000049530 located_in GO:0005886"
+is_a: PR:P07202 ! thyroid peroxidase (human)
+intersection_of: PR:P07202 ! thyroid peroxidase (human)
 intersection_of: lacks_part SO:0000418 ! signal_peptide
 relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
@@ -16177,6 +16547,27 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88035 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:O54819
+name: tissue factor pathway inhibitor (mouse)
+namespace: protein
+def: "A tissue factor pathway inhibitor that is encoded in the genome of mouse." [OMA:O54819, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "EPI (mouse)" EXACT [UniProtKB:O54819]
+synonym: "extrinsic pathway inhibitor (mouse)" EXACT [UniProtKB:O54819]
+synonym: "LACI (mouse)" EXACT [UniProtKB:O54819]
+synonym: "lipoprotein-associated coagulation inhibitor (mouse)" EXACT [UniProtKB:O54819]
+synonym: "mTFPI" EXACT PRO-short-label [PRO:DNx]
+synonym: "Tfpi" RELATED Gene-based [UniProtKB:O54819]
+synonym: "TFPI (mouse)" EXACT [UniProtKB:O54819]
+xref: UniProtKB:O54819
+is_a: PR:000016279 ! tissue factor pathway inhibitor
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016279 ! tissue factor pathway inhibitor
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1095418 ! Tfpi (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:O54824
 name: pro-interleukin-16 (mouse)
 namespace: protein
@@ -16309,6 +16700,24 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:O70176
+name: pituitary adenylate cyclase-activating polypeptide (mouse)
+namespace: protein
+def: "A pituitary adenylate cyclase-activating polypeptide that is encoded in the genome of mouse." [OMA:O70176, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "Adcyap1" RELATED Gene-based [UniProtKB:O70176]
+synonym: "mADCYAP1" EXACT PRO-short-label [PRO:DNx]
+synonym: "Pacap" RELATED Gene-based [UniProtKB:O70176]
+synonym: "PACAP (mouse)" EXACT [UniProtKB:O70176]
+xref: UniProtKB:O70176
+is_a: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:105094 ! Adcyap1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:O70548
 name: telethonin (mouse)
 namespace: protein
@@ -16324,6 +16733,26 @@ intersection_of: PR:000016156 ! telethonin
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1330233 ! Tcap (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:O75815
+name: breast cancer anti-estrogen resistance protein 3 (human)
+namespace: protein
+def: "A breast cancer anti-estrogen resistance protein 3 that is encoded in the genome of human." [PRO:DNx, UniProtKB:O75815]
+comment: Category=organism-gene.
+synonym: "BCAR3" RELATED Gene-based [UniProtKB:O75815]
+synonym: "hBCAR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "novel SH2-containing protein 2 (human)" EXACT [UniProtKB:O75815]
+synonym: "NSP2" RELATED Gene-based [UniProtKB:O75815]
+synonym: "SH2 domain-containing protein 3B (human)" EXACT [UniProtKB:O75815]
+synonym: "SH2D3B" RELATED Gene-based [UniProtKB:O75815]
+synonym: "UNQ271/PRO308" RELATED Gene-based [UniProtKB:O75815]
+xref: UniProtKB:O75815
+is_a: PR:000004677 ! breast cancer anti-estrogen resistance protein 3
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004677 ! breast cancer anti-estrogen resistance protein 3
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:O75923
@@ -16816,6 +17245,26 @@ xref: UniProtKB:P00738
 is_a: PR:000008725 ! haptoglobin
 is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000008725 ! haptoglobin
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P00750
+name: tissue-type plasminogen activator (human)
+namespace: protein
+def: "A tissue-type plasminogen activator that is encoded in the genome of human." [PRO:DNx, UniProtKB:P00750]
+comment: Category=organism-gene.
+synonym: "alteplase (human)" EXACT [UniProtKB:P00750]
+synonym: "hPLAT" EXACT PRO-short-label [PRO:DNx]
+synonym: "PLAT" RELATED Gene-based [UniProtKB:P00750]
+synonym: "reteplase (human)" EXACT [UniProtKB:P00750]
+synonym: "t-PA (human)" EXACT [UniProtKB:P00750]
+synonym: "t-plasminogen activator (human)" EXACT [UniProtKB:P00750]
+synonym: "tPA (human)" EXACT [UniProtKB:P00750]
+xref: UniProtKB:P00750
+is_a: PR:000012825 ! tissue-type plasminogen activator
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000012825 ! tissue-type plasminogen activator
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
@@ -18514,6 +18963,35 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P05067
+name: amyloid-beta precursor protein (human)
+namespace: protein
+def: "An amyloid-beta precursor protein that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-gene. Requested by=Alzforum.
+synonym: "A4" RELATED Gene-based [UniProtKB:P05067]
+synonym: "ABPP (human)" EXACT [UniProtKB:P05067]
+synonym: "AD1" RELATED Gene-based [UniProtKB:P05067]
+synonym: "Alzheimer disease amyloid A4 protein homolog (human)" EXACT [UniProtKB:P05067]
+synonym: "Alzheimer disease amyloid protein (human)" EXACT [UniProtKB:P05067]
+synonym: "amyloid precursor protein (human)" EXACT [UniProtKB:P05067]
+synonym: "amyloid-beta (A4) precursor protein (human)" EXACT [UniProtKB:P05067]
+synonym: "amyloid-beta A4 protein (human)" EXACT [UniProtKB:P05067]
+synonym: "APP" RELATED Gene-based [UniProtKB:P05067]
+synonym: "APPI (human)" EXACT [UniProtKB:P05067]
+synonym: "cerebral vascular amyloid peptide (human)" EXACT [UniProtKB:P05067]
+synonym: "CVAP (human)" EXACT [UniProtKB:P05067]
+synonym: "hAPP" EXACT PRO-short-label [PRO:DNx]
+synonym: "PN-II (human)" EXACT [UniProtKB:P05067]
+synonym: "PreA4 (human)" EXACT [UniProtKB:P05067]
+synonym: "protease nexin-II (human)" EXACT [UniProtKB:P05067]
+xref: UniProtKB:P05067
+is_a: PR:000004168 ! amyloid-beta precursor protein
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000004168 ! amyloid-beta precursor protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P05089
 name: arginase-1 (human)
 namespace: protein
@@ -19296,6 +19774,21 @@ xref: UniProtKB:P07195
 is_a: PR:000009742 ! L-lactate dehydrogenase B chain
 is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000009742 ! L-lactate dehydrogenase B chain
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P07202
+name: thyroid peroxidase (human)
+namespace: protein
+def: "A thyroid peroxidase that is encoded in the genome of human." [PRO:DNx, UniProtKB:P07202]
+comment: Category=organism-gene.
+synonym: "hTPO" EXACT PRO-short-label [PRO:DNx]
+synonym: "TPO" RELATED Gene-based [UniProtKB:P07202]
+xref: UniProtKB:P07202
+is_a: PR:000016584 ! thyroid peroxidase
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016584 ! thyroid peroxidase
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
@@ -20553,6 +21046,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97753 
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P10646
+name: tissue factor pathway inhibitor (human)
+namespace: protein
+def: "A tissue factor pathway inhibitor that is encoded in the genome of human." [PRO:DNx, UniProtKB:P10646]
+comment: Category=organism-gene.
+synonym: "EPI (human)" EXACT [UniProtKB:P10646]
+synonym: "extrinsic pathway inhibitor (human)" EXACT [UniProtKB:P10646]
+synonym: "hTFPI" EXACT PRO-short-label [PRO:DNx]
+synonym: "LACI" RELATED Gene-based [UniProtKB:P10646]
+synonym: "lipoprotein-associated coagulation inhibitor (human)" EXACT [UniProtKB:P10646]
+synonym: "TFPI" RELATED Gene-based [UniProtKB:P10646]
+synonym: "TFPI1" RELATED Gene-based [UniProtKB:P10646]
+xref: UniProtKB:P10646
+is_a: PR:000016279 ! tissue factor pathway inhibitor
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000016279 ! tissue factor pathway inhibitor
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P10696
 name: alkaline phosphatase, germ cell type (human)
 namespace: protein
@@ -20766,6 +21279,25 @@ is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000003469 ! early growth response protein 2
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P11214
+name: tissue-type plasminogen activator (mouse)
+namespace: protein
+def: "A tissue-type plasminogen activator that is encoded in the genome of mouse." [OMA:P11214, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mPLAT" EXACT PRO-short-label [PRO:DNx]
+synonym: "Plat" RELATED Gene-based [UniProtKB:P11214]
+synonym: "t-PA (mouse)" EXACT [UniProtKB:P11214]
+synonym: "t-plasminogen activator (mouse)" EXACT [UniProtKB:P11214]
+synonym: "tPA (mouse)" EXACT [UniProtKB:P11214]
+xref: UniProtKB:P11214
+is_a: PR:000012825 ! tissue-type plasminogen activator
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000012825 ! tissue-type plasminogen activator
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97610 ! Plat (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P11215
@@ -21118,6 +21650,33 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P12023
+name: amyloid-beta precursor protein (mouse)
+namespace: protein
+def: "An amyloid-beta precursor protein that is encoded in the genome of mouse." [OMA:P12023, PRO:DAN]
+comment: Category=organism-gene. Requested by=Alzforum.
+synonym: "A4" RELATED Gene-based [UniProtKB:P12023]
+synonym: "ABPP (mouse)" EXACT [UniProtKB:P12023]
+synonym: "AD1" RELATED Gene-based [UniProtKB:P12023]
+synonym: "AG (mouse)" EXACT [UniProtKB:P12023]
+synonym: "Alzheimer disease amyloid A4 protein homolog (mouse)" EXACT [UniProtKB:P12023]
+synonym: "Alzheimer disease amyloid protein (mouse)" EXACT [UniProtKB:P12023]
+synonym: "amyloid precursor protein (mouse)" EXACT [UniProtKB:P12023]
+synonym: "amyloid-beta (A4) precursor protein (mouse)" EXACT [UniProtKB:P12023]
+synonym: "amyloid-beta A4 protein (mouse)" EXACT [UniProtKB:P12023]
+synonym: "amyloidogenic glycoprotein (mouse)" EXACT [UniProtKB:P12023]
+synonym: "App" RELATED Gene-based [UniProtKB:P12023]
+synonym: "APP (mouse)" EXACT [UniProtKB:P12023]
+synonym: "mAPP" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P12023
+is_a: PR:000004168 ! amyloid-beta precursor protein
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000004168 ! amyloid-beta precursor protein
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:88059 ! App (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P12034
 name: fibroblast growth factor 5 (human)
 namespace: protein
@@ -21154,6 +21713,25 @@ intersection_of: PR:000004126 ! serum amyloid P-component
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98229 ! Apcs (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P12272
+name: parathyroid hormone-related protein (human)
+namespace: protein
+def: "A parathyroid hormone-related protein that is encoded in the genome of human." [PRO:DNx, UniProtKB:P12272]
+comment: Category=organism-gene.
+synonym: "hPTHLH" EXACT PRO-short-label [PRO:DNx]
+synonym: "parathyroid hormone-like protein (human)" EXACT [UniProtKB:P12272]
+synonym: "PLP (human)" BROAD [UniProtKB:P12272]
+synonym: "PTH-rP (human)" EXACT [UniProtKB:P12272]
+synonym: "PTHLH" RELATED Gene-based [UniProtKB:P12272]
+synonym: "PTHRP" RELATED Gene-based [UniProtKB:P12272]
+xref: UniProtKB:P12272
+is_a: PR:000013433 ! parathyroid hormone-related protein
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000013433 ! parathyroid hormone-related protein
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P12277
@@ -22435,6 +23013,23 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P17251
+name: parathyroid hormone-related protein (chicken)
+namespace: protein
+def: "A parathyroid hormone-related protein that is encoded in the genome of chicken." [OMA:P17251, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "chick-PTHLH" EXACT PRO-short-label [PRO:DNx]
+synonym: "PTH-rP (chicken)" EXACT [UniProtKB:P17251]
+synonym: "PTHLH" RELATED Gene-based [UniProtKB:P17251]
+synonym: "PTHrP (chicken)" EXACT [UniProtKB:P17251]
+xref: UniProtKB:P17251
+is_a: PR:000013433 ! parathyroid hormone-related protein
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000013433 ! parathyroid hormone-related protein
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: PR:P17301
 name: integrin alpha-2 (human)
 namespace: protein
@@ -22767,6 +23362,22 @@ intersection_of: PR:000001449 ! fibroblast growth factor receptor 2
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 relationship: has_gene_template http://www.ncbi.nlm.nih.gov/gene/396259 ! FGFR2 (chicken)
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P18509
+name: pituitary adenylate cyclase-activating polypeptide (human)
+namespace: protein
+def: "A pituitary adenylate cyclase-activating polypeptide that is encoded in the genome of human." [PRO:DNx, UniProtKB:P18509]
+comment: Category=organism-gene.
+synonym: "ADCYAP1" RELATED Gene-based [UniProtKB:P18509]
+synonym: "hADCYAP1" EXACT PRO-short-label [PRO:DNx]
+synonym: "PACAP (human)" EXACT [UniProtKB:P18509]
+xref: UniProtKB:P18509
+is_a: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000003761 ! pituitary adenylate cyclase-activating polypeptide
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
 id: PR:P18827
@@ -23648,6 +24259,27 @@ is_a: PR:000029063 ! Gallus gallus protein
 intersection_of: PR:000005460 ! neuronal acetylcholine receptor subunit alpha-7
 intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P22858
+name: parathyroid hormone-related protein (mouse)
+namespace: protein
+def: "A parathyroid hormone-related protein that is encoded in the genome of mouse." [OMA:P22858, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mPTHLH" EXACT PRO-short-label [PRO:DNx]
+synonym: "parathyroid hormone-like protein (mouse)" EXACT [UniProtKB:P22858]
+synonym: "PLP (mouse)" RELATED [UniProtKB:P22858]
+synonym: "PTH-rP (mouse)" EXACT [UniProtKB:P22858]
+synonym: "Pthlh" RELATED Gene-based [UniProtKB:P22858]
+synonym: "Pthrp" RELATED Gene-based [UniProtKB:P22858]
+synonym: "PTHrP (mouse)" EXACT [UniProtKB:P22858]
+xref: UniProtKB:P22858
+is_a: PR:000013433 ! parathyroid hormone-related protein
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000013433 ! parathyroid hormone-related protein
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:97800 ! Pthlh (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
 id: PR:P22897
@@ -25167,6 +25799,23 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000001257 ! C-X-C chemokine receptor type 2
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:105303 ! Cxcr2 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:P35419
+name: thyroid peroxidase (mouse)
+namespace: protein
+def: "A thyroid peroxidase that is encoded in the genome of mouse." [OMA:P35419, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "mTPO" EXACT PRO-short-label [PRO:DNx]
+synonym: "Tpo" RELATED Gene-based [UniProtKB:P35419]
+synonym: "TPO (mouse)" EXACT [UniProtKB:P35419]
+xref: UniProtKB:P35419
+is_a: PR:000016584 ! thyroid peroxidase
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000016584 ! thyroid peroxidase
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:98813 ! Tpo (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -29410,6 +30059,34 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:106201
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q5QNS5
+name: hepatitis A virus cellular receptor 1 homolog (mouse)
+namespace: protein
+def: "A hepatitis A virus cellular receptor 1 that is encoded in the genome of mouse." [PRO:DNx]
+comment: Category=organism-gene.
+synonym: "CD365 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "HAVcr-1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "Havcr1" RELATED Gene-based [UniProtKB:Q5QNS5]
+synonym: "kidney injury molecule 1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "KIM-1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "Kim1" RELATED Gene-based [UniProtKB:Q5QNS5]
+synonym: "mHAVCR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "T cell immunoglobulin and mucin domain-containing protein 1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "T cell membrane protein 1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "T-cell immunoglobulin mucin receptor 1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "TIM-1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "Tim1" RELATED Gene-based [UniProtKB:Q5QNS5]
+synonym: "TIMD-1 (mouse)" EXACT [UniProtKB:Q5QNS5]
+synonym: "Timd1" RELATED Gene-based [UniProtKB:Q5QNS5]
+xref: UniProtKB:Q5QNS5
+is_a: PR:000008453 ! hepatitis A virus cellular receptor 1
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000008453 ! hepatitis A virus cellular receptor 1
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2159680 ! Havcr1 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:Q5UKY4
 name: cell surface glycoprotein CD200 receptor 3 (mouse)
 namespace: protein
@@ -31018,6 +31695,26 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:238496
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:Q92583
+name: C-C motif chemokine 17 (human)
+namespace: protein
+def: "A C-C motif chemokine 17 that is encoded in the genome of human." [PRO:WCB, UniProtKB:Q92583]
+comment: Category=organism-gene.
+synonym: "CC chemokine TARC (human)" EXACT [UniProtKB:Q92583]
+synonym: "CCL17" RELATED Gene-based [UniProtKB:Q92583]
+synonym: "hCCL17" EXACT PRO-short-label [PRO:DNx]
+synonym: "SCYA17" RELATED Gene-based [UniProtKB:Q92583]
+synonym: "small-inducible cytokine A17 (human)" EXACT [UniProtKB:Q92583]
+synonym: "TARC" RELATED Gene-based [UniProtKB:Q92583]
+synonym: "thymus and activation-regulated chemokine (human)" EXACT [UniProtKB:Q92583]
+xref: UniProtKB:Q92583
+is_a: PR:000001989 ! C-C motif chemokine 17
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000001989 ! C-C motif chemokine 17
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:Q92629
 name: delta-sarcoglycan (human)
 namespace: protein
@@ -31032,6 +31729,34 @@ xref: UniProtKB:Q92629
 is_a: PR:000014783 ! delta-sarcoglycan
 is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000014783 ! delta-sarcoglycan
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q96D42
+name: hepatitis A virus cellular receptor 1 (human)
+namespace: protein
+def: "A hepatitis A virus cellular receptor 1 that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q96D42]
+comment: Category=organism-gene.
+synonym: "CD365 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "HAVcr-1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "HAVCR1" RELATED Gene-based [UniProtKB:Q96D42]
+synonym: "hHAVCR1" EXACT PRO-short-label [PRO:DNx]
+synonym: "kidney injury molecule 1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "KIM-1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "KIM1" RELATED Gene-based [UniProtKB:Q96D42]
+synonym: "T-cell immunoglobulin and mucin domain-containing protein 1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "T-cell immunoglobulin mucin receptor 1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "T-cell membrane protein 1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "TIM (human)" BROAD [UniProtKB:Q96D42]
+synonym: "TIM-1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "TIM1" RELATED Gene-based [UniProtKB:Q96D42]
+synonym: "TIMD-1 (human)" EXACT [UniProtKB:Q96D42]
+synonym: "TIMD1" RELATED Gene-based [UniProtKB:Q96D42]
+xref: UniProtKB:Q96D42
+is_a: PR:000008453 ! hepatitis A virus cellular receptor 1
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000008453 ! hepatitis A virus cellular receptor 1
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
@@ -31994,6 +32719,24 @@ is_a: PR:000029032 ! Mus musculus protein
 intersection_of: PR:000000775 ! short transient receptor potential cation channel TRPC3
 intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
 relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:109526 ! Trpc3 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: PR:Q9QZK2
+name: breast cancer anti-estrogen resistance protein 3 homolog (mouse)
+namespace: protein
+def: "A breast cancer anti-estrogen resistance protein 3 that is encoded in the genome of mouse." [OMA:Q9QZK2, PRO:DNx]
+comment: Category=organism-gene.
+synonym: "And34" RELATED Gene-based [UniProtKB:Q9QZK2]
+synonym: "Bcar3" RELATED Gene-based [UniProtKB:Q9QZK2]
+synonym: "mBCAR3" EXACT PRO-short-label [PRO:DNx]
+synonym: "p130Cas-binding protein AND-34 (mouse)" EXACT [UniProtKB:Q9QZK2]
+xref: UniProtKB:Q9QZK2
+is_a: PR:000004677 ! breast cancer anti-estrogen resistance protein 3
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000004677 ! breast cancer anti-estrogen resistance protein 3
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:1352501 ! Bcar3 (mouse)
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
@@ -33174,6 +33917,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:105094
+name: Adcyap1 (mouse)
+namespace: gene
+def: "A protein coding gene Adcyap1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:105303
 name: Cxcr2 (mouse)
 namespace: gene
@@ -33493,6 +34245,15 @@ id: http://www.informatics.jax.org/marker/MGI:109526
 name: Trpc3 (mouse)
 namespace: gene
 def: "A protein coding gene Trpc3 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:1095418
+name: Tfpi (mouse)
+namespace: gene
+def: "A protein coding gene Tfpi in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -33930,6 +34691,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:1352501
+name: Bcar3 (mouse)
+namespace: gene
+def: "A protein coding gene Bcar3 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:1353425
 name: Opn4 (mouse)
 namespace: gene
@@ -34236,6 +35006,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:2159680
+name: Havcr1 (mouse)
+namespace: gene
+def: "A protein coding gene Havcr1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:2179069
 name: Chodl (mouse)
 namespace: gene
@@ -34402,6 +35181,15 @@ id: http://www.informatics.jax.org/marker/MGI:88057
 name: Apoe (mouse)
 namespace: gene
 def: "A protein coding gene Apoe in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:88059
+name: App (mouse)
+namespace: gene
+def: "A protein coding gene App in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -35784,6 +36572,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:97610
+name: Plat (mouse)
+namespace: gene
+def: "A protein coding gene Plat in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:97612
 name: Plaur (mouse)
 namespace: gene
@@ -35815,6 +36612,15 @@ id: http://www.informatics.jax.org/marker/MGI:97769
 name: Prnp (mouse)
 namespace: gene
 def: "A protein coding gene Prnp in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:97800
+name: Pthlh (mouse)
+namespace: gene
+def: "A protein coding gene Pthlh in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
@@ -36031,6 +36837,15 @@ id: http://www.informatics.jax.org/marker/MGI:98747
 name: Thy1 (mouse)
 namespace: gene
 def: "A protein coding gene Thy1 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:98813
+name: Tpo (mouse)
+namespace: gene
+def: "A protein coding gene Tpo in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
