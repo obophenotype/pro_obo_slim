@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2023-04-18/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-05-10/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
+synonymtypedef: PSI-MOD-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2023-04-18" xsd:string
+property_value: owl:versionInfo "2023-05-10" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -213,6 +214,20 @@ is_a: GO:0032991 ! protein-containing complex
 id: MOD:00764
 name: glycoconjugated residue
 namespace: PSI-MOD
+is_a: PR:000025513 ! modified amino-acid residue
+
+[Term]
+id: MOD:01148
+name: ubiquitinylated lysine
+namespace: PSI-MOD
+synonym: "UbiqLys" EXACT PSI-MOD-label [PRO:DAN]
+is_a: PR:000025513 ! modified amino-acid residue
+
+[Term]
+id: MOD:01149
+name: sumoylated lysine
+namespace: PSI-MOD
+synonym: "SumoLys" EXACT PSI-MOD-label [PRO:DAN]
 is_a: PR:000025513 ! modified amino-acid residue
 
 [Term]
@@ -5488,6 +5503,72 @@ synonym: "HGFAC" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000008603
+name: histone H4
+namespace: protein
+def: "A core histone that is a translation product of the human HIST4H4 genes, 1:1 orthologs thereof, or a semi-ortholog thereof." [PRO:DAN]
+comment: Category=gene. Note: The human The HIST1H4A, HIST1H4B, HIST1H4C, HIST1H4D, HIST1H4E, HIST1H4F, HIST1H4H, HIST1H4I, HIST1H4J, HIST1H4K, HIST1H4L, HIST2H4A, HIST2H4B, and HIST4H4 genes encode identical proteins.
+synonym: "H4" EXACT PRO-short-label [PRO:DNx]
+synonym: "H4-16" RELATED Gene-based []
+synonym: "H4/A" RELATED Gene-based []
+synonym: "H4/B" RELATED Gene-based []
+synonym: "H4/C" RELATED Gene-based []
+synonym: "H4/D" RELATED Gene-based []
+synonym: "H4/E" RELATED Gene-based []
+synonym: "H4/G" RELATED Gene-based []
+synonym: "H4/H" RELATED Gene-based []
+synonym: "H4/I" RELATED Gene-based []
+synonym: "H4/J" RELATED Gene-based []
+synonym: "H4/K" RELATED Gene-based []
+synonym: "H4/M" RELATED Gene-based []
+synonym: "H4/N" RELATED Gene-based []
+synonym: "H4/O" RELATED Gene-based []
+synonym: "H4C1" RELATED Gene-based []
+synonym: "H4C11" RELATED Gene-based []
+synonym: "H4C12" RELATED Gene-based []
+synonym: "H4C13" RELATED Gene-based []
+synonym: "H4C14" RELATED Gene-based []
+synonym: "H4C15" RELATED Gene-based []
+synonym: "H4C16" RELATED Gene-based []
+synonym: "H4C2" RELATED Gene-based []
+synonym: "H4C3" RELATED Gene-based []
+synonym: "H4C4" RELATED Gene-based []
+synonym: "H4C5" RELATED Gene-based []
+synonym: "H4C6" RELATED Gene-based []
+synonym: "H4C8" RELATED Gene-based []
+synonym: "H4C9" RELATED Gene-based []
+synonym: "H4F2" RELATED Gene-based []
+synonym: "H4FA" RELATED Gene-based []
+synonym: "H4FB" RELATED Gene-based []
+synonym: "H4FC" RELATED Gene-based []
+synonym: "H4FD" RELATED Gene-based []
+synonym: "H4FE" RELATED Gene-based []
+synonym: "H4FG" RELATED Gene-based []
+synonym: "H4FH" RELATED Gene-based []
+synonym: "H4FI" RELATED Gene-based []
+synonym: "H4FJ" RELATED Gene-based []
+synonym: "H4FK" RELATED Gene-based []
+synonym: "H4FM" RELATED Gene-based []
+synonym: "H4FN" RELATED Gene-based []
+synonym: "H4FO" RELATED Gene-based []
+synonym: "HIST1H4A" RELATED Gene-based []
+synonym: "HIST1H4B" RELATED Gene-based []
+synonym: "HIST1H4C" RELATED Gene-based []
+synonym: "HIST1H4D" RELATED Gene-based []
+synonym: "HIST1H4E" RELATED Gene-based []
+synonym: "HIST1H4F" RELATED Gene-based []
+synonym: "HIST1H4H" RELATED Gene-based []
+synonym: "HIST1H4I" RELATED Gene-based []
+synonym: "HIST1H4J" RELATED Gene-based []
+synonym: "HIST1H4K" RELATED Gene-based []
+synonym: "HIST1H4L" RELATED Gene-based []
+synonym: "HIST2H4" RELATED Gene-based []
+synonym: "HIST2H4A" RELATED Gene-based []
+synonym: "HIST2H4B" RELATED Gene-based []
+synonym: "HIST4H4" RELATED Gene-based []
+is_a: PR:000043452 ! core histone
+
+[Term]
 id: PR:000008725
 name: haptoglobin
 namespace: protein
@@ -9393,6 +9474,18 @@ intersection_of: output_of GO:0016485 ! protein processing
 relationship: output_of GO:0016485 ! protein processing
 
 [Term]
+id: PR:000020152
+name: histone H4, initiator methionine removed form
+namespace: protein
+def: "A histone H4 that has had the initiator methionine removed." [PRO:DNx]
+comment: Category=modification.
+synonym: "H4/InitMet-" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000008603 ! histone H4
+intersection_of: PR:000008603 ! histone H4
+intersection_of: lacks_part PR:000021937 ! initiator methionine
+relationship: lacks_part PR:000021937 ! initiator methionine
+
+[Term]
 id: PR:000020179
 name: haptoglobin, signal peptide removed form
 namespace: protein
@@ -11162,6 +11255,25 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000027547
+name: histone H2A
+namespace: protein
+def: "A core histone that is a translation product of one of the H2A gene variants. It is a core histone and contains a copy of the Histone (Pfam:PF00125) domain." [PMID:18443735, PMID:19234519, PRO:CNA]
+comment: Category=family. Requested by=PomBase.
+xref: PIRSF:PIRSF002048
+is_a: PR:000043452 ! core histone
+
+[Term]
+id: PR:000027594
+name: histone H3
+namespace: protein
+def: "A core histone that is a translation product of one of the H3 gene variants. It is a core histone and contains a copy of the Histone (Pfam:PF00125) domain at its C-terminus." [PMID:18443735, PMID:19234519, PRO:CNA]
+comment: Category=family.
+synonym: "H3(any)" EXACT PRO-short-label [PRO:DAN]
+xref: PIRSF:PIRSF002051
+is_a: PR:000043452 ! core histone
+
+[Term]
 id: PR:000027795
 name: trypsin
 namespace: protein
@@ -11756,6 +11868,31 @@ synonym: "Prot/GlycoRes+" EXACT PRO-short-label [PRO:DAN]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000037077
+name: ubiquitinated protein
+namespace: protein
+def: "A protein that includes at least one ubiquitinylated lysine." [PRO:DAN]
+comment: Category=modification.
+synonym: "Prot/UbiqLys+" EXACT PRO-short-label [PRO:DAN]
+synonym: "ubiquitinylated protein" EXACT [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: has_part MOD:01148 ! ubiquitinylated lysine
+relationship: has_part MOD:01148 ! ubiquitinylated lysine
+
+[Term]
+id: PR:000037078
+name: sumoylated protein
+namespace: protein
+def: "A protein that includes at least one sumoylated lysine." [PRO:DAN]
+comment: Category=modification.
+synonym: "Prot/SumoLys+" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+intersection_of: PR:000000001 ! protein
+intersection_of: has_part MOD:01149 ! sumoylated lysine
+relationship: has_part MOD:01149 ! sumoylated lysine
+
+[Term]
 id: PR:000037272
 name: sonic hedgehog protein, signal peptide removed form (mouse)
 namespace: protein
@@ -11791,6 +11928,34 @@ synonym: "cathepsin" NARROW [PRO:DAN]
 synonym: "fam:CTS" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000036194 ! eukaryotic protein
 relationship: only_in_taxon NCBITaxon:33208 ! Metazoa
+
+[Term]
+id: PR:000041244
+name: histone
+namespace: protein
+def: "A protein that functions as a component of the nucleosome." [PRO:DAN]
+comment: Category=union.
+is_a: PR:000000001 ! protein
+union_of: PR:000043452 ! core histone
+union_of: PR:000043453 ! linker histone
+
+[Term]
+id: PR:000043452
+name: core histone
+namespace: protein
+def: "A protein that contains a single copy of the Histone (Pfam:PF00125) domain, optionally followed by a C-terminus of histone H2A (Pfam:PF16211) domain (for histone H2A) with or without a Macro domain (Pfam:PF01661)." [PRO:DAN]
+comment: Category=family.
+synonym: "fam:coreHistone" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000043453
+name: linker histone
+namespace: protein
+def: "A protein that contains a single copy of the Linker histone (Pfam:PF00538) domain followed by a long low-complexity region at its C terminus." [PRO:DAN]
+comment: Category=family.
+synonym: "fam:linkerHistone" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000000001 ! protein
 
 [Term]
 id: PR:000044062
@@ -12009,6 +12174,17 @@ synonym: "PDGF BB dimer (human)" EXACT [PRO:DAN]
 is_a: GO:1990265 ! platelet-derived growth factor complex
 relationship: has_component PR:000044753 {cardinality="2"} ! platelet-derived growth factor subunit B mature form (human)
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000044771
+name: monoubiquitinylated lysine
+namespace: protein
+def: "A ubiquitinylated lysine in which the crosslink is to a single ubiquitin chain." [PRO:DAN]
+comment: Category=external.
+synonym: "monoUbiqLys" EXACT PRO-short-label [PRO:DAN]
+intersection_of: MOD:01148 ! ubiquitinylated lysine
+intersection_of: has_component PR:000035728 {cardinality="1"} ! ubiquitin
+relationship: has_component PR:000035728 {cardinality="1"} ! ubiquitin
 
 [Term]
 id: PR:000044780
@@ -13167,6 +13343,22 @@ is_a: PR:P11413 ! glucose-6-phosphate 1-dehydrogenase (human)
 intersection_of: PR:P11413 ! glucose-6-phosphate 1-dehydrogenase (human)
 intersection_of: lacks_part PR:000021937 ! initiator methionine
 relationship: lacks_part PR:000021937 ! initiator methionine
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000047511
+name: trans-acting T-cell-specific transcription factor GATA-3 ubiquitinated form (human)
+namespace: protein
+def: "A trans-acting T-cell-specific transcription factor GATA-3 (human) that includes at least one ubiquitinated lysine. UniProtKB:P23771, MOD:01148." [PRO:DNx, Reactome:R-HSA-6783009]
+comment: Category=organism-modification.
+synonym: "hGATA3/UbiqLys+" EXACT PRO-short-label [PRO:DNx]
+synonym: "UniProtKB:P23771, MOD:01148" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-6783009 "PR:000047511 located_in GO:0005654"
+is_a: PR:000037077 ! ubiquitinated protein
+is_a: PR:P23771 ! trans-acting T-cell-specific transcription factor GATA-3 (human)
+intersection_of: PR:P23771 ! trans-acting T-cell-specific transcription factor GATA-3 (human)
+intersection_of: has_part MOD:01148 ! ubiquitinylated lysine
+relationship: has_part MOD:01148 ! ubiquitinylated lysine
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
@@ -14452,6 +14644,22 @@ relationship: lacks_part SO:0000418 ! signal_peptide
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:000049305
+name: alpha-synuclein ubiquitinated form (human)
+namespace: protein
+def: "An alpha-synuclein (human) that includes at least one ubiquitinated lysine. UniProtKB:P37840, MOD:01148." [PRO:DNx, Reactome:R-HSA-5660754]
+comment: Category=organism-modification.
+synonym: "hSNCA/UbiqLys+" EXACT PRO-short-label [PRO:DNx]
+synonym: "UniProtKB:P37840, MOD:01148" EXACT PRO-proteoform-std [PRO:DNx]
+xref: Reactome:R-HSA-5660754 "PR:000049305 located_in GO:0005829"
+is_a: PR:000037077 ! ubiquitinated protein
+is_a: PR:P37840 ! alpha-synuclein (human)
+intersection_of: PR:P37840 ! alpha-synuclein (human)
+intersection_of: has_part MOD:01148 ! ubiquitinylated lysine
+relationship: has_part MOD:01148 ! ubiquitinylated lysine
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:000049328
 name: leukosialin, signal peptide removed form (human)
 namespace: protein
@@ -15531,6 +15739,19 @@ synonym: "immunoglobulin heavy chain alpha 1, secretory isoform (human)" EXACT [
 is_a: PR:000050179 ! IgA1 heavy chain protein (human)
 is_a: PR:000050372 ! IgA1 heavy chain protein, secretory isoform
 intersection_of: PR:000050372 ! IgA1 heavy chain protein, secretory isoform
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:000050385
+name: histone H3 (human)
+namespace: protein
+def: "A histone H3 that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-family. Note: There are seven histone H3 variants in human.
+synonym: "hH3(any)" EXACT PRO-short-label [PRO:DAN]
+is_a: PR:000027594 ! histone H3
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000027594 ! histone H3
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
@@ -27925,6 +28146,158 @@ intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
 [Term]
+id: PR:P62801
+name: histone H4 (chicken)
+namespace: protein
+def: "A histone H4 that is encoded in the genome of chicken." [OMA:P62801, PRO:DAN]
+comment: Category=organism-gene. Note: The HIST1H46, HIST1H46L2, HIST1H46L6, HIST1H4B, HIST1H4D, HIST1H4I, and HIST2H4B genes encode identical proteins.
+synonym: "chick-H4" EXACT PRO-short-label [PRO:DNx]
+synonym: "H4-I" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-II" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-III" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-IV" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-V" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-VI" RELATED Gene-based [UniProtKB:P62801]
+synonym: "H4-VII" RELATED Gene-based [UniProtKB:P62801]
+xref: UniProtKB:P62801
+is_a: PR:000008603 ! histone H4
+is_a: PR:000029063 ! Gallus gallus protein
+intersection_of: PR:000008603 ! histone H4
+intersection_of: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=50627 ! HIST1H46 (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=50630 ! HIST2H4B (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=532154 ! HIST1H4D (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=55704 ! HIST1H4B (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=55804 ! HIST1H46L6 (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=64760 ! HIST1H4I (chicken)
+relationship: has_gene_template http://birdgenenames.org/cgnc/GeneReport?id=65021 ! HIST1H46L2 (chicken)
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: PR:P62805
+name: histone H4 (human)
+namespace: protein
+def: "A histone H4 that is encoded in the genome of human." [PRO:DAN]
+comment: Category=organism-gene. Note: The HIST1H4A, HIST1H4B, HIST1H4C, HIST1H4D, HIST1H4E, HIST1H4F, HIST1H4H, HIST1H4I, HIST1H4J, HIST1H4K, HIST1H4L, HIST2H4A, HIST2H4B, and HIST4H4 genes encode identical proteins.
+synonym: "H4-16" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4/A" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/B" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/C" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/D" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/E" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/G" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/H" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/I" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/J" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/K" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/M" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/N" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4/O" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4C1" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C11" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C12" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C13" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C14" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C15" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C16" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C2" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C3" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C4" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C5" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C6" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C8" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4C9" RELATED Gene-based [UniProtKB:P62805]
+synonym: "H4F2" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FA" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FB" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FC" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FD" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FE" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FG" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FH" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FI" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FJ" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FK" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FM" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FN" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "H4FO" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "hH4" EXACT PRO-short-label [PRO:DNx]
+synonym: "HIST1H4A" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4B" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4C" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4D" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4E" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4F" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4H" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4I" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4J" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4K" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST1H4L" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST2H4" RELATED Gene-based [UniProtKB:P62805]
+synonym: "HIST2H4A" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST2H4B" NARROW Gene-based [PRO:DAN, UniProtKB:P62805]
+synonym: "HIST4H4" RELATED Gene-based [UniProtKB:P62805]
+xref: UniProtKB:P62805
+is_a: PR:000008603 ! histone H4
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000008603 ! histone H4
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:P62806
+name: histone H4 (mouse)
+namespace: protein
+def: "A histone H4 that is encoded in the genome of mouse." [OMA:P62806, PRO:DNx]
+comment: Category=organism-gene. Note: The Hist1h4a, Hist1h4b, Hist1h4c, Hist1h4d, Hist1h4f, Hist1h4h, Hist1h4i, Hist1h4j, Hist1h4k, Hist1h4m, Hist2h4, and Hist4h4 genes encode identical proteins.
+synonym: "H4-12" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4-53" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c1" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c11" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c12" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c14" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c16" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c2" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c3" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c4" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c6" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c8" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4c9" RELATED Gene-based [UniProtKB:P62806]
+synonym: "H4f16" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4a" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4b" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4c" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4d" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4f" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4h" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4i" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4j" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4k" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist1h4m" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist2h4" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist2h4a" RELATED Gene-based [UniProtKB:P62806]
+synonym: "Hist4h4" RELATED Gene-based [UniProtKB:P62806]
+synonym: "mH4" EXACT PRO-short-label [PRO:DNx]
+xref: UniProtKB:P62806
+is_a: PR:000008603 ! histone H4
+is_a: PR:000029032 ! Mus musculus protein
+intersection_of: PR:000008603 ! histone H4
+intersection_of: only_in_taxon NCBITaxon:10090 ! Mus musculus
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2140113 ! Hist2h4 (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448419 ! Hist1h4a (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448420 ! Hist1h4b (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448421 ! Hist1h4c (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448423 ! Hist1h4d (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448425 ! Hist1h4f (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448427 ! Hist1h4h (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448432 ! Hist1h4i (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448436 ! Hist1h4j (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448439 ! Hist1h4k (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448441 ! Hist1h4m (mouse)
+relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:2448443 ! Hist4h4 (mouse)
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: PR:P62979
 name: ubiquitin-40S ribosomal protein S27a (human)
 namespace: protein
@@ -33566,10 +33939,37 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=50627
+name: HIST1H46 (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H46 in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=50630
+name: HIST2H4B (chicken)
+namespace: gene
+def: "A protein coding gene HIST2H4B in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: http://birdgenenames.org/cgnc/GeneReport?id=51092
 name: CXCR5 (chicken)
 namespace: gene
 def: "A protein coding gene CXCR5 in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=532154
+name: HIST1H4D (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H4D in chicken." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
@@ -33584,10 +33984,46 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
 
 [Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=55704
+name: HIST1H4B (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H4B in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=55804
+name: HIST1H46L6 (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H46L6 in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
 id: http://birdgenenames.org/cgnc/GeneReport?id=6004
 name: RAG1 (chicken)
 namespace: gene
 def: "A protein coding gene RAG1 in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=64760
+name: HIST1H4I (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H4I in chicken." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
+
+[Term]
+id: http://birdgenenames.org/cgnc/GeneReport?id=65021
+name: HIST1H46L2 (chicken)
+namespace: gene
+def: "A protein coding gene HIST1H46L2 in chicken." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:9031 ! Gallus gallus
@@ -34988,6 +35424,15 @@ is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: http://www.informatics.jax.org/marker/MGI:2140113
+name: Hist2h4 (mouse)
+namespace: gene
+def: "A protein coding gene Hist2h4 in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
 id: http://www.informatics.jax.org/marker/MGI:2143702
 name: Enpp3 (mouse)
 namespace: gene
@@ -35064,6 +35509,105 @@ id: http://www.informatics.jax.org/marker/MGI:2447586
 name: Fkrp (mouse)
 namespace: gene
 def: "A protein coding gene Fkrp in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448419
+name: Hist1h4a (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4a in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448420
+name: Hist1h4b (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4b in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448421
+name: Hist1h4c (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4c in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448423
+name: Hist1h4d (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4d in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448425
+name: Hist1h4f (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4f in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448427
+name: Hist1h4h (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4h in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448432
+name: Hist1h4i (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4i in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448436
+name: Hist1h4j (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4j in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448439
+name: Hist1h4k (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4k in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448441
+name: Hist1h4m (mouse)
+namespace: gene
+def: "A protein coding gene Hist1h4m in mouse." [PRO:DNx]
+comment: Category=external.
+is_a: SO:0001217 ! protein_coding_gene
+relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
+
+[Term]
+id: http://www.informatics.jax.org/marker/MGI:2448443
+name: Hist4h4 (mouse)
+namespace: gene
+def: "A protein coding gene Hist4h4 in mouse." [PRO:DNx]
 comment: Category=external.
 is_a: SO:0001217 ! protein_coding_gene
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
