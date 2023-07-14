@@ -37,4 +37,4 @@ pr_slim.obo: pr_slim.owl
 all: pr_slim.owl pr_slim.obo
 
 human-pr-mapping.ttl: mirror/pr.owl
-	$(ROBOT) query --input $< -q sparql/human-pr-mapping.sparql $@
+	$(ROBOT) query --format ttl --input $< --query sparql/human-pr-mapping.sparql $@
