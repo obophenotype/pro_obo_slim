@@ -1,0 +1,45 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX obo: <http://purl.obolibrary.org/obo_>
+PREFIX PR: <http://purl.obolibrary.org/obo/PR_>
+PREFIX CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+PREFIX COB: <http://purl.obolibrary.org/obo/COB_>
+PREFIX subClassOf: <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+PREFIX label: <http://www.w3.org/2000/01/rdf-schema#label>
+PREFIX semapv: <ttps://w3id.org/semapv/vocab/>
+
+
+######################################
+## Subclasses of
+## PR:000000001 protein
+## PR:000029067 Homo sapiens protein
+## PR:000050567 protein-containing material entity
+## PR:000036194 eukaryotic protein
+## CHEBI:36080 protein
+######################################
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+########################
+########################
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+
+CONSTRUCT
+{
+?super semapv:crossSpeciesExactMatch ?sub .
+}
+WHERE {
+       VALUES ?sub { PR:000030075 }
+       ?sub subClassOf:* PR:000029067 ; # Homo sapiens protein
+            subClassOf: ?super .
+#      ?super subClassOf: PR:000050567 . # protein-containing material entity
+#FILTER (?sub != ?super && ?super != owl:Nothing)
+ FILTER (?sub != ?super)
+ FILTER (?super != PR:000000001)
+ FILTER (?super != PR:000036194)
+ FILTER (?super != PR:000029067)
+ FILTER (?super != PR:000050567)
+ FILTER ( LCASE(STR(?slabel)) = STRBEFORE( LCASE(STR(?label)), " (human)" ) ) # match classes based on label; this is slow but critical
+      }
+
