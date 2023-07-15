@@ -31,10 +31,10 @@ CONSTRUCT
 }
 WHERE {
 #      VALUES ?sub { PR:000030075 }
-       ?sub subClassOf: PR:000029067 ; # Homo sapiens protein
+       ?sub subClassOf:* PR:000029067 ; # Homo sapiens protein
             subClassOf: ?super ;
              label: ?label .
-       ?super subClassOf: PR:000050567 ; # protein-containing material entity
+       ?super subClassOf:* PR:000050567 ; # protein-containing material entity
               label: ?slabel .
 FILTER (?sub != ?super)
 FILTER ( LCASE(STR(?slabel)) = STRBEFORE( LCASE(STR(?label)), " (human)" ) ) # match classes based on label; this is slow but critical
