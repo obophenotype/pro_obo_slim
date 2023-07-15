@@ -11,19 +11,11 @@ PREFIX subClassOf: <http://www.w3.org/2000/01/rdf-schema#subClassOf>
 PREFIX label: <http://www.w3.org/2000/01/rdf-schema#label>
 PREFIX semapv: <ttps://w3id.org/semapv/vocab/>
 
-
 ######################################
 ## Subclasses of
-## PR:000000001 protein
 ## PR:000029067 Homo sapiens protein
 ## PR:000050567 protein-containing material entity
-## PR:000036194 eukaryotic protein
-## CHEBI:36080 protein
 ######################################
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-########################
-########################
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 
 CONSTRUCT
 {
