@@ -1,14 +1,6 @@
 @prefix PR:    <http://purl.obolibrary.org/obo/PR_> .
-@prefix semapv: <ttps://w3id.org/semapv/vocab/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@prefix CHEBI: <http://purl.obolibrary.org/obo/CHEBI_> .
-@prefix COB:   <http://purl.obolibrary.org/obo/COB_> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
 @prefix label: <http://www.w3.org/2000/01/rdf-schema#label> .
-@prefix obo:   <http://purl.obolibrary.org/obo_> .
 @prefix subClassOf: <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
 
 PR:000001596  semapv:crossSpeciesExactMatch
