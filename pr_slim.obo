@@ -1,11 +1,11 @@
 format-version: 1.2
-data-version: pr/obophenotype/releases/2023-03-13/pr_slim.owl
+data-version: pr/obophenotype/releases/2023-08-10/pr_slim.owl
 synonymtypedef: Gene-based ""
 synonymtypedef: PRO-proteoform-ftid ""
 synonymtypedef: PRO-proteoform-std ""
 synonymtypedef: PRO-short-label ""
 ontology: pr/obophenotype/pr_slim
-property_value: owl:versionInfo "2023-03-13" xsd:string
+property_value: owl:versionInfo "2023-08-10" xsd:string
 
 [Term]
 id: BFO:0000019
@@ -5890,6 +5890,21 @@ synonym: "MTM1" EXACT PRO-short-label [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
+id: PR:000010769
+name: mucin-5B
+namespace: protein
+def: "A protein that is a translation product of the human MUC5B gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "cervical mucin" EXACT []
+synonym: "high molecular weight salivary mucin MG1" EXACT []
+synonym: "MUC-5B" EXACT []
+synonym: "MUC5" RELATED Gene-based []
+synonym: "MUC5B" EXACT PRO-short-label [PRO:DNx]
+synonym: "mucin-5 subtype B, tracheobronchial" EXACT []
+synonym: "sublingual gland mucin" EXACT []
+is_a: PR:000000001 ! protein
+
+[Term]
 id: PR:000010799
 name: myb proto-oncogene protein
 namespace: protein
@@ -10811,6 +10826,24 @@ synonym: "CRIPTO" RELATED Gene-based []
 synonym: "cripto-1 growth factor" EXACT []
 synonym: "epidermal growth factor-like cripto protein CR1" EXACT []
 synonym: "TDGF1" EXACT PRO-short-label [PRO:DNx]
+is_a: PR:000000001 ! protein
+
+[Term]
+id: PR:000031343
+name: mucin-5AC
+namespace: protein
+def: "A protein that is a translation product of the human MUC5AC gene or a 1:1 ortholog thereof." [PRO:DNx]
+comment: Category=gene.
+synonym: "gastric mucin" EXACT []
+synonym: "LeB" EXACT []
+synonym: "lewis B blood group antigen" EXACT []
+synonym: "major airway glycoprotein" EXACT []
+synonym: "MUC-5AC" EXACT []
+synonym: "MUC5" RELATED Gene-based []
+synonym: "MUC5AC" EXACT PRO-short-label [PRO:DNx]
+synonym: "mucin-5 subtype AC, tracheobronchial" EXACT []
+synonym: "TBM" EXACT []
+synonym: "tracheobronchial mucin" BROAD [PRO:DNx]
 is_a: PR:000000001 ! protein
 
 [Term]
@@ -26932,6 +26965,28 @@ relationship: has_gene_template http://www.informatics.jax.org/marker/MGI:109124
 relationship: only_in_taxon NCBITaxon:10090 ! Mus musculus
 
 [Term]
+id: PR:P98088
+name: mucin-5AC (human)
+namespace: protein
+def: "A mucin-5AC that is encoded in the genome of human." [PRO:DNx, UniProtKB:P98088]
+comment: Category=organism-gene.
+synonym: "gastric mucin (human)" EXACT [UniProtKB:P98088]
+synonym: "hMUC5AC" EXACT PRO-short-label [PRO:DNx]
+synonym: "major airway glycoprotein (human)" EXACT [UniProtKB:P98088]
+synonym: "MUC-5AC (human)" EXACT [UniProtKB:P98088]
+synonym: "MUC5" RELATED Gene-based [UniProtKB:P98088]
+synonym: "MUC5AC" RELATED Gene-based [UniProtKB:P98088]
+synonym: "mucin-5 subtype AC, tracheobronchial (human)" EXACT [UniProtKB:P98088]
+synonym: "TBM (human)" EXACT [UniProtKB:P98088]
+synonym: "tracheobronchial mucin (human)" BROAD [UniProtKB:P98088]
+xref: UniProtKB:P98088
+is_a: PR:000029067 ! Homo sapiens protein
+is_a: PR:000031343 ! mucin-5AC
+intersection_of: PR:000031343 ! mucin-5AC
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
 id: PR:P98150
 name: nuclear factor NF-kappa-B p100 subunit (chicken)
 namespace: protein
@@ -30375,6 +30430,27 @@ xref: UniProtKB:Q9HBE4
 is_a: PR:000001382 ! interleukin-21
 is_a: PR:000029067 ! Homo sapiens protein
 intersection_of: PR:000001382 ! interleukin-21
+intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: PR:Q9HC84
+name: mucin-5B (human)
+namespace: protein
+def: "A mucin-5B that is encoded in the genome of human." [PRO:DNx, UniProtKB:Q9HC84]
+comment: Category=organism-gene.
+synonym: "cervical mucin (human)" EXACT [UniProtKB:Q9HC84]
+synonym: "high molecular weight salivary mucin MG1 (human)" EXACT [UniProtKB:Q9HC84]
+synonym: "hMUC5B" EXACT PRO-short-label [PRO:DNx]
+synonym: "MUC-5B (human)" EXACT [UniProtKB:Q9HC84]
+synonym: "MUC5" RELATED Gene-based [UniProtKB:Q9HC84]
+synonym: "MUC5B" RELATED Gene-based [UniProtKB:Q9HC84]
+synonym: "mucin-5 subtype B, tracheobronchial (human)" EXACT [UniProtKB:Q9HC84]
+synonym: "sublingual gland mucin (human)" EXACT [UniProtKB:Q9HC84]
+xref: UniProtKB:Q9HC84
+is_a: PR:000010769 ! mucin-5B
+is_a: PR:000029067 ! Homo sapiens protein
+intersection_of: PR:000010769 ! mucin-5B
 intersection_of: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 relationship: only_in_taxon NCBITaxon:9606 ! Homo sapiens
 
