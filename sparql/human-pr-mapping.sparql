@@ -1,0 +1,25 @@
+PREFIX PR: <http://purl.obolibrary.org/obo/PR_>
+PREFIX subClassOf: <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+PREFIX label: <http://www.w3.org/2000/01/rdf-schema#label>
+PREFIX semapv: <https://w3id.org/semapv/vocab/>
+
+######################################
+## Subclasses of
+## PR:000029067 Homo sapiens protein
+## PR:000000001 protein
+######################################
+
+CONSTRUCT
+{
+?super semapv:crossSpeciesExactMatch ?sub .
+}
+WHERE {
+#      VALUES ?sub { PR:000030075 }
+       ?sub subClassOf:* PR:000029067 ; # Homo sapiens protein
+            subClassOf: ?super ;
+             label: ?label .
+       ?super subClassOf:* PR:000000001 ; # protein
+              label: ?slabel .
+FILTER (?sub != ?super)
+FILTER ( LCASE(STR(?slabel)) = STRBEFORE( LCASE(STR(?label)), " (human)" ) ) # match classes based on label; this is slow but critical
+      }
