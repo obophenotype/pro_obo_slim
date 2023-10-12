@@ -105,6 +105,9 @@ PR:000003865  semapv:crossSpeciesExactMatch
 PR:000007539  semapv:crossSpeciesExactMatch
                 PR:Q00688 .
 
+PR:000006540  semapv:crossSpeciesExactMatch
+                PR:Q13316 .
+
 PR:000030253  semapv:crossSpeciesExactMatch
                 PR:Q5EE01 .
 
@@ -182,6 +185,9 @@ PR:000031857  semapv:crossSpeciesExactMatch
 
 PR:000030773  semapv:crossSpeciesExactMatch
                 PR:Q9UJC5 .
+
+PR:000009808  semapv:crossSpeciesExactMatch
+                PR:Q8NHL6 .
 
 PR:000014301  semapv:crossSpeciesExactMatch
                 PR:P10301 .
@@ -261,8 +267,14 @@ PR:000003738  semapv:crossSpeciesExactMatch
 PR:000017107  semapv:crossSpeciesExactMatch
                 PR:Q9UBR1 .
 
+PR:000008156  semapv:crossSpeciesExactMatch
+                PR:Q9HCN6 .
+
 PR:000002028  semapv:crossSpeciesExactMatch
                 PR:P15813 .
+
+PR:000016506  semapv:crossSpeciesExactMatch
+                PR:P19429 .
 
 PR:000032501  semapv:crossSpeciesExactMatch
                 PR:Q9H9R9 .
@@ -740,6 +752,9 @@ PR:000006737  semapv:crossSpeciesExactMatch
 
 PR:000012229  semapv:crossSpeciesExactMatch
                 PR:Q15102 .
+
+PR:000001353  semapv:crossSpeciesExactMatch
+                PR:Q99062 .
 
 PR:000012855  semapv:crossSpeciesExactMatch
                 PR:Q9HB20 .
@@ -1356,6 +1371,9 @@ PR:000005452  semapv:crossSpeciesExactMatch
 PR:000008826  semapv:crossSpeciesExactMatch
                 PR:P98160 .
 
+PR:000012569  semapv:crossSpeciesExactMatch
+                PR:P02776 .
+
 PR:000003925  semapv:crossSpeciesExactMatch
                 PR:P05091 .
 
@@ -1569,6 +1587,9 @@ PR:000030244  semapv:crossSpeciesExactMatch
 PR:000005304  semapv:crossSpeciesExactMatch
                 PR:Q3KPI0 .
 
+PR:000005930  semapv:crossSpeciesExactMatch
+                PR:P09603 .
+
 PR:000013165  semapv:crossSpeciesExactMatch
                 PR:O60828 .
 
@@ -1616,6 +1637,9 @@ PR:000007026  semapv:crossSpeciesExactMatch
 
 PR:000006908  semapv:crossSpeciesExactMatch
                 PR:P26641 .
+
+PR:000002125  semapv:crossSpeciesExactMatch
+                PR:P80098 .
 
 PR:000009878  semapv:crossSpeciesExactMatch
                 PR:Q969J3 .
@@ -2108,6 +2132,9 @@ PR:000008015  semapv:crossSpeciesExactMatch
 
 PR:000014616  semapv:crossSpeciesExactMatch
                 PR:Q13214 .
+
+PR:000001991  semapv:crossSpeciesExactMatch
+                PR:Q99731 .
 
 PR:000030611  semapv:crossSpeciesExactMatch
                 PR:Q8NFB2 .
@@ -2874,6 +2901,9 @@ PR:000004092  semapv:crossSpeciesExactMatch
 PR:000008875  semapv:crossSpeciesExactMatch
                 PR:P10997 .
 
+PR:000005899  semapv:crossSpeciesExactMatch
+                PR:O95727 .
+
 PR:000017343  semapv:crossSpeciesExactMatch
                 PR:O75351 .
 
@@ -3348,6 +3378,9 @@ PR:000016583  semapv:crossSpeciesExactMatch
 PR:000008637  semapv:crossSpeciesExactMatch
                 PR:Q01581 .
 
+PR:000001987  semapv:crossSpeciesExactMatch
+                PR:Q16663 .
+
 PR:000011381  semapv:crossSpeciesExactMatch
                 PR:Q9Y639 .
 
@@ -3531,11 +3564,11 @@ PR:000005677  semapv:crossSpeciesExactMatch
 PR:000032366  semapv:crossSpeciesExactMatch
                 PR:Q7Z4L9 .
 
-PR:000011169  semapv:crossSpeciesExactMatch
-                PR:Q14494 .
-
 PR:000010170  semapv:crossSpeciesExactMatch
                 PR:Q15691 .
+
+PR:000011169  semapv:crossSpeciesExactMatch
+                PR:Q14494 .
 
 PR:000016997  semapv:crossSpeciesExactMatch
                 PR:O95164 .
@@ -3905,6 +3938,9 @@ PR:000009684  semapv:crossSpeciesExactMatch
 
 PR:000001813  semapv:crossSpeciesExactMatch
                 PR:Q14246 .
+
+PR:000001330  semapv:crossSpeciesExactMatch
+                PR:P06731 .
 
 PR:000012832  semapv:crossSpeciesExactMatch
                 PR:P51178 .
@@ -4344,6 +4380,9 @@ PR:000012047  semapv:crossSpeciesExactMatch
 PR:000017875  semapv:crossSpeciesExactMatch
                 PR:Q86VK4 .
 
+PR:000006072  semapv:crossSpeciesExactMatch
+                PR:P80162 .
+
 PR:000012673  semapv:crossSpeciesExactMatch
                 PR:Q9NRX4 .
 
@@ -4397,6 +4436,9 @@ PR:000017371  semapv:crossSpeciesExactMatch
 
 PR:000030390  semapv:crossSpeciesExactMatch
                 PR:P59942 .
+
+PR:000009425  semapv:crossSpeciesExactMatch
+                PR:Q9NZS2 .
 
 PR:000016770  semapv:crossSpeciesExactMatch
                 PR:Q9BXA7 .
@@ -4629,6 +4671,9 @@ PR:000010108  semapv:crossSpeciesExactMatch
 PR:000016054  semapv:crossSpeciesExactMatch
                 PR:Q9BX59 .
 
+PR:000001458  semapv:crossSpeciesExactMatch
+                PR:P19440 .
+
 PR:000029299  semapv:crossSpeciesExactMatch
                 PR:Q4VC05 .
 
@@ -4848,17 +4893,20 @@ PR:000003764  semapv:crossSpeciesExactMatch
 PR:000014783  semapv:crossSpeciesExactMatch
                 PR:Q92629 .
 
-PR:000031777  semapv:crossSpeciesExactMatch
-                PR:P53990 .
-
 PR:000015299  semapv:crossSpeciesExactMatch
                 PR:Q99954 .
+
+PR:000031777  semapv:crossSpeciesExactMatch
+                PR:P53990 .
 
 PR:000007581  semapv:crossSpeciesExactMatch
                 PR:P02751 .
 
 PR:000050219  semapv:crossSpeciesExactMatch
                 PR:000050341 .
+
+PR:000009330  semapv:crossSpeciesExactMatch
+                PR:Q99706 .
 
 PR:000029777  semapv:crossSpeciesExactMatch
                 PR:P29084 .
@@ -5949,11 +5997,11 @@ PR:000003930  semapv:crossSpeciesExactMatch
 PR:000017293  semapv:crossSpeciesExactMatch
                 PR:Q14135 .
 
-PR:000009347  semapv:crossSpeciesExactMatch
-                PR:Q9UEF7 .
-
 PR:000005372  semapv:crossSpeciesExactMatch
                 PR:O15182 .
+
+PR:000009347  semapv:crossSpeciesExactMatch
+                PR:Q9UEF7 .
 
 PR:000007121  semapv:crossSpeciesExactMatch
                 PR:Q5JZY3 .
@@ -5993,6 +6041,9 @@ PR:000004987  semapv:crossSpeciesExactMatch
 
 PR:000016130  semapv:crossSpeciesExactMatch
                 PR:Q5QJ74 .
+
+PR:000009809  semapv:crossSpeciesExactMatch
+                PR:Q8N423 .
 
 PR:000016528  semapv:crossSpeciesExactMatch
                 PR:Q9H0E2 .
@@ -6380,6 +6431,9 @@ PR:000014647  semapv:crossSpeciesExactMatch
 
 PR:000010672  semapv:crossSpeciesExactMatch
                 PR:Q96DH6 .
+
+PR:000012421  semapv:crossSpeciesExactMatch
+                PR:P12004 .
 
 PR:000003771  semapv:crossSpeciesExactMatch
                 PR:P11766 .
@@ -6945,6 +6999,9 @@ PR:000004113  semapv:crossSpeciesExactMatch
 PR:000007891  semapv:crossSpeciesExactMatch
                 PR:P01275 .
 
+PR:000010413  semapv:crossSpeciesExactMatch
+                PR:P14174 .
+
 PR:000017358  semapv:crossSpeciesExactMatch
                 PR:Q96AJ9 .
 
@@ -7365,6 +7422,9 @@ PR:000017284  semapv:crossSpeciesExactMatch
 PR:000016057  semapv:crossSpeciesExactMatch
                 PR:Q13148 .
 
+PR:000009338  semapv:crossSpeciesExactMatch
+                PR:P43630 .
+
 PR:000044781  semapv:crossSpeciesExactMatch
                 PR:Q13046 .
 
@@ -7400,6 +7460,9 @@ PR:000017831  semapv:crossSpeciesExactMatch
 
 PR:000007027  semapv:crossSpeciesExactMatch
                 PR:P28324 .
+
+PR:000002126  semapv:crossSpeciesExactMatch
+                PR:P80075 .
 
 PR:000029849  semapv:crossSpeciesExactMatch
                 PR:O95292 .
@@ -7466,6 +7529,9 @@ PR:000015435  semapv:crossSpeciesExactMatch
 
 PR:000014834  semapv:crossSpeciesExactMatch
                 PR:Q9H0F6 .
+
+PR:000011375  semapv:crossSpeciesExactMatch
+                PR:P16860 .
 
 PR:000002105  semapv:crossSpeciesExactMatch
                 PR:P07204 .
@@ -7578,11 +7644,11 @@ PR:000014728  semapv:crossSpeciesExactMatch
 PR:000015472  semapv:crossSpeciesExactMatch
                 PR:Q5MJ09 .
 
-PR:000005777  semapv:crossSpeciesExactMatch
-                PR:Q96KJ9 .
-
 PR:000012496  semapv:crossSpeciesExactMatch
                 PR:O00330 .
+
+PR:000005777  semapv:crossSpeciesExactMatch
+                PR:Q96KJ9 .
 
 PR:000014245  semapv:crossSpeciesExactMatch
                 PR:P78346 .
@@ -7664,6 +7730,9 @@ PR:000007499  semapv:crossSpeciesExactMatch
 
 PR:000009248  semapv:crossSpeciesExactMatch
                 PR:O60662 .
+
+PR:000002121  semapv:crossSpeciesExactMatch
+                PR:Q99616 .
 
 PR:000015849  semapv:crossSpeciesExactMatch
                 PR:Q7L0J3 .
@@ -8253,6 +8322,9 @@ PR:000017476  semapv:crossSpeciesExactMatch
 PR:000030501  semapv:crossSpeciesExactMatch
                 PR:Q8NDY8 .
 
+PR:000001881  semapv:crossSpeciesExactMatch
+                PR:P18627 .
+
 PR:000004629  semapv:crossSpeciesExactMatch
                 PR:O14514 .
 
@@ -8684,6 +8756,9 @@ PR:000010372  semapv:crossSpeciesExactMatch
 
 PR:000032568  semapv:crossSpeciesExactMatch
                 PR:P0CL80 .
+
+PR:000009997  semapv:crossSpeciesExactMatch
+                PR:O95711 .
 
 PR:000001017  semapv:crossSpeciesExactMatch
                 PR:P08575-4 .
@@ -9234,11 +9309,14 @@ PR:000004922  semapv:crossSpeciesExactMatch
 PR:000007591  semapv:crossSpeciesExactMatch
                 PR:P49354 .
 
+PR:000013083  semapv:crossSpeciesExactMatch
+                PR:Q9Y3C6 .
+
 PR:000003689  semapv:crossSpeciesExactMatch
                 PR:P35609 .
 
-PR:000013083  semapv:crossSpeciesExactMatch
-                PR:Q9Y3C6 .
+PR:000009340  semapv:crossSpeciesExactMatch
+                PR:Q14943 .
 
 PR:000006990  semapv:crossSpeciesExactMatch
                 PR:P06730 .
@@ -9416,6 +9494,9 @@ PR:000017536  semapv:crossSpeciesExactMatch
 
 PR:000001941  semapv:crossSpeciesExactMatch
                 PR:P23771 .
+
+PR:000005615  semapv:crossSpeciesExactMatch
+                PR:P10909 .
 
 PR:000012334  semapv:crossSpeciesExactMatch
                 PR:Q9H0N5 .
@@ -9924,6 +10005,9 @@ PR:000008973  semapv:crossSpeciesExactMatch
 PR:000011489  semapv:crossSpeciesExactMatch
                 PR:Q9BRJ7 .
 
+PR:000010490  semapv:crossSpeciesExactMatch
+                PR:P22894 .
+
 PR:000006519  semapv:crossSpeciesExactMatch
                 PR:Q9Y2H0 .
 
@@ -10197,6 +10281,9 @@ PR:000008236  semapv:crossSpeciesExactMatch
 PR:000006010  semapv:crossSpeciesExactMatch
                 PR:Q9NSA3 .
 
+PR:000007009  semapv:crossSpeciesExactMatch
+                PR:P08246 .
+
 PR:000002108  semapv:crossSpeciesExactMatch
                 PR:O00220 .
 
@@ -10353,11 +10440,14 @@ PR:000017197  semapv:crossSpeciesExactMatch
 PR:000030222  semapv:crossSpeciesExactMatch
                 PR:Q8N5W8 .
 
+PR:000006907  semapv:crossSpeciesExactMatch
+                PR:O43324 .
+
 PR:000007025  semapv:crossSpeciesExactMatch
                 PR:P19419 .
 
-PR:000006907  semapv:crossSpeciesExactMatch
-                PR:O43324 .
+PR:000002124  semapv:crossSpeciesExactMatch
+                PR:P13236 .
 
 PR:000031847  semapv:crossSpeciesExactMatch
                 PR:Q8N2G8 .
@@ -10950,6 +11040,9 @@ PR:000007954  semapv:crossSpeciesExactMatch
 PR:000014190  semapv:crossSpeciesExactMatch
                 PR:P62913 .
 
+PR:000015189  semapv:crossSpeciesExactMatch
+                PR:P31645 .
+
 PR:000009220  semapv:crossSpeciesExactMatch
                 PR:Q15040 .
 
@@ -10979,6 +11072,9 @@ PR:000010534  semapv:crossSpeciesExactMatch
 
 PR:000016480  semapv:crossSpeciesExactMatch
                 PR:O00300 .
+
+PR:000005558  semapv:crossSpeciesExactMatch
+                PR:Q9Y240 .
 
 PR:000001884  semapv:crossSpeciesExactMatch
                 PR:Q9UEW3 .
@@ -11012,6 +11108,9 @@ PR:000001805  semapv:crossSpeciesExactMatch
 
 PR:000030419  semapv:crossSpeciesExactMatch
                 PR:Q8N1G2 .
+
+PR:000001322  semapv:crossSpeciesExactMatch
+                PR:P12821 .
 
 PR:000015800  semapv:crossSpeciesExactMatch
                 PR:Q9UNK0 .
@@ -11135,6 +11234,9 @@ PR:000013462  semapv:crossSpeciesExactMatch
 
 PR:000017437  semapv:crossSpeciesExactMatch
                 PR:O00744 .
+
+PR:000001842  semapv:crossSpeciesExactMatch
+                PR:Q9HBG7 .
 
 PR:000005516  semapv:crossSpeciesExactMatch
                 PR:P12532 .
@@ -12819,6 +12921,9 @@ PR:000001202  semapv:crossSpeciesExactMatch
 PR:000008955  semapv:crossSpeciesExactMatch
                 PR:P01876 .
 
+PR:000010472  semapv:crossSpeciesExactMatch
+                PR:P39900 .
+
 PR:000005502  semapv:crossSpeciesExactMatch
                 PR:Q8N5K1 .
 
@@ -13164,14 +13269,17 @@ PR:000005306  semapv:crossSpeciesExactMatch
 PR:000029473  semapv:crossSpeciesExactMatch
                 PR:Q8TCE6 .
 
-PR:000006050  semapv:crossSpeciesExactMatch
-                PR:Q13620 .
-
 PR:000016626  semapv:crossSpeciesExactMatch
                 PR:Q9NZC2 .
 
+PR:000006050  semapv:crossSpeciesExactMatch
+                PR:Q13620 .
+
 PR:000012651  semapv:crossSpeciesExactMatch
                 PR:Q92576 .
+
+PR:000005932  semapv:crossSpeciesExactMatch
+                PR:P09919 .
 
 PR:000059718  semapv:crossSpeciesExactMatch
                 PR:A8MWY0 .
@@ -13533,11 +13641,11 @@ PR:000013597  semapv:crossSpeciesExactMatch
 PR:000015346  semapv:crossSpeciesExactMatch
                 PR:P62304 .
 
-PR:000011371  semapv:crossSpeciesExactMatch
-                PR:Q86SE8 .
-
 PR:000008627  semapv:crossSpeciesExactMatch
                 PR:Q9P0W2 .
+
+PR:000011371  semapv:crossSpeciesExactMatch
+                PR:Q86SE8 .
 
 PR:000013120  semapv:crossSpeciesExactMatch
                 PR:Q13522 .
@@ -13991,6 +14099,9 @@ PR:000007490  semapv:crossSpeciesExactMatch
 
 PR:000003588  semapv:crossSpeciesExactMatch
                 PR:P19801 .
+
+PR:000010012  semapv:crossSpeciesExactMatch
+                PR:Q9Y5Y7 .
 
 PR:000015840  semapv:crossSpeciesExactMatch
                 PR:Q15526 .
