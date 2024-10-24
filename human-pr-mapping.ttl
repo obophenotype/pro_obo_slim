@@ -534,6 +534,9 @@ PR:000017523  semapv:crossSpeciesExactMatch
 PR:000007435  semapv:crossSpeciesExactMatch
                 PR:P55899 .
 
+PR:000014191  semapv:crossSpeciesExactMatch
+                PR:P30050 .
+
 PR:000018237  semapv:crossSpeciesExactMatch
                 PR:O95229 .
 
@@ -2913,6 +2916,9 @@ PR:000014034  semapv:crossSpeciesExactMatch
 PR:000009897  semapv:crossSpeciesExactMatch
                 PR:P06858 .
 
+PR:000013872  semapv:crossSpeciesExactMatch
+                PR:Q6UW15 .
+
 PR:000006926  semapv:crossSpeciesExactMatch
                 PR:O43281 .
 
@@ -4422,6 +4428,9 @@ PR:000004483  semapv:crossSpeciesExactMatch
 PR:000012992  semapv:crossSpeciesExactMatch
                 PR:P61218 .
 
+PR:000013896  semapv:crossSpeciesExactMatch
+                PR:Q9HD89 .
+
 PR:000004293  semapv:crossSpeciesExactMatch
                 PR:O75915 .
 
@@ -4448,6 +4457,9 @@ PR:000005476  semapv:crossSpeciesExactMatch
 
 PR:000008618  semapv:crossSpeciesExactMatch
                 PR:Q16534 .
+
+PR:000014280  semapv:crossSpeciesExactMatch
+                PR:P46782 .
 
 PR:000008428  semapv:crossSpeciesExactMatch
                 PR:Q14520 .
@@ -7608,6 +7620,9 @@ PR:000031567  semapv:crossSpeciesExactMatch
 PR:000032711  semapv:crossSpeciesExactMatch
                 PR:Q8IYS0 .
 
+PR:000030473  semapv:crossSpeciesExactMatch
+                PR:Q9UHN6 .
+
 PR:000003775  semapv:crossSpeciesExactMatch
                 PR:Q9BV57 .
 
@@ -7974,11 +7989,11 @@ PR:000031900  semapv:crossSpeciesExactMatch
 PR:000014207  semapv:crossSpeciesExactMatch
                 PR:Q9UNX3 .
 
-PR:000001870  semapv:crossSpeciesExactMatch
-                PR:Q05084 .
-
 PR:000003868  semapv:crossSpeciesExactMatch
                 PR:O95831 .
+
+PR:000001870  semapv:crossSpeciesExactMatch
+                PR:Q05084 .
 
 PR:000004822  semapv:crossSpeciesExactMatch
                 PR:P55201 .
@@ -8604,6 +8619,9 @@ PR:000012622  semapv:crossSpeciesExactMatch
 PR:000010384  semapv:crossSpeciesExactMatch
                 PR:Q09328 .
 
+PR:000013526  semapv:crossSpeciesExactMatch
+                PR:P10082 .
+
 PR:000011288  semapv:crossSpeciesExactMatch
                 PR:Q9C002 .
 
@@ -8879,6 +8897,9 @@ PR:000014420  semapv:crossSpeciesExactMatch
 
 PR:000029756  semapv:crossSpeciesExactMatch
                 PR:Q9NTG7 .
+
+PR:000014230  semapv:crossSpeciesExactMatch
+                PR:P46777 .
 
 PR:000004795  semapv:crossSpeciesExactMatch
                 PR:Q8N4F0 .
@@ -12675,11 +12696,11 @@ PR:000031410  semapv:crossSpeciesExactMatch
 PR:000004712  semapv:crossSpeciesExactMatch
                 PR:P11274 .
 
-PR:000010983  semapv:crossSpeciesExactMatch
-                PR:Q6IQ20 .
-
 PR:000001380  semapv:crossSpeciesExactMatch
                 PR:P01589 .
+
+PR:000010983  semapv:crossSpeciesExactMatch
+                PR:Q6IQ20 .
 
 PR:000010793  semapv:crossSpeciesExactMatch
                 PR:P50539 .
@@ -12869,6 +12890,9 @@ PR:000015358  semapv:crossSpeciesExactMatch
 
 PR:000007508  semapv:crossSpeciesExactMatch
                 PR:Q08830 .
+
+PR:000014264  semapv:crossSpeciesExactMatch
+                PR:P60866 .
 
 PR:000017406  semapv:crossSpeciesExactMatch
                 PR:Q8IUB3 .
@@ -13689,6 +13713,9 @@ PR:000013351  semapv:crossSpeciesExactMatch
 PR:000005501  semapv:crossSpeciesExactMatch
                 PR:Q9NZ45 .
 
+PR:000014255  semapv:crossSpeciesExactMatch
+                PR:P62263 .
+
 PR:000006405  semapv:crossSpeciesExactMatch
                 PR:Q9H1M3 .
 
@@ -14135,6 +14162,9 @@ PR:000017522  semapv:crossSpeciesExactMatch
 
 PR:000010455  semapv:crossSpeciesExactMatch
                 PR:P12872 .
+
+PR:000014190  semapv:crossSpeciesExactMatch
+                PR:P62913 .
 
 PR:000011359  semapv:crossSpeciesExactMatch
                 PR:Q9NQX5 .
@@ -16682,6 +16712,9 @@ PR:000013399  semapv:crossSpeciesExactMatch
 
 PR:000010808  semapv:crossSpeciesExactMatch
                 PR:Q99417 .
+
+PR:000014543  semapv:crossSpeciesExactMatch
+                PR:P09683 .
 
 PR:000029879  semapv:crossSpeciesExactMatch
                 PR:Q7Z739 .
