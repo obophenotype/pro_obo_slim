@@ -13530,6 +13530,9 @@ PR:000003762  semapv:crossSpeciesExactMatch
 PR:000013889  semapv:crossSpeciesExactMatch
                 PR:O15258 .
 
+PR:000009774  semapv:crossSpeciesExactMatch
+                PR:P47929 .
+
 PR:000012795  semapv:crossSpeciesExactMatch
                 PR:O15496 .
 
