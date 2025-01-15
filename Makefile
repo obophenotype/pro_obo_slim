@@ -36,13 +36,6 @@ human-pr-mapping.ttl: mirror/pr-mapping-filtered.owl
 mirror/pr-pre.owl: mirror/pr.owl human-pr-mapping.ttl
 	$(ROBOT) merge -i mirror/pr.owl -i human-pr-mapping.ttl -o $@
 
-#build/%.db: src/scripts/prefixes.sql mirror/%.owl.gz | build/rdftab
-#	rm -rf $@
-#	sqlite3 $@ < $<
-#	zcat < $(word 2,$^) | ./build/rdftab $@
-#	sqlite3 $@ "CREATE INDEX idx_stanza ON statements (stanza);"
-#	sqlite3 $@ "ANALYZE;"
-
 pr_slim.owl: mirror/pr-pre.owl seed.txt
 	$(ROBOT) extract -i $< -T seed.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --term MOD:00693 \
@@ -53,7 +46,7 @@ pr_slim.owl: mirror/pr-pre.owl seed.txt
 
 pr_slim.obo: pr_slim.owl
 	$(ROBOT) convert --input $< --check false -f obo -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
-.PRECIOUS: pr_slim.obo.obo
+.PRECIOUS: pr_slim.obo
 
 all: pr_slim.owl pr_slim.obo
 
