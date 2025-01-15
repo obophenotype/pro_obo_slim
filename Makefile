@@ -6,14 +6,21 @@ VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 
 MIR=                        true
+CLEAN_FILES=                pr.owl.gz pr.owl pr-mapping-filtered.owl
 
-mirror/pr.owl:
-	if [ $(MIR) = true ]; then curl -L $(URIBASE)/pr.owl.gz --create-dirs -o mirror/pr.owl.gz --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/pr.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+ifeq ($(MIR),true)
+mirror/pr.owl.gz: clean
+	curl -L $(URIBASE)/pr.owl.gz --create-dirs -o $@ --retry 4 --max-time 200
+.PRECIOUS: mirror/pr.owl
+endif
+
+mirror/pr.owl: mirror/pr.owl.gz
+	$(ROBOT) convert -i $< -o $@
 .PRECIOUS: mirror/pr.owl
 
-mirror/pr.owl.gz:
-	if [ $(MIR) = true ]; then curl -L $(URIBASE)/pr.owl.gz --create-dirs -o $@ --retry 4 --max-time 200; fi
-.PRECIOUS: mirror/pr.owl.gz
+clean:
+	rm -f $(foreach file, $(CLEAN_FILES), mirror/$(file))
+.PHONY: clean
 
 # This goal is only for extracting the mappings. We take all PRO terms in the seed
 # Then get their parents and children, and then run the mappings query.
