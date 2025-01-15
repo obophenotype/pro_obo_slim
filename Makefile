@@ -11,7 +11,7 @@ CLEAN_FILES=                pr.owl.gz pr.owl pr-mapping-filtered.owl
 ifeq ($(MIR),true)
 mirror/pr.owl.gz: clean
 	curl -L $(URIBASE)/pr.owl.gz --create-dirs -o $@ --retry 4 --max-time 200
-.PRECIOUS: mirror/pr.owl
+.PRECIOUS: mirror/pr.owl.gz
 endif
 
 mirror/pr.owl: mirror/pr.owl.gz
