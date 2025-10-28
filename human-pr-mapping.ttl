@@ -14946,6 +14946,9 @@ PR:000013429  semapv:crossSpeciesExactMatch
 PR:000012335  semapv:crossSpeciesExactMatch
                 PR:Q15365 .
 
+PR:000020844  semapv:crossSpeciesExactMatch
+                PR:000027390 .
+
 PR:000010097  semapv:crossSpeciesExactMatch
                 PR:Q6UXC1 .
 
@@ -14955,8 +14958,8 @@ PR:000001996  semapv:crossSpeciesExactMatch
 PR:000008220  semapv:crossSpeciesExactMatch
                 PR:O75791 .
 
-PR:000020844  semapv:crossSpeciesExactMatch
-                PR:000027390 .
+PR:000011241  semapv:crossSpeciesExactMatch
+                PR:P43699 .
 
 PR:000011051  semapv:crossSpeciesExactMatch
                 PR:Q9NXR1 .
