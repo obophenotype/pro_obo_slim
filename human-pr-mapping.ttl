@@ -9102,6 +9102,9 @@ PR:000012371  semapv:crossSpeciesExactMatch
 PR:000006519  semapv:crossSpeciesExactMatch
                 PR:Q9Y2H0 .
 
+PR:000013275  semapv:crossSpeciesExactMatch
+                PR:P22891 .
+
 PR:000005425  semapv:crossSpeciesExactMatch
                 PR:Q9BZP6 .
 
