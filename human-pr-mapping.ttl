@@ -3069,11 +3069,11 @@ PR:000008645  semapv:crossSpeciesExactMatch
 PR:000002063  semapv:crossSpeciesExactMatch
                 PR:Q04912 .
 
-PR:000012810  semapv:crossSpeciesExactMatch
-                PR:P39877 .
-
 PR:000014808  semapv:crossSpeciesExactMatch
                 PR:Q96EQ0 .
+
+PR:000012810  semapv:crossSpeciesExactMatch
+                PR:P39877 .
 
 PR:000010572  semapv:crossSpeciesExactMatch
                 PR:Q7Z7H8 .
@@ -7406,6 +7406,9 @@ PR:000013669  semapv:crossSpeciesExactMatch
 
 PR:000015907  semapv:crossSpeciesExactMatch
                 PR:O00445 .
+
+PR:000018498  semapv:crossSpeciesExactMatch
+                PR:000047934 .
 
 PR:000037346  semapv:crossSpeciesExactMatch
                 PR:O00213-1 .
