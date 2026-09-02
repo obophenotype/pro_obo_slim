@@ -10,4 +10,8 @@
 #
 # See README-editors.md for more details.
 
-docker run -e ROBOT_JAVA_ARGS='-Xmx6G' -e JAVA_OPTS='-Xmx6G' -v $PWD/:/work -w /work --rm -ti obolibrary/odklite "$@"
+# Pin to the same ODK image the CI workflow uses (.github/workflows/build.yaml).
+# Override with e.g. ODK_TAG=v1.2.31 sh odk.sh make all
+ODK_TAG=${ODK_TAG:-v1.2.30}
+
+docker run -e ROBOT_JAVA_ARGS='-Xmx6G' -e JAVA_OPTS='-Xmx6G' -v $PWD/:/work -w /work --rm -ti obolibrary/odklite:$ODK_TAG "$@"
