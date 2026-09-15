@@ -47229,6 +47229,9 @@ PR:000006430  semapv:crossSpeciesExactMatch
 PR:000001280  semapv:crossSpeciesExactMatch
                 PR:P78325 .
 
+PR:000001614  semapv:crossSpeciesExactMatch
+                PR:P08172 .
+
 PR:000006690  semapv:crossSpeciesExactMatch
                 PR:A6NNA5 .
 
